@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" role="img" aria-label="Replenta">
+<path d="M66.66 15.85 A38 38 0 1 1 18.87 71.80" fill="none" stroke="#26215C" stroke-width="12" stroke-linecap="round"/>
+<circle cx="12.61" cy="56.76" r="3.4" fill="#EF9F27"/>
+<circle cx="13.21" cy="40.49" r="3.4" fill="#EF9F27"/>
+<circle cx="20.57" cy="25.96" r="3.4" fill="#EF9F27"/>
+<circle cx="33.34" cy="15.85" r="3.4" fill="#EF9F27"/>
+<polygon points="60.00,12.00 45.00,19.00 45.00,5.00" fill="#26215C"/>
+<circle cx="50" cy="50" r="13" fill="#534AB7"/>
+</svg>

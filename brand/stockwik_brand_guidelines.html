@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stockwik — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --indigo:#26215C; --mid:#534AB7; --amber:#EF9F27; --ink:#1A1640;
+    --amber-soft:#FAEEDA; --indigo-soft:#EEEDFE;
+    --page:#FBFAF7; --card:#fff; --line:rgba(26,22,64,0.12); --muted:#6b6b7a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',sans-serif;background:var(--page);color:var(--ink);line-height:1.65;padding:56px 24px 96px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  h1{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:40px;letter-spacing:-0.025em;color:var(--indigo);}
+  h2{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.015em;color:var(--indigo);margin:48px 0 18px;padding-bottom:10px;border-bottom:2px solid var(--amber);}
+  h3{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:16px;color:var(--ink);margin:24px 0 10px;}
+  p{font-size:15px;margin-bottom:12px;max-width:66ch;}
+  .lede{font-size:17px;color:#3a3647;margin:8px 0 8px;}
+  .mono{font-family:'Rajdhani',sans-serif;font-variant-numeric:tabular-nums;}
+  code{font-family:'Rajdhani',sans-serif;background:var(--indigo-soft);color:var(--indigo);padding:2px 7px;border-radius:5px;font-size:13px;font-weight:500;}
+
+  .hero{background:var(--indigo);border-radius:20px;padding:48px;display:flex;align-items:center;gap:36px;margin:28px 0 8px;flex-wrap:wrap;}
+  .hero .wm{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:64px;letter-spacing:-0.04em;color:#fff;}
+
+  .palette{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px;}
+  @media(max-width:640px){.palette{grid-template-columns:repeat(2,1fr);}}
+  .pc{border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .pc .chip{height:88px;}
+  .pc .info{padding:12px 14px;}
+  .pc .role{font-weight:600;font-size:14px;}
+  .pc .hex{font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--muted);margin-top:2px;}
+  .pc .use{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.45;}
+
+  .type-demo{border:1px solid var(--line);border-radius:14px;padding:24px;background:var(--card);margin-top:8px;}
+  .type-demo .big{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:46px;letter-spacing:-0.02em;color:var(--indigo);line-height:1.1;}
+  .type-demo .row{display:flex;gap:24px;flex-wrap:wrap;margin-top:18px;align-items:baseline;}
+  .type-demo .row span{font-family:'Rajdhani',sans-serif;}
+
+  .logos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;}
+  @media(max-width:640px){.logos{grid-template-columns:repeat(2,1fr);}}
+  .lt{border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;align-items:center;gap:14px;background:var(--card);}
+  .lt.dark{background:var(--indigo);border-color:var(--indigo);}
+  .lt .cap{font-size:12px;color:var(--muted);text-align:center;}
+  .lt.dark .cap{color:rgba(255,255,255,0.7);}
+  .lt svg{display:block;}
+
+  .rules{list-style:none;}
+  .rules li{position:relative;padding-left:30px;margin-bottom:12px;font-size:15px;max-width:66ch;}
+  .rules li::before{position:absolute;left:0;top:1px;font-family:'Rajdhani',sans-serif;font-weight:600;}
+  .rules li.do::before{content:"\2713";color:#3B6D11;}
+  .rules li.dont::before{content:"\2715";color:#A32D2D;}
+
+  .files{background:var(--indigo-soft);border-radius:14px;padding:20px 24px;margin-top:8px;}
+  .files h3{margin-top:0;}
+  .files ul{list-style:none;}
+  .files li{font-family:'Rajdhani',sans-serif;font-size:14px;padding:5px 0;color:var(--indigo);}
+  .files li span{color:var(--muted);font-family:'Inter',sans-serif;font-size:13px;}
+  .foot{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
+  a{color:var(--mid);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Stockwik</h1>
+  <p class="lede">Brand guidelines · v1</p>
+
+  <div class="hero">
+    <svg width="110" height="110" viewBox="0 0 100 100" role="img" aria-label="Stockwik mark">
+      <path d="M68.4 21.8 A42 42 0 1 1 15.6 83.4" fill="none" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round"/>
+      <circle cx="8.7" cy="66.6" r="3.6" fill="#EF9F27"/><circle cx="9.4" cy="48.5" r="3.6" fill="#EF9F27"/><circle cx="17.5" cy="32.5" r="3.6" fill="#EF9F27"/><circle cx="31.6" cy="21.5" r="3.6" fill="#EF9F27"/>
+      <polygon points="60.4,17.0 45.0,24.2 45.0,9.8" fill="#FFFFFF"/>
+      <circle cx="50" cy="60" r="14" fill="#EF9F27"/>
+    </svg>
+    <div class="wm">stockwik</div>
+  </div>
+
+  <h2>The mark</h2>
+  <p>The Stockwik symbol is a <strong>replenish loop</strong>: a near-complete circle that breaks at the top, with four dots climbing toward the gap and a triangle poised to close it. It reads as a cycle of depletion and replenishment — stock running down, then topped back up — which is exactly what the product does. The centered dot anchors it and doubles as the "current stock level."</p>
+
+  <h2>Color</h2>
+  <p>Deep indigo carries the brand; amber is the accent that signals action and energy. The amber is deliberately used sparingly — for the depletion dots in the mark, and in the product UI for buttons, alerts, and highlights.</p>
+  <div class="palette">
+    <div class="pc"><div class="chip" style="background:#26215C;"></div><div class="info"><div class="role">Indigo</div><div class="hex">#26215C</div><div class="use">Primary. Arc, triangle, wordmark, headings.</div></div></div>
+    <div class="pc"><div class="chip" style="background:#534AB7;"></div><div class="info"><div class="role">Mid purple</div><div class="hex">#534AB7</div><div class="use">Secondary. Center dot, links, subtle fills.</div></div></div>
+    <div class="pc"><div class="chip" style="background:#EF9F27;"></div><div class="info"><div class="role">Amber</div><div class="hex">#EF9F27</div><div class="use">Accent. Depletion dots, buttons, highlights.</div></div></div>
+    <div class="pc"><div class="chip" style="background:#1A1640;"></div><div class="info"><div class="role">Ink</div><div class="hex">#1A1640</div><div class="use">Body text on light backgrounds.</div></div></div>
+  </div>
+
+  <h2>Typography</h2>
+  <p><strong>Rajdhani</strong> sets the wordmark, all headings, display text, and numbers — its condensed, squared, technical letterforms give the brand a fast, precise, efficient feel that matches the "stock + quick" idea behind the name. It's especially strong on figures, which suits a data-dense inventory tool. <strong>Inter</strong> handles body copy and small UI text (labels, table data, captions) for maximum legibility, since condensed faces get cramped at small sizes. Reserve Rajdhani for large display use; let Inter carry anything small. Both are free and open-source (SIL Open Font License) and load directly from Google Fonts.</p>
+  <div class="type-demo">
+    <div class="big">Buy right. Stay stocked.</div>
+    <div class="row">
+      <span style="font-weight:400;font-size:22px;color:var(--ink);">Rajdhani Regular</span>
+      <span style="font-weight:500;font-size:22px;color:var(--ink);">Medium</span>
+      <span style="font-weight:600;font-size:22px;color:var(--ink);">SemiBold</span>
+      <span style="font-weight:700;font-size:22px;color:var(--ink);">Bold</span>
+    </div>
+    <p style="margin-top:18px;font-family:'Inter',sans-serif;color:#4a4657;">Body copy in Inter. Stockwik turns your real sales and inventory data into clear buy decisions — what to reorder, when, and how much — so you stop running out of bestsellers and stop tying up cash in dead stock.</p>
+  </div>
+
+  <h2>Logo variants</h2>
+  <div class="logos">
+    <div class="lt">
+      <svg width="84" height="84" viewBox="0 0 100 100" role="img" aria-label="primary"><path d="M68.4 21.8 A42 42 0 1 1 15.6 83.4" fill="none" stroke="#26215C" stroke-width="13" stroke-linecap="round"/><circle cx="8.7" cy="66.6" r="3.6" fill="#EF9F27"/><circle cx="9.4" cy="48.5" r="3.6" fill="#EF9F27"/><circle cx="17.5" cy="32.5" r="3.6" fill="#EF9F27"/><circle cx="31.6" cy="21.5" r="3.6" fill="#EF9F27"/><polygon points="60.4,17.0 45.0,24.2 45.0,9.8" fill="#26215C"/><circle cx="50" cy="60" r="14" fill="#534AB7"/></svg>
+      <div class="cap">Primary<br>(on light)</div>
+    </div>
+    <div class="lt dark">
+      <svg width="84" height="84" viewBox="0 0 100 100" role="img" aria-label="reversed"><path d="M68.4 21.8 A42 42 0 1 1 15.6 83.4" fill="none" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round"/><circle cx="8.7" cy="66.6" r="3.6" fill="#EF9F27"/><circle cx="9.4" cy="48.5" r="3.6" fill="#EF9F27"/><circle cx="17.5" cy="32.5" r="3.6" fill="#EF9F27"/><circle cx="31.6" cy="21.5" r="3.6" fill="#EF9F27"/><polygon points="60.4,17.0 45.0,24.2 45.0,9.8" fill="#FFFFFF"/><circle cx="50" cy="60" r="14" fill="#EF9F27"/></svg>
+      <div class="cap">Reversed<br>(on indigo)</div>
+    </div>
+    <div class="lt">
+      <svg width="84" height="84" viewBox="0 0 100 100" role="img" aria-label="mono"><path d="M68.4 21.8 A42 42 0 1 1 15.6 83.4" fill="none" stroke="#1A1640" stroke-width="13" stroke-linecap="round"/><circle cx="8.7" cy="66.6" r="3.6" fill="#1A1640"/><circle cx="9.4" cy="48.5" r="3.6" fill="#1A1640"/><circle cx="17.5" cy="32.5" r="3.6" fill="#1A1640"/><circle cx="31.6" cy="21.5" r="3.6" fill="#1A1640"/><polygon points="60.4,17.0 45.0,24.2 45.0,9.8" fill="#1A1640"/><circle cx="50" cy="60" r="14" fill="#1A1640"/></svg>
+      <div class="cap">Monochrome<br>(one color)</div>
+    </div>
+  </div>
+
+  <h2>Buttons, tabs &amp; UI components</h2>
+  <p>Interface components — buttons, tabs, form fields, and the patterns built from this palette and type — live in the <strong>Stockwik Design System</strong>, the developer-facing companion to this guide. This document stays focused on the brand foundation (logo, color, type); the design system shows how those translate into real UI. The design system references the color values defined here, so this guide remains the single source of truth for the palette.</p>
+
+  <h2>Usage rules</h2>
+  <ul class="rules">
+    <li class="do">Keep clear space around the mark equal to the diameter of the center dot.</li>
+    <li class="do">Use the reversed (white) mark on indigo or dark photographic backgrounds.</li>
+    <li class="do">Use the monochrome mark for engraving, faxes, single-color print, or watermarks.</li>
+    <li class="do">Keep the wordmark lowercase — "stockwik", never "Stockwik" or "STOCKWIK" in the logo.</li>
+    <li class="dont">Don't recolor the mark outside the brand palette, or use amber for the arc.</li>
+    <li class="dont">Don't rotate the mark, change the gap position, or alter the number of dots (always four).</li>
+    <li class="dont">Don't stretch, skew, or add effects (shadows, gradients, outlines) to the logo.</li>
+    <li class="dont">Don't set the wordmark in any font other than Rajdhani.</li>
+  </ul>
+
+  <h2>Files in this kit</h2>
+  <div class="files">
+    <ul>
+      <li>stockwik_mark_primary.svg &nbsp;<span>— indigo mark, transparent bg</span></li>
+      <li>stockwik_mark_reversed.svg &nbsp;<span>— white mark on indigo tile</span></li>
+      <li>stockwik_mark_mono.svg &nbsp;<span>— single-color (ink)</span></li>
+      <li>stockwik_favicon.svg &nbsp;<span>— rounded tile, optimized small</span></li>
+      <li>stockwik_lockup_horizontal.svg &nbsp;<span>— mark + wordmark, side by side</span></li>
+      <li>stockwik_lockup_stacked.svg &nbsp;<span>— mark above wordmark</span></li>
+    </ul>
+  </div>
+
+  <h3>Fonts</h3>
+  <p>Rajdhani — <a href="https://fonts.google.com/specimen/Rajdhani">fonts.google.com/specimen/Rajdhani</a><br>
+  Inter — <a href="https://fonts.google.com/specimen/Inter">fonts.google.com/specimen/Inter</a></p>
+  <p>Web embed: <code>@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap');</code></p>
+
+  <div class="foot">
+    Stockwik brand guidelines v1 · palette, type, and logo system. The SVG lockups reference Rajdhani by name; for environments without the font installed, convert the wordmark to outlines or keep the webfont import. Both fonts are licensed under the SIL Open Font License (free for commercial use).
+  </div>
+
+</div>
+</body>
+</html>

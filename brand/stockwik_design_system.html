@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stockwik — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --indigo:#26215C; --mid:#534AB7; --amber:#EF9F27; --ink:#1A1640;
+    --amber-soft:#FAEEDA; --indigo-soft:#EEEDFE;
+    --page:#FBFAF7; --card:#fff; --line:rgba(26,22,64,0.12); --muted:#6b6b7a;
+    --danger:#A32D2D; --ok:#3B6D11;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',sans-serif;background:var(--page);color:var(--ink);line-height:1.65;padding:56px 24px 96px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  h1{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:40px;letter-spacing:-0.025em;color:var(--indigo);}
+  h2{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.015em;color:var(--indigo);margin:48px 0 18px;padding-bottom:10px;border-bottom:2px solid var(--amber);}
+  h3{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:16px;color:var(--ink);margin:24px 0 10px;}
+  p{font-size:15px;margin-bottom:12px;max-width:66ch;}
+  .lede{font-size:17px;color:#3a3647;margin:8px 0 8px;}
+  .mono{font-family:'Rajdhani',sans-serif;font-variant-numeric:tabular-nums;}
+  code{font-family:'Inter',sans-serif;background:var(--indigo-soft);color:var(--indigo);padding:2px 7px;border-radius:5px;font-size:13px;font-weight:500;}
+  a{color:var(--mid);}
+
+  .callout{background:var(--indigo-soft);border-radius:12px;padding:16px 20px;font-size:14px;margin:14px 0;}
+  .callout strong{color:var(--indigo);}
+
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 24px;margin:24px 0 8px;}
+  .toc h3{margin-top:0;}
+  .toc ul{list-style:none;}
+  .toc li{font-family:'Inter',sans-serif;font-size:14px;padding:4px 0;}
+
+  .rules{list-style:none;margin-top:8px;}
+  .rules li{position:relative;padding-left:30px;margin-bottom:12px;font-size:15px;max-width:66ch;}
+  .rules li::before{position:absolute;left:0;top:1px;font-family:'Rajdhani',sans-serif;font-weight:600;}
+  .rules li.do::before{content:"\2713";color:var(--ok);}
+  .rules li.dont::before{content:"\2715";color:var(--danger);}
+
+  /* ---- Buttons ---- */
+  .btn{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:15px;padding:11px 22px;border-radius:8px;border:1.5px solid transparent;cursor:pointer;line-height:1;display:inline-flex;align-items:center;gap:8px;transition:background .15s ease,border-color .15s ease,color .15s ease,transform .05s ease;}
+  .btn:active{transform:translateY(1px);}
+  .btn:focus-visible{outline:3px solid rgba(83,74,183,0.45);outline-offset:2px;}
+  .btn-primary{background:var(--amber);color:var(--ink);}
+  .btn-primary:hover{background:#D98A14;}
+  .btn-secondary{background:var(--indigo);color:#fff;}
+  .btn-secondary:hover{background:#352D78;}
+  .btn-outline{background:transparent;color:var(--indigo);border-color:var(--indigo);}
+  .btn-outline:hover{background:var(--indigo-soft);}
+  .btn-ghost{background:transparent;color:var(--mid);padding-left:10px;padding-right:10px;}
+  .btn-ghost:hover{background:var(--indigo-soft);}
+  .btn-danger{background:#fff;color:var(--danger);border-color:#E0B4B4;}
+  .btn-danger:hover{background:#FBEDED;border-color:var(--danger);}
+  .btn-danger.solid{background:var(--danger);color:#fff;border-color:var(--danger);}
+  .btn-danger.solid:hover{background:#822323;}
+  .btn-sm{font-size:13px;padding:8px 15px;}
+  .btn-lg{font-size:17px;padding:14px 28px;}
+  .btn:disabled{opacity:0.45;cursor:not-allowed;}
+  .btn-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:18px;}
+  .demo{border:1px solid var(--line);border-radius:14px;padding:24px;background:var(--card);margin-top:8px;}
+  .demo .label{font-size:12px;text-transform:uppercase;letter-spacing:0.07em;color:var(--muted);margin:18px 0 10px;}
+  .demo .label:first-child{margin-top:0;}
+  .demo .note{font-size:13px;color:var(--muted);margin-top:4px;}
+  .on-dark{background:var(--indigo);border-radius:10px;padding:18px;margin-top:10px;}
+
+  /* ---- Tabs ---- */
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
+  .tablist{display:flex;gap:4px;padding:0 8px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none;}
+  .tablist::-webkit-scrollbar{display:none;}
+  .tab{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:14px;color:var(--muted);background:none;border:none;cursor:pointer;padding:16px 16px 14px;position:relative;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .15s ease,border-color .15s ease;}
+  .tab:hover{color:var(--indigo);}
+  .tab[aria-selected="true"]{color:var(--indigo);border-bottom-color:var(--amber);}
+  .tab:focus-visible{outline:3px solid rgba(83,74,183,0.4);outline-offset:-3px;border-radius:6px 6px 0 0;}
+  .tab .count{font-size:12px;font-weight:600;color:var(--mid);background:var(--indigo-soft);border-radius:20px;padding:1px 8px;margin-left:7px;vertical-align:middle;}
+  .tabpanel{padding:24px;}
+  .tabpanel[hidden]{display:none;}
+  .tablist.pillstyle{border-bottom:none;padding:6px;background:var(--indigo-soft);border-radius:12px;gap:4px;display:inline-flex;margin:0;}
+  .tablist.pillstyle .tab{padding:8px 16px;border-radius:8px;border-bottom:none;margin-bottom:0;}
+  .tablist.pillstyle .tab[aria-selected="true"]{background:var(--card);color:var(--indigo);box-shadow:0 1px 2px rgba(0,0,0,0.06);}
+
+  /* sample content */
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  th{text-align:left;font-family:'Rajdhani',sans-serif;font-weight:600;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:0.04em;padding:8px 10px;border-bottom:1px solid var(--line);}
+  td{padding:11px 10px;border-bottom:1px solid var(--line);}
+  tr:last-child td{border-bottom:none;}
+  .num{font-family:'Rajdhani',sans-serif;font-variant-numeric:tabular-nums;}
+  .pill{font-size:12px;font-weight:600;padding:2px 9px;border-radius:20px;}
+  .pill.low{background:#FBEDED;color:var(--danger);}
+  .pill.ok{background:#E8F3E0;color:var(--ok);}
+  .metric-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .metric{flex:1;min-width:140px;border:1px solid var(--line);border-radius:12px;padding:16px;}
+  .metric .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;}
+  .metric .v{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:28px;color:var(--indigo);margin-top:4px;}
+  .metric .v.amber{color:var(--amber);}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;margin-bottom:6px;}
+  .field input{width:100%;font-family:'Inter',sans-serif;font-size:14px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;}
+  .field input:focus{outline:none;border-color:var(--mid);box-shadow:0 0 0 3px rgba(83,74,183,0.15);}
+
+  /* ---- Data tables ---- */
+  .dt{width:100%;border-collapse:collapse;font-size:14px;}
+  .dt th{text-align:left;font-family:'Rajdhani',sans-serif;font-weight:600;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:0.04em;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--card);}
+  .dt td{padding:9px 14px;border-bottom:1px solid var(--line);}             /* compact default (~50+ rows) */
+  .dt.comfortable td{padding:12px 14px;}
+  .dt.relaxed td{padding:16px 14px;}
+  .dt tbody tr:last-child td{border-bottom:none;}
+  .dt .num{font-family:'Rajdhani',sans-serif;font-variant-numeric:tabular-nums;text-align:right;}
+  .dt th.num{text-align:right;}
+  /* clickable rows */
+  .dt.clickable tbody tr{cursor:pointer;transition:background .12s ease;}
+  .dt.clickable tbody tr:hover{background:var(--indigo-soft);}
+  .dt.clickable tbody tr:focus-visible{outline:2px solid var(--mid);outline-offset:-2px;background:var(--indigo-soft);}
+  /* optional zebra for very wide tables */
+  .dt.zebra tbody tr:nth-child(even){background:rgba(38,33,92,0.025);}
+  .dt.zebra.clickable tbody tr:hover{background:var(--indigo-soft);}
+  /* sticky header for long scrolling lists */
+  .dt-scroll{max-height:280px;overflow-y:auto;border:1px solid var(--line);border-radius:12px;}
+  .dt-scroll .dt th{position:sticky;top:0;z-index:1;box-shadow:0 1px 0 var(--line);}
+  .dt-scroll .dt{font-size:14px;}
+
+  /* ---- Typography specimen ---- */
+  .type-row{display:flex;align-items:baseline;gap:18px;padding:14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap;}
+  .type-row:last-child{border-bottom:none;}
+  .type-row .spec{flex:none;width:150px;font-size:12px;color:var(--muted);line-height:1.4;}
+  .type-row .spec b{display:block;font-family:'Inter',sans-serif;font-weight:600;color:var(--ink);font-size:13px;text-transform:none;letter-spacing:0;}
+  .ty-display{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:40px;letter-spacing:0.01em;line-height:1;color:var(--indigo);}
+  .ty-h1{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:30px;letter-spacing:0.01em;line-height:1.05;color:var(--ink);}
+  .ty-h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:21px;letter-spacing:0.02em;color:var(--ink);}
+  .ty-num{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:34px;letter-spacing:0.01em;color:var(--indigo);font-variant-numeric:tabular-nums;}
+  .ty-body{font-family:'Inter',sans-serif;font-weight:400;font-size:15px;color:var(--ink);max-width:52ch;}
+  .ty-small{font-family:'Inter',sans-serif;font-weight:400;font-size:13px;color:var(--muted);}
+  .ty-label{font-family:'Inter',sans-serif;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);}
+  .font-table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px;}
+  .font-table th{font-family:'Inter',sans-serif;text-align:left;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);padding:8px 12px;border-bottom:1px solid var(--line);}
+  .font-table td{padding:9px 12px;border-bottom:1px solid var(--line);}
+  .font-table tr:last-child td{border-bottom:none;}
+  .font-table .f{font-weight:600;}
+
+  /* ---- Form inputs ---- */
+  .fld{margin-bottom:18px;max-width:420px;}
+  .fld label{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;margin-bottom:6px;color:var(--ink);}
+  .fld label .opt{font-family:'Inter',sans-serif;font-weight:400;color:var(--muted);font-size:12px;margin-left:6px;}
+  .fld .help{font-size:12px;color:var(--muted);margin-top:6px;}
+  .fld .err{font-size:12px;color:var(--danger);margin-top:6px;}
+  .inp{width:100%;font-family:'Inter',sans-serif;font-size:14px;color:var(--ink);padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;transition:border-color .15s ease,box-shadow .15s ease;}
+  .inp::placeholder{color:#9b9aa6;}
+  .inp:hover{border-color:rgba(26,22,64,0.25);}
+  .inp:focus{outline:none;border-color:var(--mid);box-shadow:0 0 0 3px rgba(83,74,183,0.15);}
+  .inp:disabled{background:#f4f3f7;color:var(--muted);cursor:not-allowed;}
+  .inp.invalid{border-color:var(--danger);}
+  .inp.invalid:focus{box-shadow:0 0 0 3px rgba(163,45,45,0.15);}
+  select.inp{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2326215C' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:34px;}
+  /* input with prefix/suffix (e.g. $ or units) */
+  .inp-group{display:flex;align-items:stretch;max-width:420px;}
+  .inp-group .affix{display:flex;align-items:center;padding:0 12px;background:#f4f3f7;border:1px solid var(--line);color:var(--muted);font-size:14px;font-family:'Rajdhani',sans-serif;}
+  .inp-group .affix.pre{border-right:none;border-radius:8px 0 0 8px;}
+  .inp-group .affix.suf{border-left:none;border-radius:0 8px 8px 0;}
+  .inp-group .inp{border-radius:0;}
+  .inp-group .inp:first-child{border-radius:8px 0 0 8px;}
+  .inp-group .inp:last-child{border-radius:0 8px 8px 0;}
+  /* checkbox / radio / toggle */
+  .check{display:flex;align-items:center;gap:9px;font-size:14px;cursor:pointer;margin-bottom:10px;}
+  .check input{width:17px;height:17px;accent-color:var(--mid);cursor:pointer;}
+  .toggle{position:relative;width:40px;height:23px;flex:none;}
+  .toggle input{opacity:0;width:100%;height:100%;margin:0;cursor:pointer;}
+  .toggle .track{position:absolute;inset:0;background:#cfcdd6;border-radius:20px;transition:background .15s ease;pointer-events:none;}
+  .toggle .track::after{content:"";position:absolute;top:2px;left:2px;width:19px;height:19px;background:#fff;border-radius:50%;transition:transform .15s ease;box-shadow:0 1px 2px rgba(0,0,0,0.2);}
+  .toggle input:checked + .track{background:var(--mid);}
+  .toggle input:checked + .track::after{transform:translateX(17px);}
+  .toggle input:focus-visible + .track{outline:3px solid rgba(83,74,183,0.4);outline-offset:2px;}
+
+  /* ---- Badges ---- */
+  .badge{display:inline-flex;align-items:center;gap:5px;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;padding:3px 10px;border-radius:20px;line-height:1.4;}
+  .badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+  .badge-stockout{background:#FBEDED;color:#A32D2D;}
+  .badge-low{background:#FCEFD8;color:#9A6207;}
+  .badge-healthy{background:#E8F3E0;color:#3B6D11;}
+  .badge-overstock{background:var(--indigo-soft);color:var(--indigo);}
+  .badge-dead{background:#EEEDEB;color:#6b6b6b;}
+  .badge-neutral{background:#EEEDEB;color:#4a4a52;}
+
+  .foot{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Stockwik — Design System</h1>
+  <p class="lede">UI components and patterns · v1</p>
+  <p>This is the developer-facing companion to the brand guidelines. The brand guide is the source of truth for the logo, palette, and type; this doc shows how those translate into real interface components. Color values below reference the brand palette — if a hex ever changes, change it in the brand guide first.</p>
+
+  <div class="callout">
+    <strong>Color tokens</strong> (from the brand guidelines):
+    <span class="mono">indigo #26215C</span> · <span class="mono">mid #534AB7</span> · <span class="mono">amber #EF9F27</span> · <span class="mono">ink #1A1640</span>.
+    Defined once as CSS variables in <code>:root</code> (or Tailwind theme colors) and referenced everywhere — never hard-code hexes in components.
+  </div>
+
+  <div class="toc">
+    <h3>Components</h3>
+    <ul>
+      <li>0 · Typography</li>
+      <li>1 · Buttons</li>
+      <li>2 · Tabs</li>
+      <li>3 · Tables</li>
+      <li>4 · Form inputs</li>
+      <li>5 · Status badges</li>
+      <li><span style="color:var(--muted);">More to come: cards, modals, toasts, empty states…</span></li>
+    </ul>
+  </div>
+
+  <!-- ================= BUTTONS ================= -->
+  <h2>0 · Typography</h2>
+  <p>Two typefaces, each with a clear job. <strong>Rajdhani Bold</strong> is the display face — condensed, squared, and technical, it gives the brand its fast, precise feel and is especially strong on numbers. <strong>Inter</strong> is the workhorse for everything people actually read closely. The rule that keeps it coherent: <strong>Rajdhani for large or short-form display (headings, the wordmark, big metric numbers, buttons, badges); Inter for everything small or running (body copy, labels, table data, captions, code).</strong> Condensed faces cramp at small sizes, so don't reach for Rajdhani on small paragraph or label text.</p>
+
+  <div class="demo">
+    <div class="type-row"><div class="spec"><b>Display</b>Rajdhani Bold · 40px</div><div class="ty-display">Buy right. Stay stocked.</div></div>
+    <div class="type-row"><div class="spec"><b>Heading 1</b>Rajdhani Bold · 30px</div><div class="ty-h1">Suggested reorders</div></div>
+    <div class="type-row"><div class="spec"><b>Heading 2</b>Rajdhani Bold · 21px</div><div class="ty-h2">Inbound shipments</div></div>
+    <div class="type-row"><div class="spec"><b>Metric number</b>Rajdhani Bold · 34px · tabular</div><div class="ty-num">1,248</div></div>
+    <div class="type-row"><div class="spec"><b>Body</b>Inter Regular · 15px</div><div class="ty-body">Stockwik turns your real sales and inventory data into clear buy decisions — what to reorder, when, and how much.</div></div>
+    <div class="type-row"><div class="spec"><b>Small / caption</b>Inter · 13px</div><div class="ty-small">Synced 4 minutes ago · 128 SKUs tracked</div></div>
+    <div class="type-row"><div class="spec"><b>Label / eyebrow</b>Inter SemiBold · 12px · uppercase</div><div class="ty-label">Needs reorder</div></div>
+  </div>
+
+  <h3>Which font goes where</h3>
+  <table class="font-table">
+    <thead><tr><th>Element</th><th>Font</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Wordmark, page headings (h1–h3)</td><td class="f">Rajdhani Bold</td><td>Large display — carries brand personality</td></tr>
+      <tr><td>Metric numbers, big figures</td><td class="f">Rajdhani Bold</td><td>Condensed face is sharpest on numerals</td></tr>
+      <tr><td>Buttons, status badges, table headers</td><td class="f">Rajdhani</td><td>Short uppercase labels where the condensed look reads as intentional</td></tr>
+      <tr><td>Body copy, descriptions</td><td class="f">Inter</td><td>Built for screen reading at length</td></tr>
+      <tr><td>Form labels, captions, code</td><td class="f">Inter</td><td>Small running text — Rajdhani cramps here</td></tr>
+      <tr><td>Table data &amp; numbers in rows</td><td class="f">Inter (text) / Rajdhani (figures, tabular)</td><td>Readable text in Inter; align numerals with tabular figures</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Type scale</h3>
+  <p>A simple scale keeps sizes consistent. Display 40 / H1 30 / H2 21 / H3 16 (Rajdhani); body 15 / small 13 / label 12 (Inter). Line-height ~1.0–1.1 for Rajdhani display (tight, since it's condensed), ~1.55–1.65 for Inter body (open, for readability).</p>
+
+  <h2>1 · Buttons</h2>
+  <p>The button hierarchy follows one rule: <strong>amber means "do this," indigo means "this is structural."</strong> Reserve the amber primary for the single most important action on a view — the rest of the page uses quieter styles so that one action stands out. Labels are Rajdhani SemiBold; corners use an 8px radius echoing the loop mark's rounded ends.</p>
+
+  <div class="demo">
+    <div class="label">Primary — one per view, the main action</div>
+    <div class="btn-row">
+      <button class="btn btn-primary">Start free trial</button>
+      <button class="btn btn-primary">Create purchase order</button>
+      <button class="btn btn-primary btn-sm">Small</button>
+      <button class="btn btn-primary btn-lg">Large</button>
+    </div>
+    <div class="note">Amber <span class="mono">#EF9F27</span> with ink text (<span class="mono">#1A1640</span>) — ink not white, since amber is too light for white text to meet contrast (7.84:1 with ink vs. 2.17:1 with white).</div>
+
+    <div class="label">Secondary — important, not the hero</div>
+    <div class="btn-row">
+      <button class="btn btn-secondary">Save changes</button>
+      <button class="btn btn-secondary">View details</button>
+    </div>
+    <div class="note">Indigo <span class="mono">#26215C</span> with white text (14.4:1).</div>
+
+    <div class="label">Outline &amp; ghost — secondary / low-stakes</div>
+    <div class="btn-row">
+      <button class="btn btn-outline">Cancel</button>
+      <button class="btn btn-outline">Back</button>
+      <button class="btn btn-ghost">Learn more →</button>
+    </div>
+
+    <div class="label">Destructive — deletes and removals</div>
+    <div class="btn-row">
+      <button class="btn btn-danger">Remove supplier</button>
+      <button class="btn btn-danger solid">Delete purchase order</button>
+    </div>
+    <div class="note">Deliberately outside the brand palette so destructive actions never blend in. Soft by default; solid red for final confirmation.</div>
+
+    <div class="label">Pairing &amp; disabled state</div>
+    <div class="btn-row">
+      <button class="btn btn-primary">Confirm order</button>
+      <button class="btn btn-outline">Cancel</button>
+      <button class="btn btn-primary" disabled>Disabled</button>
+    </div>
+
+    <div class="label">On a dark / indigo background</div>
+    <div class="on-dark">
+      <div class="btn-row" style="margin-bottom:0;">
+        <button class="btn btn-primary">Start free trial</button>
+        <button class="btn" style="background:#fff;color:var(--indigo);">Secondary</button>
+        <button class="btn" style="background:transparent;color:#fff;border-color:rgba(255,255,255,0.5);">Outline</button>
+      </div>
+    </div>
+  </div>
+
+  <h3>Button rules</h3>
+  <ul class="rules">
+    <li class="do">Use exactly one amber primary per screen or section — it marks the main action.</li>
+    <li class="do">Always pair a filled primary with a quieter outline/ghost for the secondary choice.</li>
+    <li class="do">Keep a visible focus ring for keyboard users (the purple outline on focus).</li>
+    <li class="dont">Don't put two amber primaries side by side — they cancel each other out.</li>
+    <li class="dont">Don't use white text on amber (fails contrast) — use ink instead.</li>
+    <li class="dont">Don't use the brand palette for destructive actions — keep red separate.</li>
+  </ul>
+
+  <!-- ================= TABS ================= -->
+  <h2>2 · Tabs</h2>
+  <p>Tabs are navigation, not actions — so they stay quiet and don't compete with amber buttons. The default is an <strong>underline style</strong>: muted gray inactive labels, with the active tab getting darker indigo text plus a 2px amber underline as a "you are here" cue. Best for 2–4 short labels.</p>
+
+  <div class="panel">
+    <div class="tablist" role="tablist" aria-label="Inventory detail">
+      <button class="tab" role="tab" aria-selected="true"  aria-controls="p1" id="t1">Stock <span class="count">128</span></button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p2" id="t2">Forecast</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p3" id="t3">Suppliers <span class="count">6</span></button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p4" id="t4">Settings</button>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="p1" aria-labelledby="t1">
+      <table>
+        <thead><tr><th>SKU</th><th>Product</th><th class="num">On hand</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="num">GF-1042</td><td>Citra Hops 1lb</td><td class="num">8</td><td><span class="pill low">Reorder</span></td></tr>
+          <tr><td class="num">GF-2210</td><td>Pilsner Malt 50lb</td><td class="num">34</td><td><span class="pill ok">OK</span></td></tr>
+          <tr><td class="num">GF-0788</td><td>US-05 Yeast</td><td class="num">12</td><td><span class="pill ok">OK</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+      <div class="metric-row">
+        <div class="metric"><div class="k">30-day velocity</div><div class="v">42<span style="font-size:15px;color:var(--muted);">/wk</span></div></div>
+        <div class="metric"><div class="k">Days of cover</div><div class="v amber">9</div></div>
+        <div class="metric"><div class="k">Suggested buy</div><div class="v">144</div></div>
+      </div>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+      <table>
+        <thead><tr><th>Supplier</th><th>Lead time</th><th class="num">MOQ</th></tr></thead>
+        <tbody>
+          <tr><td>Brewers Supply Group</td><td>5 days</td><td class="num">12</td></tr>
+          <tr><td>Country Malt</td><td>7 days</td><td class="num">1 pallet</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+      <div class="field"><label>Reorder point override</label><input type="text" value="10" /></div>
+      <div class="field"><label>Safety stock (days)</label><input type="text" value="3" /></div>
+    </div>
+  </div>
+  <p class="note" style="font-size:13px;color:var(--muted);margin-top:12px;">Optional count badges show volume before a click — useful for data tabs. Drop them where they help.</p>
+
+  <h3>Alternate — soft pill (use sparingly)</h3>
+  <p>Pill tabs read as a compact toggle — good for a small "switch the view of this one thing" control (table vs. chart), less good as primary page-section navigation, where they get heavy.</p>
+  <div class="panel" style="padding:20px;">
+    <div class="tablist pillstyle" role="tablist" aria-label="View toggle">
+      <button class="tab" role="tab" aria-selected="true">Table</button>
+      <button class="tab" role="tab" aria-selected="false">Chart</button>
+      <button class="tab" role="tab" aria-selected="false">Summary</button>
+    </div>
+  </div>
+
+  <h3>Tab rules</h3>
+  <ul class="rules">
+    <li class="do">Keep the underline style for primary page-section navigation.</li>
+    <li class="do">Implement proper ARIA roles (tablist / tab / tabpanel) and arrow-key navigation.</li>
+    <li class="do">Make the whole tab a click target, not just the text.</li>
+    <li class="dont">Don't mute inactive labels so far they look disabled.</li>
+    <li class="dont">Don't mix underline and pill styles for the same purpose — reserve pills for inline toggles.</li>
+  </ul>
+
+  <div class="callout">
+    <strong>Implementation note.</strong> In the React/Vite app, don't hand-roll tab logic — drive the active tab with state, or use an accessible headless library (Radix UI Tabs, Headless UI) and apply these CSS classes. That gets keyboard/ARIA handling for free. The styling here is the deliverable; any inline demo script is throwaway scaffolding.
+  </div>
+
+  <!-- ================= TABLES ================= -->
+  <h2>3 · Tables</h2>
+  <p>Tables are the workhorse of the app, usually showing long SKU/inventory lists. Defaults are tuned for that: <strong>compact row spacing</strong> so more rows fit on screen, <strong>right-aligned tabular numbers</strong> so quantities and costs line up for easy comparison, and <strong>clickable rows</strong> with a clear hover state. Comfortable and relaxed density variants are available for shorter tables.</p>
+
+  <h3>Default — compact, clickable rows</h3>
+  <p>Vertical padding of 9px keeps long lists scannable. Rows show a pointer cursor and an indigo-soft hover tint; numbers are right-aligned in tabular figures.</p>
+  <div class="panel" style="padding:0;">
+    <table class="dt clickable">
+      <thead><tr><th>SKU</th><th>Product</th><th class="num">On hand</th><th class="num">Reorder pt</th><th class="num">Unit cost</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="num">GF-1042</td><td>Citra Hops 1lb</td><td class="num">8</td><td class="num">15</td><td class="num">$12.50</td><td><span class="pill low">Reorder</span></td></tr>
+        <tr><td class="num">GF-2210</td><td>Pilsner Malt 50lb</td><td class="num">34</td><td class="num">10</td><td class="num">$38.00</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td class="num">GF-0788</td><td>US-05 Yeast</td><td class="num">12</td><td class="num">20</td><td class="num">$4.95</td><td><span class="pill low">Reorder</span></td></tr>
+        <tr><td class="num">GF-3301</td><td>Corny Keg 5gal</td><td class="num">6</td><td class="num">4</td><td class="num">$89.00</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td class="num">GF-1180</td><td>Star San 32oz</td><td class="num">21</td><td class="num">12</td><td class="num">$17.25</td><td><span class="pill ok">OK</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note" style="font-size:13px;color:var(--muted);margin-top:10px;">Hover a row to see the click affordance. Numbers right-align so columns of digits compare at a glance — the single biggest readability win for inventory data.</p>
+
+  <h3>Long lists — sticky header + scroll</h3>
+  <p>For 50+ row lists, wrap the table so the header stays pinned while the body scrolls. Pair with the compact default.</p>
+  <div class="dt-scroll">
+    <table class="dt clickable">
+      <thead><tr><th>SKU</th><th>Product</th><th class="num">On hand</th><th class="num">30d sold</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="num">GF-1042</td><td>Citra Hops 1lb</td><td class="num">8</td><td class="num">52</td><td><span class="pill low">Reorder</span></td></tr>
+        <tr><td class="num">GF-2210</td><td>Pilsner Malt 50lb</td><td class="num">34</td><td class="num">18</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td class="num">GF-0788</td><td>US-05 Yeast</td><td class="num">12</td><td class="num">41</td><td><span class="pill low">Reorder</span></td></tr>
+        <tr><td class="num">GF-3301</td><td>Corny Keg 5gal</td><td class="num">6</td><td class="num">3</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td class="num">GF-1180</td><td>Star San 32oz</td><td class="num">21</td><td class="num">9</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td class="num">GF-5520</td><td>Mangrove Jack M44</td><td class="num">3</td><td class="num">22</td><td><span class="pill low">Reorder</span></td></tr>
+        <tr><td class="num">GF-4410</td><td>Cascade Hops 1lb</td><td class="num">17</td><td class="num">31</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td class="num">GF-6201</td><td>Vienna Malt 10lb</td><td class="num">9</td><td class="num">14</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td class="num">GF-7788</td><td>Auto-Siphon 3/8"</td><td class="num">4</td><td class="num">7</td><td><span class="pill low">Reorder</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Density variants</h3>
+  <p>Add <code>.comfortable</code> (12px) for medium tables, or <code>.relaxed</code> (16px) for short tables where breathing room reads as premium. Default (no class) is compact.</p>
+  <div class="panel" style="padding:0;margin-bottom:14px;">
+    <table class="dt relaxed">
+      <thead><tr><th>Supplier</th><th class="num">Lead time</th><th class="num">MOQ</th></tr></thead>
+      <tbody>
+        <tr><td>Brewers Supply Group</td><td class="num">5 days</td><td class="num">12</td></tr>
+        <tr><td>Country Malt</td><td class="num">7 days</td><td class="num">1 pallet</td></tr>
+        <tr><td>Yakima Valley Hops</td><td class="num">3 days</td><td class="num">5 lb</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Table rules</h3>
+  <ul class="rules">
+    <li class="do">Right-align numeric columns and use tabular figures so digits line up.</li>
+    <li class="do">Default to compact spacing for long lists; reserve relaxed for short tables.</li>
+    <li class="do">Give clickable rows a pointer cursor, a hover tint, and a keyboard focus outline.</li>
+    <li class="do">Use a sticky header for any list long enough to scroll.</li>
+    <li class="dont">Don't add vertical gridlines — horizontal hairlines alone are cleaner to scan.</li>
+    <li class="dont">Don't use zebra striping on narrow tables; reserve it for very wide ones where the eye loses its row.</li>
+    <li class="dont">Don't left-align numbers or mix proportional and tabular figures in a column.</li>
+  </ul>
+
+  <div class="callout">
+    <strong>Implementation note.</strong> For long lists in the React app, plain HTML tables are fine into the low hundreds of rows. Past that, reach for a virtualized table (TanStack Table + virtualization) so only visible rows render — but keep these exact classes for styling so the look stays consistent. Sorting, filtering, and column resizing also live in TanStack Table rather than hand-rolled.
+  </div>
+
+  <!-- ================= FORM INPUTS ================= -->
+  <h2>4 · Form inputs</h2>
+  <p>Forms appear on every create/edit screen — PO builders, supplier settings, product detail. The defaults: a Rajdhani SemiBold label, an Inter input at 14px, an 8px radius to match buttons, and a purple focus ring matching the rest of the system. Keep field widths consistent (≈420px max for single-column forms) so edges align.</p>
+
+  <div class="demo">
+    <div class="label">Text field — with label, helper, and error</div>
+    <div class="fld">
+      <label>Supplier name</label>
+      <input class="inp" type="text" placeholder="e.g. Brewers Supply Group" />
+      <div class="help">The name shown on purchase orders.</div>
+    </div>
+    <div class="fld">
+      <label>Reorder point <span class="opt">optional</span></label>
+      <input class="inp invalid" type="text" value="abc" />
+      <div class="err">Must be a whole number.</div>
+    </div>
+
+    <div class="label">Number with unit / cost affixes</div>
+    <div class="fld">
+      <label>Unit cost</label>
+      <div class="inp-group"><span class="affix pre">$</span><input class="inp" type="text" value="12.50" /></div>
+    </div>
+    <div class="fld">
+      <label>Safety stock</label>
+      <div class="inp-group"><input class="inp" type="text" value="3" /><span class="affix suf">days</span></div>
+    </div>
+
+    <div class="label">Select / dropdown</div>
+    <div class="fld">
+      <label>Pack type</label>
+      <select class="inp"><option>Each</option><option>Case of 12</option><option>Pallet</option></select>
+    </div>
+
+    <div class="label">Disabled</div>
+    <div class="fld">
+      <label>SKU</label>
+      <input class="inp" type="text" value="GF-1042" disabled />
+      <div class="help">Auto-generated — can't be edited.</div>
+    </div>
+
+    <div class="label">Checkbox, radio &amp; toggle</div>
+    <label class="check"><input type="checkbox" checked /> Auto-create draft POs at reorder point</label>
+    <label class="check"><input type="checkbox" /> Email supplier on send</label>
+    <div style="height:6px;"></div>
+    <label class="check"><input type="radio" name="r" checked /> Round to pack size</label>
+    <label class="check"><input type="radio" name="r" /> Round to MOQ</label>
+    <div style="height:10px;"></div>
+    <label class="check"><span class="toggle"><input type="checkbox" checked /><span class="track"></span></span> Sync inventory back to Shopify</label>
+  </div>
+
+  <h3>Form rules</h3>
+  <ul class="rules">
+    <li class="do">Always pair an input with a label; mark optional fields, not required ones (required is the default expectation).</li>
+    <li class="do">Put units and currency in affixes ($, days, lb) so the value field stays clean.</li>
+    <li class="do">Show errors inline below the field in red, with a specific message — not just a red border.</li>
+    <li class="do">Keep one consistent max width so stacked fields align on the left and right.</li>
+    <li class="dont">Don't use placeholder text as a substitute for a label — it vanishes on input.</li>
+    <li class="dont">Don't reach for amber on inputs; the purple focus ring is the system's input accent.</li>
+  </ul>
+
+  <!-- ================= BADGES ================= -->
+  <h2>5 · Status badges</h2>
+  <p>Inventory states recur on nearly every screen, so their colors are <strong>locked semantically</strong> — the same state is always the same color, app-wide. These replace the ad-hoc pills used earlier in the table examples. The optional leading dot helps the state read at a glance in dense tables.</p>
+
+  <div class="demo">
+    <div class="label">Inventory states (semantic — don't remap these colors)</div>
+    <div class="btn-row">
+      <span class="badge badge-stockout"><span class="dot"></span>Stockout</span>
+      <span class="badge badge-low"><span class="dot"></span>Low</span>
+      <span class="badge badge-healthy"><span class="dot"></span>Healthy</span>
+      <span class="badge badge-overstock"><span class="dot"></span>Overstock</span>
+      <span class="badge badge-dead"><span class="dot"></span>Dead stock</span>
+    </div>
+    <div class="note">Stockout = red (urgent), Low = amber/brown (attention), Healthy = green, Overstock = indigo (cash tied up), Dead = gray (inert).</div>
+
+    <div class="label">Neutral / count badge</div>
+    <div class="btn-row">
+      <span class="badge badge-neutral">Draft</span>
+      <span class="badge badge-neutral">3 open POs</span>
+      <span class="badge badge-overstock">Synced</span>
+    </div>
+
+    <div class="label">In context — a table</div>
+    <div class="panel" style="padding:0;">
+      <table class="dt clickable">
+        <thead><tr><th>SKU</th><th>Product</th><th class="num">On hand</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="num">GF-1042</td><td>Citra Hops 1lb</td><td class="num">0</td><td><span class="badge badge-stockout"><span class="dot"></span>Stockout</span></td></tr>
+          <tr><td class="num">GF-0788</td><td>US-05 Yeast</td><td class="num">8</td><td><span class="badge badge-low"><span class="dot"></span>Low</span></td></tr>
+          <tr><td class="num">GF-2210</td><td>Pilsner Malt 50lb</td><td class="num">34</td><td><span class="badge badge-healthy"><span class="dot"></span>Healthy</span></td></tr>
+          <tr><td class="num">GF-3301</td><td>Corny Keg 5gal</td><td class="num">210</td><td><span class="badge badge-overstock"><span class="dot"></span>Overstock</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>Badge rules</h3>
+  <ul class="rules">
+    <li class="do">Treat the inventory-state colors as fixed meaning — define once, never remap per screen.</li>
+    <li class="do">Use the leading dot in dense tables where the color needs to register fast.</li>
+    <li class="dont">Don't invent new state colors ad hoc — add to this set so the vocabulary stays small.</li>
+    <li class="dont">Don't reuse the destructive-red badge for anything but a genuine stockout/urgent state.</li>
+  </ul>
+
+  <div class="foot">
+    Stockwik design system v1 · companion to the brand guidelines. Colors reference the brand palette (single source of truth). Fonts: Rajdhani (display/labels) + Inter (body), both SIL OFL.
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('[role="tablist"]').forEach(list=>{
+    const tabs=[...list.querySelectorAll('[role="tab"]')];
+    tabs.forEach((tab,i)=>{
+      tab.addEventListener('click',()=>activate(tabs,tab));
+      tab.addEventListener('keydown',e=>{
+        if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+          e.preventDefault();
+          const dir=e.key==='ArrowRight'?1:-1;
+          const next=tabs[(i+dir+tabs.length)%tabs.length];
+          next.focus(); activate(tabs,next);
+        }
+      });
+    });
+  });
+  function activate(tabs,active){
+    tabs.forEach(t=>{
+      const sel=t===active;
+      t.setAttribute('aria-selected',sel);
+      const panelId=t.getAttribute('aria-controls');
+      if(panelId){const p=document.getElementById(panelId);if(p)p.hidden=!sel;}
+    });
+  }
+</script>
+</body>
+</html>
