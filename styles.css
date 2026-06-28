@@ -1,0 +1,215 @@
+/* ============================================================
+   STOCKWIK — site stylesheet
+   Type: Rajdhani Bold (display/headings/numbers) + Inter (body)
+   Palette: indigo foundation, amber accent used sparingly
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+  --indigo:#26215C;
+  --indigo-deep:#1A1640;
+  --mid:#534AB7;
+  --mid-soft:#EEEDFE;
+  --amber:#EF9F27;
+  --amber-soft:#FCEFD8;
+  --ink:#1A1640;
+  --paper:#FBFAF7;
+  --paper-2:#F4F2EC;
+  --wash-indigo:#F5F4FC;
+  --card:#FFFFFF;
+  --line:rgba(26,22,64,0.12);
+  --line-soft:rgba(26,22,64,0.07);
+  --muted:#6B6A78;
+  --ok:#3B6D11;
+  --danger:#A32D2D;
+
+  --maxw:1120px;
+  --r:14px;
+  --r-sm:9px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;}
+a{color:inherit;text-decoration:none;}
+
+/* ---------- type ---------- */
+.display{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:0.005em;line-height:1.02;}
+h1,h2,h3,h4{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:0.01em;line-height:1.05;color:var(--ink);}
+h1{font-size:clamp(40px,6vw,68px);}
+h2{font-size:clamp(30px,4vw,44px);}
+h3{font-size:22px;}
+.eyebrow{font-family:'Inter',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);}
+.lede{font-size:clamp(17px,2vw,20px);color:#3a3647;line-height:1.55;max-width:60ch;}
+.num{font-family:'Rajdhani',sans-serif;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:0.01em;}
+
+/* ---------- layout ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+.section{padding:88px 0;}
+.section-sm{padding:56px 0;}
+@media(max-width:680px){.section{padding:60px 0;}}
+
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft);}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand svg{width:34px;height:34px;}
+.brand .wm{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:25px;letter-spacing:0.01em;color:var(--indigo);}
+.nav-links{display:flex;align-items:center;gap:30px;}
+.nav-links a{font-size:14.5px;font-weight:500;color:#43404f;transition:color .15s;}
+.nav-links a:hover{color:var(--indigo);}
+.nav-cta{display:flex;align-items:center;gap:14px;}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--indigo);}
+@media(max-width:860px){
+  .nav-links{display:none;}
+  .menu-btn{display:block;}
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;letter-spacing:0.02em;
+  padding:12px 22px;border-radius:var(--r-sm);border:1.5px solid transparent;cursor:pointer;
+  display:inline-flex;align-items:center;gap:9px;transition:transform .05s,background .15s,border-color .15s,color .15s;
+  white-space:nowrap;
+}
+.btn:active{transform:translateY(1px);}
+.btn-primary{background:var(--amber);color:var(--indigo-deep);}
+.btn-primary:hover{background:#e0900f;}
+.btn-ghost{background:transparent;color:var(--indigo);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--indigo);background:#fff;}
+.btn-white{background:#fff;color:var(--indigo);}
+.btn-white:hover{background:var(--paper-2);}
+.btn-lg{font-size:18px;padding:15px 28px;}
+.shopify-ic{width:18px;height:18px;}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;}
+.hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;padding:72px 0 84px;}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:40px;padding:48px 0 60px;}}
+.hero h1 span.amber{color:var(--amber);}
+.hero .lede{margin-top:20px;}
+.hero-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+.hero-note{margin-top:16px;font-size:13.5px;color:var(--muted);}
+
+/* ---------- product preview card (reused) ---------- */
+.preview{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px -28px rgba(26,22,64,0.35);overflow:hidden;}
+.preview-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line-soft);background:var(--paper-2);}
+.preview-bar i{width:11px;height:11px;border-radius:50%;background:#d9d6cf;display:block;}
+.preview-body{padding:18px;}
+.metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px;}
+.metric{border:1px solid var(--line);border-radius:11px;padding:13px;}
+.metric .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:600;}
+.metric .v{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:30px;line-height:1.1;margin-top:3px;color:var(--indigo);}
+.metric .v.amber{color:var(--amber);} .metric .v.danger{color:var(--danger);}
+table.mini{width:100%;border-collapse:collapse;font-size:13px;}
+table.mini th{font-family:'Rajdhani',sans-serif;font-weight:600;text-transform:uppercase;font-size:12px;letter-spacing:0.04em;color:var(--muted);text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);}
+table.mini th.num,table.mini td.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.mini td{padding:9px 10px;border-bottom:1px solid var(--line-soft);}
+table.mini tr:last-child td{border-bottom:none;}
+.badge{display:inline-flex;align-items:center;gap:5px;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:0.03em;padding:2px 9px;border-radius:20px;text-transform:uppercase;white-space:nowrap;}
+.badge .dot{width:5px;height:5px;border-radius:50%;background:currentColor;}
+.b-out{background:var(--amber-soft);color:#9A6207;} .b-ok{background:#E8F3E0;color:var(--ok);} .b-stop{background:#FBEDED;color:var(--danger);}
+.b-watch{background:var(--mid-soft);color:var(--indigo);}
+
+/* ---------- logos / trust strip ---------- */
+.trust{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);background:var(--paper-2);}
+.trust .wrap{display:flex;align-items:center;gap:32px;flex-wrap:wrap;justify-content:center;padding-top:22px;padding-bottom:22px;}
+.trust span{font-size:13px;color:var(--muted);font-weight:500;}
+
+/* ---------- feature grid ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+@media(max-width:860px){.grid-3{grid-template-columns:1fr;}.grid-2{grid-template-columns:1fr;}}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:border-color .15s,transform .15s;}
+.feat:hover{border-color:var(--mid);transform:translateY(-2px);}
+.feat .ic{width:42px;height:42px;border-radius:10px;background:var(--mid-soft);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.feat .ic svg{width:34px;height:34px;}
+.feat h3{margin-bottom:8px;}
+.feat p{font-size:14.5px;color:#4a4757;}
+
+/* ---------- section heading block ---------- */
+.sec-head{max-width:720px;margin-bottom:44px;}
+.sec-head .eyebrow{margin-bottom:14px;display:block;}
+.sec-head p{margin-top:14px;}
+
+/* ---------- "how" steps — a real sequence, so numbering is earned ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s;}
+@media(max-width:860px){.steps{grid-template-columns:1fr;}}
+.step{position:relative;padding-top:20px;border-top:2px solid var(--indigo);}
+.step .n{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;color:var(--mid);letter-spacing:0.05em;}
+.step h3{margin:10px 0 8px;}
+.step p{font-size:14.5px;color:#4a4757;}
+
+/* ---------- big CTA band ---------- */
+.cta-band{background:var(--indigo);color:#fff;border-radius:22px;padding:56px;text-align:center;position:relative;overflow:hidden;}
+.cta-band h2{color:#fff;}
+.cta-band .lede{color:rgba(255,255,255,0.8);margin:16px auto 0;}
+.cta-band .hero-actions{justify-content:center;}
+.cta-band .loop-bg{position:absolute;right:-60px;top:-60px;width:280px;height:280px;opacity:0.13;}
+@media(max-width:680px){.cta-band{padding:38px 24px;}}
+
+/* ---------- footer ---------- */
+.site-footer{background:var(--indigo-deep);color:rgba(255,255,255,0.72);padding:56px 0 32px;margin-top:0;}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;}
+@media(max-width:780px){.foot-grid{grid-template-columns:1fr 1fr;gap:28px;}}
+.site-footer .brand .wm{color:#fff;}
+.site-footer h4{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:14px;}
+.site-footer a{display:block;font-size:14px;padding:5px 0;color:rgba(255,255,255,0.72);transition:color .15s;}
+.site-footer a:hover{color:#fff;}
+.foot-about{font-size:14px;line-height:1.6;margin-top:14px;max-width:34ch;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,0.12);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:rgba(255,255,255,0.5);}
+
+/* ---------- pricing ---------- */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start;}
+@media(max-width:860px){.price-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;}}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;position:relative;}
+.plan.featured{border-color:var(--mid);border-width:2px;box-shadow:0 20px 50px -30px rgba(83,74,183,0.5);}
+.plan .tag{position:absolute;top:-12px;left:30px;background:var(--amber);color:var(--indigo-deep);font-family:'Rajdhani',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;padding:4px 12px;border-radius:20px;}
+.plan .pname{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:22px;color:var(--ink);}
+.plan .price{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:50px;line-height:1;margin:14px 0 4px;color:var(--indigo);}
+.plan .price small{font-size:16px;color:var(--muted);font-weight:600;}
+.plan .pdesc{font-size:14px;color:var(--muted);min-height:42px;}
+.plan ul{list-style:none;margin:20px 0 24px;}
+.plan li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;padding:7px 0;}
+.plan li svg{width:18px;height:18px;flex:none;margin-top:2px;}
+.plan .btn{width:100%;justify-content:center;}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:780px;margin:0 auto;}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0;}
+.faq summary{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:19px;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";font-size:24px;color:var(--mid);font-weight:400;}
+.faq details[open] summary::after{content:"–";}
+.faq p{margin-top:12px;font-size:15px;color:#4a4757;}
+
+/* ---------- comparison table ---------- */
+.cmp{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;}
+.cmp th,.cmp td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line-soft);font-size:14.5px;}
+.cmp thead th{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;letter-spacing:0.02em;background:var(--paper-2);}
+.cmp thead th.us{color:var(--indigo);background:var(--mid-soft);}
+.cmp td.center,.cmp th.center{text-align:center;}
+.cmp tr:last-child td{border-bottom:none;}
+.cmp .yes{color:var(--ok);font-weight:600;}
+.cmp .no{color:var(--muted);}
+.tick{width:18px;height:18px;display:inline-block;vertical-align:middle;}
+
+/* ---------- callout ---------- */
+.callout{background:var(--mid-soft);border-radius:var(--r);padding:26px 28px;display:flex;gap:18px;align-items:flex-start;}
+.callout svg{width:26px;height:26px;flex:none;}
+.callout p{font-size:15px;color:#3a3550;}
+
+/* ---------- misc ---------- */
+.center{text-align:center;}
+.mt-0{margin-top:0;}
+:focus-visible{outline:3px solid rgba(83,74,183,0.45);outline-offset:2px;border-radius:4px;}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}

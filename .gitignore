@@ -1,0 +1,22 @@
+# Screenshots & local renders
+*.png
+*.jpg
+*.jpeg
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Dependencies (if you add a build step later)
+node_modules/
+dist/
+.cache/
+
+# Env / secrets — never commit these
+.env
+.env.*
+*.key
+*.pem
