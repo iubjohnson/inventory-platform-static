@@ -184,6 +184,15 @@ table.mini tr:last-child td{border-bottom:none;}
 .plan li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;padding:7px 0;}
 .plan li svg{width:18px;height:18px;flex:none;margin-top:2px;}
 .plan .btn{width:100%;justify-content:center;}
+.plan .ptag{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:18px;color:var(--indigo);margin-top:12px;}
+.plan .pplus{font-size:13.5px;font-weight:600;color:var(--ink);margin:2px 0 0;}
+.plan .pnote{font-size:12.5px;color:#4a4757;background:var(--mid-soft);border-radius:8px;padding:11px 13px;margin:0 0 18px;line-height:1.5;}
+.includes{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 26px;margin-bottom:26px;}
+.includes-head{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;color:var(--indigo);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:14px;}
+.includes-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:9px 28px;}
+.includes-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink);}
+.includes-list li svg{width:17px;height:17px;flex:none;margin-top:2px;}
+@media(max-width:640px){.includes-list{grid-template-columns:1fr;}}
 
 /* ---------- FAQ ---------- */
 .faq{max-width:780px;margin:0 auto;}
