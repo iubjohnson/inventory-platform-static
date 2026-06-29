@@ -68,6 +68,8 @@ h3{font-size:22px;}
 .nav-links a{font-size:14.5px;font-weight:500;color:#43404f;transition:color .15s;}
 .nav-links a:hover{color:var(--indigo);}
 .nav-cta{display:flex;align-items:center;gap:14px;}
+.login-link{font-size:14.5px;font-weight:500;color:#43404f;transition:color .15s;}
+.login-link:hover{color:var(--indigo);}
 .menu-btn{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--indigo);}
 @media(max-width:860px){
   .nav-links{display:none;}
