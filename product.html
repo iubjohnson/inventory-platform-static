@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product — Reorder points, purchase orders, transfers & cycle counts | Stockwik</title>
-<meta name="description" content="Stockwik's inventory planning features for Shopify: recency-weighted demand forecasting, automatic reorder points, vendor-grouped purchase orders, receiving with Shopify sync, multi-location transfers, and cycle counting.">
+<title>Product — Reorder points, purchase orders, transfers, counts & reporting | Stockwik</title>
+<meta name="description" content="Stockwik's inventory planning features for Shopify: recency-weighted demand forecasting, automatic reorder points, vendor-grouped purchase orders, receiving with Shopify sync, multi-location transfers, cycle counting, and a built-in reporting suite (CSV/PDF).">
 <link rel="icon" type="image/svg+xml" href="assets/mark_primary.svg">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -93,7 +93,7 @@
     <div>
       <span class="eyebrow">Purchase orders</span>
       <h2 style="margin-top:14px;">From buy plan to PO<br>in one click.</h2>
-      <p class="lede" style="margin-top:18px;">Stockwik nets out your current stock and open POs, rounds to supplier pack sizes and minimum order quantities, and groups everything by vendor into draft purchase orders — or start a one-off PO any time you need to. Edit, email, or print to PDF, then receive shipments in full or in part, with stock written back to Shopify automatically and a full audit trail.</p>
+      <p class="lede" style="margin-top:18px;">Stockwik nets out your current stock and open POs, rounds to supplier pack sizes and minimum order quantities, and groups everything by vendor into draft purchase orders — or start a one-off PO any time you need to. Review, edit, and send each one to your supplier by email or PDF.</p>
     </div>
     <div class="preview">
       <div class="preview-bar"><i></i><i></i><i></i></div>
@@ -115,10 +115,43 @@
   </div>
 </section>
 
-<!-- FEATURE 4: transfers (reversed) -->
+<!-- FEATURE 4: receiving (reversed) -->
 <section class="section" style="background:var(--paper-2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);">
   <div class="wrap hero-grid" style="padding:0;">
     <div class="preview" style="order:1;">
+      <div class="preview-bar"><i></i><i></i><i></i></div>
+      <div class="preview-body">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <div style="font-family:'Rajdhani',sans-serif;font-weight:700;font-size:18px;color:var(--indigo);">PO-1188 · Receiving</div>
+          <span class="badge b-watch"><span class="dot"></span>Partial</span>
+        </div>
+        <table class="mini">
+          <thead><tr><th>Item</th><th class="num">Ordered</th><th class="num">Received</th></tr></thead>
+          <tbody>
+            <tr><td>Heavyweight Tee · Black / M</td><td class="num">144</td><td class="num">144</td></tr>
+            <tr><td>Crewneck Hoodie · Navy / L</td><td class="num">96</td><td class="num">96</td></tr>
+            <tr><td>Ribbed Beanie · Charcoal</td><td class="num">48</td><td class="num">36</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="order:2;">
+      <span class="eyebrow">Receiving</span>
+      <h2 style="margin-top:14px;">Receive shipments,<br>stock updates itself.</h2>
+      <p class="lede" style="margin-top:18px;">When goods arrive, check them in against the PO — in full or in part, with backorders tracked on whatever's still owed. Stockwik writes the received quantities straight back to Shopify, captures real landed cost per unit, and logs every receipt to an audit trail, so your on-hand and your margins are right the moment the boxes land.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE 5: transfers -->
+<section class="section">
+  <div class="wrap hero-grid" style="padding:0;">
+    <div>
+      <span class="eyebrow">Inventory transfers</span>
+      <h2 style="margin-top:14px;">Move stock to<br>where it sells.</h2>
+      <p class="lede" style="margin-top:18px;">When one location is selling out while another sits on surplus, rebalance instead of over-buying. Build a transfer between your Shopify locations, send it, and Stockwik updates inventory at both the origin and destination in Shopify when it's received — with the same audit trail as a PO.</p>
+    </div>
+    <div class="preview">
       <div class="preview-bar"><i></i><i></i><i></i></div>
       <div class="preview-body">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
@@ -135,23 +168,13 @@
         </table>
       </div>
     </div>
-    <div style="order:2;">
-      <span class="eyebrow">Inventory transfers</span>
-      <h2 style="margin-top:14px;">Move stock to<br>where it sells.</h2>
-      <p class="lede" style="margin-top:18px;">When one location is selling out while another sits on surplus, rebalance instead of over-buying. Build a transfer between your Shopify locations, send it, and Stockwik updates inventory at both the origin and destination in Shopify when it's received — with the same audit trail as a PO.</p>
-    </div>
   </div>
 </section>
 
-<!-- FEATURE 5: cycle counts -->
-<section class="section">
+<!-- FEATURE 6: cycle counts (reversed) -->
+<section class="section" style="background:var(--paper-2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);">
   <div class="wrap hero-grid" style="padding:0;">
-    <div>
-      <span class="eyebrow">Cycle counts</span>
-      <h2 style="margin-top:14px;">Keep your on-hand<br>numbers honest.</h2>
-      <p class="lede" style="margin-top:18px;">Every forecast and reorder point rests on accurate stock. Count a slice of your catalog on a schedule instead of shutting the store for an annual count — enter or scan counts, see the variance against Shopify at a glance, and post adjustments that sync straight back. Small, regular counts keep your numbers from drifting.</p>
-    </div>
-    <div class="preview">
+    <div class="preview" style="order:1;">
       <div class="preview-bar"><i></i><i></i><i></i></div>
       <div class="preview-body">
         <table class="mini">
@@ -160,6 +183,40 @@
             <tr><td>Pima Tee · S / Olive</td><td class="num">46</td><td class="num">48</td><td class="num" style="color:var(--danger);">−2</td></tr>
             <tr><td>Chino Shorts · 36 / Charcoal</td><td class="num">30</td><td class="num">30</td><td class="num">0</td></tr>
             <tr><td>Oxford Shirt · M / White</td><td class="num">12</td><td class="num">9</td><td class="num" style="color:var(--ok);">+3</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="order:2;">
+      <span class="eyebrow">Cycle counts</span>
+      <h2 style="margin-top:14px;">Keep your on-hand<br>numbers honest.</h2>
+      <p class="lede" style="margin-top:18px;">Every forecast and reorder point rests on accurate stock. Count a slice of your catalog on a schedule instead of shutting the store for an annual count — enter or scan counts, see the variance against Shopify at a glance, and post adjustments that sync straight back. Small, regular counts keep your numbers from drifting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE 7: reporting -->
+<section class="section">
+  <div class="wrap hero-grid" style="padding:0;">
+    <div>
+      <span class="eyebrow">Reporting</span>
+      <h2 style="margin-top:14px;">The numbers behind<br>every decision.</h2>
+      <p class="lede" style="margin-top:18px;">Stockwik ships a full reporting suite across four areas — inventory &amp; valuation, sales &amp; profitability, purchasing &amp; suppliers, and operations &amp; audit. Dig into dead-stock and overstock value, ABC analysis, gross margin, supplier lead-time and fill rate, cycle-count shrinkage, and a complete movement ledger. Set any date range, then export to CSV or PDF.</p>
+    </div>
+    <div class="preview">
+      <div class="preview-bar"><i></i><i></i><i></i></div>
+      <div class="preview-body">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <div style="font-family:'Rajdhani',sans-serif;font-weight:700;font-size:18px;color:var(--indigo);">Reports</div>
+          <span class="badge b-watch"><span class="dot"></span>CSV · PDF</span>
+        </div>
+        <table class="mini">
+          <thead><tr><th>Report group</th><th class="num">Reports</th></tr></thead>
+          <tbody>
+            <tr><td>Inventory &amp; valuation</td><td class="num">5</td></tr>
+            <tr><td>Sales &amp; profitability</td><td class="num">5</td></tr>
+            <tr><td>Purchasing &amp; suppliers</td><td class="num">4</td></tr>
+            <tr><td>Operations &amp; audit</td><td class="num">3</td></tr>
           </tbody>
         </table>
       </div>
