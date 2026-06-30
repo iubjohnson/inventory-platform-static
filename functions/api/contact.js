@@ -5,12 +5,13 @@
 //   RESEND_API_KEY   — your Resend API key
 // Optional env vars (sensible defaults below):
 //   CONTACT_TO       — where messages are delivered   (default info@stockwik.com)
-//   CONTACT_FROM     — verified Resend sender         (default Stockwik <contact@stockwik.com>)
+//   CONTACT_FROM     — verified Resend sender         (default Stockwik Website <contact@notifications.stockwik.com>)
 //
-// NOTE: the CONTACT_FROM address must be on a domain you've verified in Resend.
+// NOTE: the CONTACT_FROM address must be on a domain/subdomain you've verified
+// in Resend. The verified sender domain here is notifications.stockwik.com.
 
 const DEFAULT_TO = "info@stockwik.com";
-const DEFAULT_FROM = "Stockwik Website <contact@stockwik.com>";
+const DEFAULT_FROM = "Stockwik Website <contact@notifications.stockwik.com>";
 const MAX_MESSAGE = 5000;
 
 export async function onRequestPost(context) {
