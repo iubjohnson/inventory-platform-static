@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Stockwik</title>
+<meta name="description" content="Get in touch with the Stockwik team. Questions about inventory planning, migrating from Stocky, or whether Stockwik fits your Shopify store — email info@stockwik.com or send a message.">
+<link rel="icon" type="image/svg+xml" href="assets/mark_primary.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img src="assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
+    <nav class="nav-links">
+      <a href="product.html">Product</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="stocky-alternative.html">Stocky alternative</a>
+    </nav>
+    <div class="nav-cta"><a class="login-link" href="https://app.stockwik.com" target="_blank" rel="noopener noreferrer">Log in</a><a class="btn btn-primary" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=install_cta&amp;utm_content=contact_header"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a></div>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- CONTACT -->
+<section class="section" style="padding-top:64px;">
+  <div class="wrap hero-grid" style="align-items:start;">
+    <div>
+      <span class="eyebrow">Contact</span>
+      <h1 style="margin:16px 0 14px;">Get in touch.</h1>
+      <p class="lede">Questions about Stockwik, migrating from Stocky, or whether it's the right fit for your store? Send a note and it comes straight to us.</p>
+      <p style="margin-top:26px;font-size:15px;color:#3a3647;">Prefer email? Reach us anytime at<br><a href="mailto:info@stockwik.com" style="color:var(--mid);font-weight:600;font-size:17px;">info@stockwik.com</a></p>
+      <p style="margin-top:18px;font-size:14px;color:var(--muted);">We usually reply within one business day.</p>
+    </div>
+    <div class="contact-card">
+      <form id="contactForm" class="cform" method="POST" action="/api/contact" novalidate>
+        <div>
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div>
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" placeholder="you@yourstore.com" required>
+        </div>
+        <div>
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="How can we help?" required></textarea>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Company (leave blank)<input name="company" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+        <noscript><p style="font-size:13px;color:var(--muted);margin-top:4px;">JavaScript is off — please email us directly at info@stockwik.com.</p></noscript>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand"><img src="assets/mark_white.svg" alt="" style="width:32px;height:32px;"><span class="wm">stockwik</span></div><p class="foot-about">Inventory planning, forecasting, and purchasing for small and mid-size Shopify merchants. Built by an operator who lived the problem.</p></div>
+      <div><h4>Product</h4><a href="product.html">Features</a><a href="pricing.html">Pricing</a><a href="stocky-alternative.html">Stocky alternative</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a><a href="#">Blog</a></div>
+      <div><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Stockwik. All rights reserved.</span><span>Made for Shopify merchants.</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form=document.getElementById('contactForm');
+  var statusEl=document.getElementById('cf-status');
+  if(!form) return;
+  function show(kind,msg){statusEl.textContent=msg;statusEl.className='form-status show '+kind;}
+  if(new URLSearchParams(location.search).get('sent')==='1'){
+    show('ok','Thanks — your message has been sent. We’ll get back to you shortly.');
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('cf-name').value.trim();
+    var email=document.getElementById('cf-email').value.trim();
+    var message=document.getElementById('cf-message').value.trim();
+    var company=form.querySelector('[name=company]').value;
+    if(!name||!email||!message){show('err','Please fill in your name, email, and message.');return;}
+    var btn=form.querySelector('button[type=submit]');
+    var label=btn.textContent;
+    btn.disabled=true;btn.textContent='Sending…';
+    fetch('/api/contact',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({name:name,email:email,message:message,company:company})
+    })
+      .then(function(r){return r.json().catch(function(){return {ok:r.ok};});})
+      .then(function(res){
+        if(res&&res.ok){form.reset();show('ok',(res&&res.message)||'Thanks — your message has been sent.');}
+        else{show('err',(res&&res.message)||'Something went wrong. Please email us at info@stockwik.com.');}
+      })
+      .catch(function(){show('err','Something went wrong. Please email us at info@stockwik.com.');})
+      .finally(function(){btn.disabled=false;btn.textContent=label;});
+  });
+})();
+</script>
+
+</body>
+</html>

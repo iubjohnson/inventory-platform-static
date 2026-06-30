@@ -200,6 +200,21 @@ table.mini tr:last-child td{border-bottom:none;}
 .includes-list li svg{width:17px;height:17px;flex:none;margin-top:2px;}
 @media(max-width:640px){.includes-list{grid-template-columns:1fr;}}
 
+/* contact form */
+.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;}
+.cform{display:flex;flex-direction:column;gap:15px;}
+.cform label{display:block;font-weight:600;font-size:13px;margin-bottom:6px;color:var(--ink);}
+.cform input[type=text],.cform input[type=email],.cform textarea{width:100%;font-family:'Inter',sans-serif;font-size:14px;color:var(--ink);padding:11px 13px;border:1px solid var(--line);border-radius:8px;background:#fff;transition:border-color .15s,box-shadow .15s;}
+.cform input::placeholder,.cform textarea::placeholder{color:#9b9aa6;}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--mid);box-shadow:0 0 0 3px rgba(83,74,183,0.15);}
+.cform textarea{resize:vertical;min-height:140px;}
+.cform .hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden;}
+.cform .btn{align-self:flex-start;}
+.form-status{font-size:14px;margin-top:2px;display:none;}
+.form-status.show{display:block;}
+.form-status.ok{color:var(--ok);}
+.form-status.err{color:var(--danger);}
+
 /* ---------- FAQ ---------- */
 .faq{max-width:780px;margin:0 auto;}
 .faq details{border-bottom:1px solid var(--line);padding:18px 0;}
