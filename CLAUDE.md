@@ -63,7 +63,7 @@ All "Install on Shopify" + "Start free trial" buttons link to:
 `https://apps.shopify.com/stockwik-inventory-management`
 with UTM params: `utm_source=stockwik_site&utm_medium=referral&utm_campaign=install_cta`
 and a per-location `utm_content` (e.g. home_hero, pricing_growth, stocky_cta).
-Encode `&` as `&amp;` in HTML. Footer About/Contact/Blog/Privacy/Terms are Phase 2 stubs (href="#") — leave them.
+Encode `&` as `&amp;` in HTML. Footer About/Contact/Privacy/Terms are now live pages; only Blog remains a Phase 2 stub (href="#").
 
 ## Verified Stocky facts (for the stocky-alternative page)
 - Full shutdown + API deactivation: **Aug 31, 2026**. App Store delisting: **Feb 2, 2026**.
@@ -72,11 +72,16 @@ Encode `&` as `&amp;` in HTML. Footer About/Contact/Blog/Privacy/Terms are Phase
 - Always keep competitive claims factual and verifiable.
 
 ## Pre-launch TODO (placeholders to replace)
-- [ ] Real pricing (the $29/$79/$199 tiers are placeholder)
+- [x] Real pricing (Starter $29 / Growth $39 / Pro $79 — shipped)
 - [ ] Confirm current Shopify POS Pro price
 - [ ] Wire mobile hamburger menu (button exists, no toggle JS yet)
-- [ ] Build Phase 2 pages: About, Contact, Blog, Privacy, Terms
+- [ ] Phase 2 pages: About, Contact, Privacy, Terms done; **Blog** still a stub
 - [ ] App Store listing name: "Stockwik: Inventory Planning" (≤30 chars, brand-first)
+- [ ] **Legal pages — before go-live:** have an attorney review privacy.html & terms.html, and fill these placeholders:
+  - `[Legal Entity Name]` — privacy.html + terms.html
+  - `[State/Country]` governing law — terms.html (appears twice)
+  - `[Business mailing address]` — privacy.html + terms.html
+  - Confirm Google Analytics is actually deployed (named as a subprocessor in privacy.html); remove that row if not
 
 ## Local dev
 Static site — just serve the folder:
