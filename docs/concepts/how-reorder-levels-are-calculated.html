@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How reorder levels are calculated — Stockwik Help</title>
+<meta name="description" content="Stockwik answers three questions for every product: when to reorder, how much to order, and how urgent it is. It does this from your real sales history — no guessing, no spreadshee">
+<link rel="icon" type="image/svg+xml" href="/assets/mark_primary.svg">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/index.html"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
+    <nav class="nav-links">
+      <a href="/product.html">Product</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/stocky-alternative.html">Stocky alternative</a>
+    </nav>
+    <div class="nav-cta"><a class="login-link" href="https://app.stockwik.com" target="_blank" rel="noopener noreferrer">Log in</a><a class="btn btn-primary" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=install_cta&amp;utm_content=docs_header"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a></div>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+<section class="section docs-section">
+  <div class="wrap docs-wrap">
+    <button class="docs-menu-btn" data-sidebar-toggle aria-label="Toggle docs menu">☰ Docs menu</button>
+    <aside class="docs-sidebar">
+      <div class="docs-search" data-docs-search>
+        <input type="search" placeholder="Search the docs…" aria-label="Search the docs" autocomplete="off">
+        <div class="docs-search-results" data-results></div>
+      </div>
+      <nav class="docs-nav" aria-label="Docs"><div class="docs-nav-sec"><h5>Getting started</h5><ul><li><a href="/docs/getting-started/what-is-stockwik.html">What is Stockwik?</a></li><li><a href="/docs/getting-started/installing.html">Installing Stockwik</a></li><li><a href="/docs/getting-started/choosing-a-plan.html">Choosing a plan</a></li><li><a href="/docs/getting-started/creating-your-account.html">Creating your account</a></li><li><a href="/docs/getting-started/onboarding-walkthrough.html">The onboarding walkthrough</a></li><li><a href="/docs/getting-started/dashboard-tour.html">Dashboard tour</a></li></ul></div><div class="docs-nav-sec"><h5>Core concepts</h5><ul><li><a href="/docs/concepts/inventory-on-hand-available-committed.html">Inventory: on hand, available &amp; committed</a></li><li><a href="/docs/concepts/how-sales-velocity-works.html">How sales velocity works</a></li><li><a href="/docs/concepts/how-reorder-levels-are-calculated.html" class="active" aria-current="page">How reorder levels are calculated</a></li><li><a href="/docs/concepts/planning-defaults-and-overrides.html">Planning defaults &amp; overrides</a></li><li><a href="/docs/concepts/abc-classification.html">ABC classification</a></li><li><a href="/docs/concepts/buy-options-and-pack-sizes.html">Buy options &amp; pack sizes</a></li><li><a href="/docs/concepts/how-syncing-works.html">How syncing works</a></li><li><a href="/docs/concepts/glossary.html">Glossary</a></li></ul></div><div class="docs-nav-sec"><h5>Inventory</h5><ul><li><a href="/docs/inventory/inventory-list-and-views.html">Inventory list &amp; views</a></li><li><a href="/docs/inventory/product-detail.html">Product detail</a></li><li><a href="/docs/inventory/import-export-inventory.html">Import &amp; export inventory</a></li></ul></div><div class="docs-nav-sec"><h5>Suppliers</h5><ul><li><a href="/docs/suppliers/managing-suppliers.html">Managing suppliers</a></li><li><a href="/docs/suppliers/buy-options.html">Buy options</a></li><li><a href="/docs/suppliers/import-export.html">Import &amp; export</a></li></ul></div><div class="docs-nav-sec"><h5>Reordering</h5><ul><li><a href="/docs/reordering/the-reorder-page.html">The Reorder page</a></li><li><a href="/docs/reordering/understanding-suggestions.html">Understanding suggestions</a></li><li><a href="/docs/reordering/create-pos-from-suggestions.html">Create POs from suggestions</a></li></ul></div><div class="docs-nav-sec"><h5>Purchase orders</h5><ul><li><a href="/docs/purchase-orders/creating-and-editing-pos.html">Creating &amp; editing POs</a></li><li><a href="/docs/purchase-orders/sending-a-po.html">Sending a PO</a></li><li><a href="/docs/purchase-orders/receiving-stock.html">Receiving stock</a></li></ul></div><div class="docs-nav-sec"><h5>Counts</h5><ul><li><a href="/docs/counts/cycle-counts-and-adjustments.html">Cycle counts &amp; adjustments</a></li></ul></div><div class="docs-nav-sec"><h5>Transfers</h5><ul><li><a href="/docs/transfers/transferring-stock.html">Transferring stock</a></li></ul></div><div class="docs-nav-sec"><h5>Reports</h5><ul><li><a href="/docs/reports/reports-overview.html">Reports overview</a></li></ul></div><div class="docs-nav-sec"><h5>Settings</h5><ul><li><a href="/docs/settings/planning-defaults.html">Planning defaults</a></li><li><a href="/docs/settings/company-profile.html">Company profile</a></li><li><a href="/docs/settings/locations.html">Locations</a></li><li><a href="/docs/settings/plan-and-billing.html">Plan &amp; billing</a></li></ul></div><div class="docs-nav-sec"><h5>Account &amp; billing</h5><ul><li><a href="/docs/account/plans-and-features.html">Plans &amp; features</a></li><li><a href="/docs/account/changing-your-plan.html">Changing your plan</a></li><li><a href="/docs/account/workspace-and-team.html">Workspace &amp; team</a></li><li><a href="/docs/account/reconnecting-your-store.html">Reconnecting your store</a></li></ul></div><div class="docs-nav-sec"><h5>Troubleshooting</h5><ul><li><a href="/docs/troubleshooting/faq.html">FAQ</a></li><li><a href="/docs/troubleshooting/common-issues.html">Common issues</a></li></ul></div></nav>
+    </aside>
+    <main class="docs-main">
+      <nav class="docs-breadcrumb"><a href="/docs/">Docs</a><span>/</span><span>Core concepts</span></nav>
+      <article class="doc-content">
+<h1>How reorder levels are calculated</h1>
+<p>Stockwik answers three questions for every product: <strong>when</strong> to reorder, <strong>how much</strong> to order, and <strong>how urgent</strong> it is. It does this from your real sales history — no guessing, no spreadsheets. This page explains exactly how those numbers are built so you can trust them and tune them with confidence.</p>
+<p>Every product gets two levels:</p>
+<ul><li>a <strong>reorder point</strong> (the <em>minimum</em> — when to order), and</li><li>an <strong>order-up-to level</strong> (the <em>maximum</em> — how high to refill).</li></ul>
+<p>Both are driven by how fast the product sells, how long your supplier takes to deliver, and how much buffer you want to keep.</p>
+<div class="doc-callout note"><div class="doc-callout-label">Note</div><div class="doc-callout-body">All of this math uses <strong>Available</strong> stock (what's free to sell), not On hand. If you're unsure of the difference, see <a href="/docs/concepts/inventory-on-hand-available-committed.html">Inventory: on hand, available &amp; committed</a>.</div></div>
+<hr>
+<h2>The reorder point (minimum)</h2>
+<p>This is the stock level at which you should place a new order. The idea is simple: you want to reorder while you still have <em>just enough</em> stock to last until the new shipment arrives — plus a safety cushion.</p>
+<p><strong>Reorder point = daily sales × (supplier lead time + safety-stock days)</strong></p>
+<ul><li><strong>Daily sales</strong> — how many units you sell per day, on average (see <a href="/docs/concepts/how-sales-velocity-works.html">How sales velocity works</a>).</li><li><strong>Supplier lead time</strong> — how many days your supplier takes to deliver after you place an order (set on each supplier; defaults to 7 days).</li><li><strong>Safety-stock days</strong> — extra buffer days to protect against a sales spike or a late delivery (an org-wide default of 14 days, adjustable per product).</li></ul>
+<div class="doc-callout plain-english"><div class="doc-callout-label">Plain English</div><div class="doc-callout-body">"Order when I have just enough left to cover the delivery wait, with a couple of weeks of buffer on top."</div></div>
+<h2>The order-up-to level (maximum)</h2>
+<p>When you do reorder, this is the level you refill <em>up to</em>. It represents how much stock you want on the shelf when a shipment lands.</p>
+<p><strong>Order-up-to = daily sales × days of cover</strong></p>
+<ul><li><strong>Days of cover</strong> — how many days of demand you want to hold (an org-wide default of 56 days — about 8 weeks — adjustable per product).</li></ul>
+<div class="doc-callout plain-english"><div class="doc-callout-label">Plain English</div><div class="doc-callout-body">"Keep about 8 weeks of stock on hand."</div></div>
+<hr>
+<h2>A worked example</h2>
+<p>Say a product sells <strong>0.5 units per day</strong>, your supplier's <strong>lead time is 7 days</strong>, your <strong>safety stock is 14 days</strong>, and your <strong>days of cover is 56</strong>:</p>
+<div class="doc-table-wrap"><table><thead><tr><th>Level</th><th>Math</th><th>Result</th></tr></thead><tbody><tr><td><strong>Reorder point</strong></td><td>0.5 × (7 + 14)</td><td><strong>≈ 10 units</strong></td></tr><tr><td><strong>Order-up-to</strong></td><td>0.5 × 56</td><td><strong>28 units</strong></td></tr></tbody></table></div>
+<p>So: when this product's available stock drops to about <strong>10</strong>, Stockwik flags it to reorder, and suggests buying enough to bring it back up to <strong>28</strong>.</p>
+<hr>
+<h2>How the suggested order quantity is figured</h2>
+<p>On the <a href="/docs/reordering/the-reorder-page.html">Reorder page</a>, Stockwik doesn't just tell you <em>that</em> to order — it tells you <em>how much</em>:</p>
+<p><strong>Suggested quantity = order-up-to − available − incoming</strong></p>
+<ul><li><strong>Incoming</strong> is anything already on an open purchase order, so you're never told to double-order.</li><li>The result is rounded <strong>up</strong> to your supplier's minimum order quantity (MOQ) and pack size, so you order whole cases or pallets rather than odd units.</li></ul>
+<p>Continuing the example: order-up-to is 28, you have 12 available and 0 incoming → suggested order ≈ <strong>16 units</strong>. If you buy that item by the case of 12, Stockwik rounds up to <strong>2 cases (24 units)</strong>.</p>
+<div class="doc-callout tip"><div class="doc-callout-label">Tip</div><div class="doc-callout-body">Products that are well-stocked ("Watch" or "Healthy") usually suggest <strong>0</strong> — they don't need ordering yet. You can still type in a quantity to add them to an order if you want to top up.</div></div>
+<hr>
+<h2>Seasonal products</h2>
+<p>Some products sell steadily; others spike at a certain time of year. Stockwik detects when a product has a <strong>strong seasonal peak</strong> and treats it differently:</p>
+<ul><li><strong>During its peak season</strong>, the order-up-to level is calculated from the product's <em>peak</em> sales rate — so you stock up ahead of the rush.</li><li><strong>Outside peak season</strong>, it uses the normal blended rate — so you don't carry peak-sized inventory all year and end up overstocked.</li></ul>
+<p>You don't have to configure this; it's detected automatically from the product's sales pattern. (More in <a href="/docs/concepts/how-sales-velocity-works.html">How sales velocity works</a>.)</p>
+<hr>
+<h2>When you want to override the math</h2>
+<p>The calculated levels are a strong default, but you're always in control. On a product's detail page (<strong>Replenishment rules</strong> tab) you can:</p>
+<ul><li><strong>Pin a minimum or maximum</strong> to a fixed number — useful when a supplier has a hard minimum, or you simply always want a certain quantity on the shelf. A pinned value <strong>replaces</strong> the formula for that product.</li><li><strong>Override days of cover or safety stock</strong> for just that product — e.g. raise safety stock on a critical item with an unreliable supplier, or lower days of cover on a slow mover to avoid dead stock.</li></ul>
+<p>Org-wide defaults live in <strong>Settings → Planning defaults</strong>; per-product overrides live on the product. See <a href="/docs/concepts/planning-defaults-and-overrides.html">Planning defaults &amp; overrides</a>.</p>
+<div class="doc-callout note"><div class="doc-callout-label">Note</div><div class="doc-callout-body">When you pin an override, the Reorder page still shows you what the formula <em>would</em> have suggested, so you can compare.</div></div>
+<hr>
+<h2>What the statuses mean</h2>
+<p>On the Reorder page and the inventory list, each product carries a status based on these levels:</p>
+<div class="doc-table-wrap"><table><thead><tr><th>Status</th><th>What it means</th></tr></thead><tbody><tr><td><strong>Stockout risk</strong></td><td>You'll run out before a new order could arrive — even if you order today. Act now.</td></tr><tr><td><strong>Reorder</strong></td><td>At or below the reorder point. Time to order.</td></tr><tr><td><strong>Watch</strong></td><td>Above the reorder point but trending toward it. No action needed yet.</td></tr><tr><td><strong>Healthy</strong></td><td>Comfortably stocked.</td></tr><tr><td><strong>On order</strong></td><td>Units are already incoming on an open purchase order.</td></tr></tbody></table></div>
+<hr>
+<h2>Related</h2>
+<ul><li><a href="/docs/concepts/how-sales-velocity-works.html">How sales velocity works</a></li><li><a href="/docs/concepts/inventory-on-hand-available-committed.html">Inventory: on hand, available &amp; committed</a></li><li><a href="/docs/concepts/planning-defaults-and-overrides.html">Planning defaults &amp; overrides</a></li><li><a href="/docs/reordering/the-reorder-page.html">The Reorder page</a></li></ul>
+      </article>
+    </main>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand"><img src="/assets/mark_white.svg" alt="" style="width:32px;height:32px;"><span class="wm">stockwik</span></div><p class="foot-about">Inventory planning, forecasting, and purchasing for small and mid-size Shopify merchants. Built by an operator who lived the problem.</p></div>
+      <div><h4>Product</h4><a href="/product.html">Features</a><a href="/pricing.html">Pricing</a><a href="/stocky-alternative.html">Stocky alternative</a><a href="/docs/">Docs</a></div>
+      <div><h4>Company</h4><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="#">Blog</a></div>
+      <div><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Stockwik. All rights reserved.</span><span>Made for Shopify merchants.</span></div>
+  </div>
+</footer>
+<script src="/docs/search-index.js"></script>
+<script src="/docs/docs.js"></script>
+</body>
+</html>
