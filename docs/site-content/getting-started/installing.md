@@ -6,9 +6,6 @@ Stockwik installs from the Shopify App Store and connects to your store in a few
 
 1. Find **Stockwik** in the Shopify App Store and click **Install**.
 2. Shopify shows a **permissions** screen listing what Stockwik needs access to. Click **Install** / **Approve** to continue.
-
-`[SCREENSHOT: Shopify install / permissions screen]`
-
 ## What Stockwik can access
 
 Stockwik asks for the minimum it needs to plan your inventory:

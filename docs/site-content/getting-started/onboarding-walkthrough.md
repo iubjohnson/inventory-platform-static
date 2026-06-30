@@ -1,9 +1,6 @@
 # The onboarding walkthrough
 
 The first time you open Stockwik, a setup wizard walks you through connecting your store and getting your planning data in shape. It takes just a few minutes, and most steps are optional — you can refine everything later. Here's what each step does.
-
-`[SCREENSHOT: onboarding step indicator showing the seven steps]`
-
 ## Step 1 — Connect
 
 Stockwik connects to your Shopify store so it can read your products, inventory, sales, and locations.
@@ -38,7 +35,7 @@ You can:
 
 Two settings shape every reorder suggestion. Both are in days, and both can be fine-tuned per product later.
 
-- **Days of cover** — how many days of stock you want to hold. This sets your *order-up-to* (maximum) level. A common starting point is **30–60 days**. (Default: 56.)
+- **Days of cover** — how many days of stock you want to hold. This sets your *order-up-to* (maximum) level. A common starting point is **60–90 days**. (Default: 90.)
 - **Safety stock (days)** — extra buffer on top of your supplier's lead time, to absorb demand spikes or late deliveries. This feeds your *reorder point*. (Default: 14.)
 
 If you have more than one location, you'll also pick a **default receiving location** — where new purchase orders are delivered.
@@ -64,9 +61,6 @@ Download the template, set up your packs, and re-upload — or skip and add buy 
 ## Step 7 — Finish
 
 That's it. Your products, suppliers, and buy options are in place. Click **Finish setup** to go to your dashboard.
-
-`[SCREENSHOT: "You're all set" completion screen]`
-
 > **Tip:** Steps 3–6 can all be revisited anytime — refine lead times, costs, and packs whenever you like. A good first move after finishing is to review your supplier lead times and check your [Reorder list](../reordering/the-reorder-page).
 
 ## Related

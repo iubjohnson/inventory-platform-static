@@ -1,9 +1,6 @@
 # Settings: Plan & billing
 
 This is where you see your current plan and make changes. All billing runs through Shopify.
-
-`[SCREENSHOT: Settings → Plan & billing]`
-
 ## What you'll see
 
 - Your **current plan** (Starter / Growth / Pro) and **billing status** (active or trialing).

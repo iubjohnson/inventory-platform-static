@@ -2,11 +2,11 @@
 
 Planning defaults are the store-wide settings behind your reorder suggestions and classifications. Set them once here; override individual products as needed.
 
-`[SCREENSHOT: Settings → Planning]`
+![Settings — Planning](/docs/assets/screenshots/settings-planning.png)
 
 ## Settings
 
-- **Days of cover** — how many days of stock to target; sets your *order-up-to (maximum)* level. A common starting point is 30–60 days. (Default: 56.)
+- **Days of cover** — how many days of stock to target; sets your *order-up-to (maximum)* level. A common starting point is 60–90 days. (Default: 90.)
 - **Safety-stock days** — buffer on top of supplier lead time, built into your *reorder point (minimum)*. (Default: 14.)
 - **Dead-stock threshold (months)** — products whose on-hand would take more than this many months to sell are flagged as dead stock. (Anything in stock but never sold is always counted as dead stock.)
 - **ABC cutoffs** — the revenue-share boundaries for Class A / B / C (default 80 / 15 / 5). See [ABC classification](../concepts/abc-classification).

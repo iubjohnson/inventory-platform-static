@@ -4,7 +4,7 @@
 
 Cycle counting is how you keep your inventory honest: physically count what's on the shelf, compare it to the system, and reconcile any difference back to Shopify. Stockwik makes this a quick, routine task.
 
-`[SCREENSHOT: count grid]`
+![Adjustments and Counts — count grid](/docs/assets/screenshots/count-grid.png)
 
 ## Running a count
 
@@ -23,6 +23,18 @@ Stockwik writes your counts to Shopify (setting on hand to your counted figure) 
 It also uses a **stale-guard**: if a sale came in *while you were counting* and changed a product's on-hand, that line is rejected and re-shown with the fresh number so you can re-verify it — the rest of your counts still commit. This stops a mid-count sale from quietly clobbering your numbers.
 
 > **Tip:** Counting in small, regular batches (e.g. by supplier or aisle) is more sustainable — and more accurate — than one big annual count.
+
+## Targeting what to count next ("Last counted")
+
+You don't have to count everything at once. The **Last counted** column shows when each product was last counted — or **"never"** if it hasn't been yet. Use it to run a rolling rotation so nothing slips through:
+
+1. Click the **Last counted** column header to sort it **ascending** — never-counted items come first, then the ones counted longest ago.
+2. Work down from the top: count (or **✓ Correct**) a batch, then commit.
+3. Because committing stamps the date on every item you touch — **even the ones you just confirmed as correct** — those items drop to the bottom, and the next-stalest items rise to the top.
+
+So each pass naturally targets whatever's most overdue, and you can see at a glance what still needs attention. Count a little each day or week instead of shutting everything down for one big annual count.
+
+> **Tip:** Combine it with the **supplier filter** — sort by Last counted, narrow to one supplier, and clear that vendor's stalest items in a single pass.
 
 ## History
 

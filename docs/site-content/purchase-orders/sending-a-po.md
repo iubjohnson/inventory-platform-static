@@ -15,9 +15,6 @@ You have three options:
 - **Email PO** — Stockwik emails a formatted PO (PDF attached) to the supplier's email address, with your company as the reply-to.
 - **PDF / Print** — open the PO as a PDF in your browser to print or save.
 - **Send it yourself** — if you order through a portal or EDI, just mark it ordered and forward however you like.
-
-`[SCREENSHOT: PO PDF]`
-
 > **Note:** To email POs, set your **company email** in **Settings → Company profile** — it's used as the reply-to, and your company details appear as the "from" block on the PO. Also make sure the **supplier** has an email address.
 
 ## What the supplier sees

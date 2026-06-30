@@ -4,7 +4,7 @@
 
 Purchase orders (POs) are how you order stock from suppliers. You can create them automatically from your reorder list or build one by hand, then edit freely while they're still drafts.
 
-`[SCREENSHOT: purchase order detail]`
+![Purchase order detail](/docs/assets/screenshots/po-detail.png)
 
 ## Two ways to create a PO
 

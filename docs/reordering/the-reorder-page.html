@@ -36,13 +36,13 @@
       <article class="doc-content">
 <h1>The Reorder page</h1>
 <p>The Reorder page is where Stockwik earns its keep: a live buy list that tells you what to order right now, how much, and from whom — grouped by supplier and ready to turn into purchase orders.</p>
-<div class="doc-shot"><span class="doc-shot-ic">▦</span>[SCREENSHOT: Reorder page grouped by supplier]</div>
+<figure class="doc-figure"><img class="doc-img" src="/docs/assets/screenshots/reorder-page.png" alt="Reorder page grouped by supplier" loading="lazy"></figure>
 <h2>Status summary</h2>
 <p>At the top, four cards count your products by urgency:</p>
 <ul><li><strong>Stockout risk</strong> — will run out before a new order could arrive. Act now.</li><li><strong>Reorder</strong> — at or below the reorder point; time to order.</li><li><strong>Watch</strong> — approaching the reorder point; not urgent.</li><li><strong>Healthy</strong> — comfortably stocked.</li></ul>
 <p>A banner alerts you if anything is at stockout risk. (See <a href="/docs/concepts/how-reorder-levels-are-calculated.html">how these are calculated</a>.)</p>
 <h2>Controls</h2>
-<ul><li><strong>Destination</strong> — where you want this order delivered (defaults to your default receiving location).</li><li><strong>Status toggles</strong> — by default the list shows the items that need action (stockout + reorder); click a card to also show Watch or Healthy.</li><li><strong>Search</strong> — filter by SKU or product name.</li><li><strong>Actions</strong> — export the current view or the full reorder list as CSV.</li></ul>
+<ul><li><strong>Deliver to</strong> — where you want this order delivered (defaults to your default receiving location).</li><li><strong>Status toggles</strong> — by default the list shows the items that need action (stockout + reorder); click a card to also show Watch or Healthy.</li><li><strong>Search</strong> — filter by SKU or product name.</li><li><strong>Actions</strong> — export the current view or the full reorder list as CSV.</li></ul>
 <h2>Grouped by supplier</h2>
 <p>Products are grouped under each supplier, with the supplier's <strong>lead time</strong> and a running <strong>subtotal</strong> for the items you've selected. Each row shows:</p>
 <ul><li><strong>Available</strong> and <strong>days left</strong>, plus the product's <strong>status</strong> (and an <strong>On order</strong> badge if units are already incoming).</li><li><strong>Need</strong> — the suggested quantity (see <a href="/docs/reordering/understanding-suggestions.html">Understanding suggestions</a>).</li><li><strong>Pack</strong> — the unit you order in (e.g. "Case of 12").</li><li><strong>Order (buy)</strong> — an editable field where you set how many packs to order.</li><li><strong>= units</strong> — the equivalent stock units, updating live as you type.</li><li><strong>Line cost</strong> — based on the buy option's cost.</li></ul>

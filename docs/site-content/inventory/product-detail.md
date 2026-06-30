@@ -2,13 +2,11 @@
 
 Click any product name (from Inventory, Reorder, or anywhere it's linked) to open its detail page — the full picture for one product, and where you fine-tune how it's planned and purchased.
 
-`[SCREENSHOT: product detail page]`
+![Product detail page](/docs/assets/screenshots/product-detail.png)
 
 ## At the top
 
 - **Image, name, SKU**, and **ABC class** badge.
-- A **"not reordering"** marker if the product is set as not-for-purchase (it won't appear on your reorder list).
-
 ## Pricing & inventory
 
 - **Retail price** (from Shopify).

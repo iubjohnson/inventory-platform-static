@@ -37,15 +37,15 @@
 <h1>Receiving stock</h1>
 <div class="doc-plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Available on <span class="plan-badge growth">Growth</span> and up.</span></div>
 <p>When a shipment arrives, receive it against its purchase order. Stockwik updates your Shopify inventory automatically and keeps a record of exactly what came in.</p>
-<div class="doc-shot"><span class="doc-shot-ic">▦</span>[SCREENSHOT: PO receive screen]</div>
+<figure class="doc-figure"><img class="doc-img" src="/docs/assets/screenshots/po-receive.png" alt="PO receive screen" loading="lazy"></figure>
 <h2>How to receive</h2>
 <ol><li>Open an <strong>Ordered</strong> or <strong>Partial</strong> PO and click <strong>Receive</strong>.</li><li>Each line shows the expected quantity, pre-filled. Enter the <strong>quantity you actually received</strong> (full or partial).</li><li>Click to commit the receipt.</li></ol>
 <p>When you commit, Stockwik <strong>pushes the new stock to Shopify first</strong> (increasing on hand at the destination location), then records the receipt locally — so Shopify and Stockwik stay in step.</p>
 <h2>Partial and short receipts</h2>
 <p>If you receive fewer units than ordered, Stockwik asks what to do:</p>
-<ul><li><strong>Keep open for more</strong> — the PO stays <strong>Partial</strong>, ready to receive the rest when a later shipment arrives.</li><li><strong>Close as-is</strong> — finish the PO now, and decide what happens to the missing units:<ul><li><strong>Return to source</strong> — they were never coming (inventory conserved), or</li><li><strong>Mark lost</strong> — write them off.</li></ul></li></ul>
+<ul><li><strong>Keep open for more</strong> — the PO stays <strong>Partial</strong>, ready to receive the rest when a later shipment arrives.</li><li><strong>Close as-is</strong> — finish the PO now.</li></ul>
 <h2>Costs update automatically</h2>
-<p>Receiving sets each product's <strong>unit cost</strong> to that receipt's cost and pushes it back to Shopify's "Cost per item," so your inventory value and margins stay accurate. (If the cost push to Shopify ever fails, the receipt still succeeds — Stockwik just retries the cost later.)</p>
+<p>Receiving sets each product's <strong>unit cost</strong> to that receipt's cost and pushes it back to Shopify's "Cost per item," so your inventory value and margins stay accurate.</p>
 <h2>Receiving history</h2>
 <p>Each PO keeps a <strong>receiving history</strong> — every receipt with its date, who received it, quantities, and per-line variance — so you can see exactly what arrived and when.</p>
 <div class="doc-callout note"><div class="doc-callout-label">Note</div><div class="doc-callout-body">Receiving is safe to retry. If a submission is interrupted, Stockwik recognizes the repeat and won't double-count the stock into Shopify.</div></div>

@@ -2,7 +2,7 @@
 
 Your company profile is the business information that appears on the purchase orders you send to suppliers.
 
-`[SCREENSHOT: Settings → Company profile]`
+![Settings — Company profile](/docs/assets/screenshots/settings-company-profile.png)
 
 ## Fields
 

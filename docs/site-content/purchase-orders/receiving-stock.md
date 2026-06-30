@@ -4,7 +4,7 @@
 
 When a shipment arrives, receive it against its purchase order. Stockwik updates your Shopify inventory automatically and keeps a record of exactly what came in.
 
-`[SCREENSHOT: PO receive screen]`
+![PO receive screen](/docs/assets/screenshots/po-receive.png)
 
 ## How to receive
 
@@ -19,13 +19,11 @@ When you commit, Stockwik **pushes the new stock to Shopify first** (increasing 
 If you receive fewer units than ordered, Stockwik asks what to do:
 
 - **Keep open for more** — the PO stays **Partial**, ready to receive the rest when a later shipment arrives.
-- **Close as-is** — finish the PO now, and decide what happens to the missing units:
-  - **Return to source** — they were never coming (inventory conserved), or
-  - **Mark lost** — write them off.
+- **Close as-is** — finish the PO now.
 
 ## Costs update automatically
 
-Receiving sets each product's **unit cost** to that receipt's cost and pushes it back to Shopify's "Cost per item," so your inventory value and margins stay accurate. (If the cost push to Shopify ever fails, the receipt still succeeds — Stockwik just retries the cost later.)
+Receiving sets each product's **unit cost** to that receipt's cost and pushes it back to Shopify's "Cost per item," so your inventory value and margins stay accurate.
 
 ## Receiving history
 

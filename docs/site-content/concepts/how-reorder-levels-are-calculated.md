@@ -31,35 +31,35 @@ When you do reorder, this is the level you refill *up to*. It represents how muc
 
 **Order-up-to = daily sales × days of cover**
 
-- **Days of cover** — how many days of demand you want to hold (an org-wide default of 56 days — about 8 weeks — adjustable per product).
+- **Days of cover** — how many days of demand you want to hold (an org-wide default of 90 days — about 12 weeks — adjustable per product).
 
-> **Plain English:** "Keep about 8 weeks of stock on hand."
+> **Plain English:** "Keep about 12 weeks of stock on hand."
 
 ---
 
 ## A worked example
 
-Say a product sells **0.5 units per day**, your supplier's **lead time is 7 days**, your **safety stock is 14 days**, and your **days of cover is 56**:
+Say a product sells **0.5 units per day**, your supplier's **lead time is 7 days**, your **safety stock is 14 days**, and your **days of cover is 90**:
 
 | Level | Math | Result |
 |---|---|---|
 | **Reorder point** | 0.5 × (7 + 14) | **≈ 10 units** |
-| **Order-up-to** | 0.5 × 56 | **28 units** |
+| **Order-up-to** | 0.5 × 90 | **45 units** |
 
-So: when this product's available stock drops to about **10**, Stockwik flags it to reorder, and suggests buying enough to bring it back up to **28**.
+So: when this product's available stock drops to about **10**, Stockwik flags it to reorder, and suggests buying enough to bring it back up to **45**.
 
 ---
 
 ## How the suggested order quantity is figured
 
-On the [Reorder page](../reordering/the-reorder-page), Stockwik doesn't just tell you *that* to order — it tells you *how much*:
+On the [Reorder page](../reordering/the-reorder-page), Stockwik doesn't just tell you *what* to order — it tells you *how much*:
 
 **Suggested quantity = order-up-to − available − incoming**
 
 - **Incoming** is anything already on an open purchase order, so you're never told to double-order.
 - The result is rounded **up** to your supplier's minimum order quantity (MOQ) and pack size, so you order whole cases or pallets rather than odd units.
 
-Continuing the example: order-up-to is 28, you have 12 available and 0 incoming → suggested order ≈ **16 units**. If you buy that item by the case of 12, Stockwik rounds up to **2 cases (24 units)**.
+Continuing the example: order-up-to is 45, you have 12 available and 0 incoming → suggested order ≈ **33 units**. If you buy that item by the case of 12, Stockwik rounds up to **3 cases (36 units)**.
 
 > **Tip:** Products that are well-stocked ("Watch" or "Healthy") usually suggest **0** — they don't need ordering yet. You can still type in a quantity to add them to an order if you want to top up.
 

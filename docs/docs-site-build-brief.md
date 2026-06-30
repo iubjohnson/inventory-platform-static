@@ -28,7 +28,7 @@ roadmap features (see Exclusions).
 - Lead with the task/outcome; avoid jargon — when a term is unavoidable, link to the Glossary.
 - **Never expose internal tuning constants as promises** (e.g. the exact velocity half-life or the seasonal
   threshold). Describe behavior in plain terms ("recent sales count more"; "products with a strong seasonal
-  peak"). Concrete user-facing defaults (days of cover 56, safety stock 14, lead time 7) ARE fine to state.
+  peak"). Concrete user-facing defaults (days of cover 90, safety stock 14, lead time 7) ARE fine to state.
 - Put a **plan badge** on every gated capability and a one-line "Available on Growth and up / Pro" note.
 - Consistent terminology — use the Glossary (§5g) spellings exactly (e.g., "on hand", "available",
   "order-up-to (max)", "reorder point (min)", "buy option").
@@ -116,8 +116,8 @@ consistent across pages and correct. §5 is the single source of truth for this 
 - **Order-up-to (max)** = velocity basis × days of cover, where velocity basis = blended (or peak if seasonal & in-season). "Reorders bring stock up to here."
 - **Suggested order qty** = round-up-to-MOQ of (max − available − incoming). Watch/Healthy items often suggest 0.
 - **Hard overrides:** a pinned Min or Max number replaces the formula for that product.
-- Defaults (org-level, overridable per product): **days of cover = 56**, **safety-stock days = 14**, **lead time = 7** (lead time comes from the supplier).
-- Worked example to reuse: velocity 0.5/day, lead 7, safety 14 → min = 0.5×21 ≈ **10**; cover 56 → max = 0.5×56 = **28**.
+- Defaults (org-level, overridable per product): **days of cover = 90**, **safety-stock days = 14**, **lead time = 7** (lead time comes from the supplier).
+- Worked example to reuse: velocity 0.5/day, lead 7, safety 14 → min = 0.5×21 ≈ **10**; cover 90 → max = 0.5×90 = **45**.
 
 **5d. Reorder statuses.** **Stockout risk** (days of stock < lead time — won't arrive in time even if ordered today), **Reorder** (at/below reorder point), **Watch** (approaching reorder point), **Healthy** (above), plus an **On order** badge when units are already on an open PO.
 
@@ -146,7 +146,7 @@ For each page: the headings + key points to cover, which §5 facts to pull, and 
 how-tos as numbered steps; put a plan badge on gated pages.
 
 ### Getting started
-- **what-is-stockwik** — one-paragraph overview (reuse the marketing opener), the core loop (sync → see what to buy → order → receive → count), who it's for (Shopify single-hub SMBs). Link to choosing-a-plan + onboarding.
+- **what-is-stockwik** — one-paragraph overview (reuse the marketing opener), the core loop (sync → see what to buy → order → receive → count), who it's for (Shopify SMBs). Link to choosing-a-plan + onboarding.
 - **installing** — install from the Shopify App Store; the Shopify permission prompt (reads products, inventory, orders incl. full history, locations; writes inventory for receiving/counts); what data Stockwik reads {§5f}; note already-installed stores open straight in. `[SCREENSHOT: Shopify install/permission screen]`
 - **choosing-a-plan** — plan selection happens before account setup; the three tiers at a glance {§5e}; 14-day trial; billing/checkout is on Shopify. Link to plans-and-features.
 - **creating-your-account** — prefilled email/company/name, set a password, **email verification code**, your workspace is created. `[SCREENSHOT: signup]` `[SCREENSHOT: verification]`
@@ -180,7 +180,7 @@ how-tos as numbered steps; put a plan badge on gated pages.
 ### Purchase orders `Growth`
 - **creating-and-editing-pos** — manual (+ New PO: supplier, destination) and from reorder; PO fields (lines: product, qty in packs, pack, cost/pack, total units, unit cost, line total; header: supplier order #, notes for supplier, internal notes); statuses **Draft → Ordered → Partial → Received / Cancelled**; editing rules per status (draft fully editable; "Edit order" on ordered/partial). `[SCREENSHOT: PO detail]`
 - **sending-a-po** — Mark as ordered; **Email PO** (PDF to supplier email; requires Company profile email set), **PDF / Print**, or send manually. `[SCREENSHOT: PO PDF]`
-- **receiving-stock** — open an Ordered/Partial PO → Receive; enter counted qty per line (full or partial); commit pushes on-hand to Shopify (reason "received") then records the receipt; **short-receipt** → keep open (Partial) or close (return-to-source vs mark-lost); cost is updated to the receipt cost and pushed back to Shopify; receiving history with per-line variance; safe to retry (idempotent).
+- **receiving-stock** — open an Ordered/Partial PO → Receive; enter counted qty per line (full or partial); commit pushes on-hand to Shopify (reason "received") then records the receipt; **short-receipt** → keep open (Partial) or close; cost is updated to the receipt cost and pushed back to Shopify; receiving history with per-line variance; safe to retry (idempotent).
 
 ### Counts `Growth`
 - **cycle-counts-and-adjustments** — open Adjustments (auto-refreshes inventory); search/filter by supplier (count batch); enter counted qty or click **✓ Correct**; variance + variance $ shown; commit pushes the absolute on-hand to Shopify with a **stale-guard** (if a sale landed mid-count that line is rejected and re-prompted with fresh numbers; the rest commit); "last counted" stamped even at zero variance; **History** tab. `[SCREENSHOT: count grid]`

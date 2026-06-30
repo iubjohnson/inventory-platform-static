@@ -4,7 +4,7 @@
 
 Reports turn your data into answers — what's tied up in stock, what's selling, how your suppliers perform, and what's moved. They're organized into four groups.
 
-`[SCREENSHOT: a report with the period picker]`
+![Reports — Inventory and valuation](/docs/assets/screenshots/report-inventory-valuation.png)
 
 ## Inventory & valuation
 

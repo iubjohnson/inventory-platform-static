@@ -1,6 +1,6 @@
 # What is Stockwik?
 
-Stockwik is inventory and replenishment software for Shopify merchants who fulfill from a single hub. It learns how your products actually sell and tells you exactly what to reorder, when, and how much — then helps you raise purchase orders, receive stock, run counts, and (on multi-location plans) move inventory between locations, all in one fast app. It's the demand-planning brain Shopify leaves out, without the spreadsheets.
+Stockwik is inventory and replenishment software for Shopify merchants. It learns how your products actually sell and tells you exactly what to reorder, when, and how much — then helps you raise purchase orders, receive stock, run counts, and (on multi-location plans) move inventory between locations, all in one fast app. It's the demand-planning brain Shopify leaves out, without the spreadsheets.
 
 ## Who it's for
 

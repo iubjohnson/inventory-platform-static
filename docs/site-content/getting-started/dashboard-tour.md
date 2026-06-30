@@ -1,9 +1,6 @@
 # Dashboard tour
 
 Once you've finished setup, you land on your dashboard. Here's a quick tour of how Stockwik is laid out.
-
-`[SCREENSHOT: dashboard with left nav]`
-
 ## The left navigation
 
 - **Dashboard** — your home overview (see below).

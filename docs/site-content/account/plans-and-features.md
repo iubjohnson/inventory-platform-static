@@ -22,9 +22,6 @@ Stockwik has three plans. All include a **14-day free trial**, and billing is ha
 - **Pro — "Multiple locations."** Everything in Growth, plus stock transfers and multi-location features for businesses fulfilling from more than one place.
 
 > **Note:** On a lower plan, features above your tier appear with a lock (🔒). Selecting one shows an upgrade prompt — your data is untouched; you just need a higher plan to use it.
-
-Annual billing is available at roughly two months free. Change plans anytime — see [Changing your plan](../account/changing-your-plan).
-
 ## Related
 - [Choosing a plan](../getting-started/choosing-a-plan)
 - [Changing your plan](../account/changing-your-plan)

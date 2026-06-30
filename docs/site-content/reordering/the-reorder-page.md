@@ -2,7 +2,7 @@
 
 The Reorder page is where Stockwik earns its keep: a live buy list that tells you what to order right now, how much, and from whom — grouped by supplier and ready to turn into purchase orders.
 
-`[SCREENSHOT: Reorder page grouped by supplier]`
+![Reorder page grouped by supplier](/docs/assets/screenshots/reorder-page.png)
 
 ## Status summary
 
@@ -17,7 +17,7 @@ A banner alerts you if anything is at stockout risk. (See [how these are calcula
 
 ## Controls
 
-- **Destination** — where you want this order delivered (defaults to your default receiving location).
+- **Deliver to** — where you want this order delivered (defaults to your default receiving location).
 - **Status toggles** — by default the list shows the items that need action (stockout + reorder); click a card to also show Watch or Healthy.
 - **Search** — filter by SKU or product name.
 - **Actions** — export the current view or the full reorder list as CSV.

@@ -2,7 +2,7 @@
 
 The Inventory page is your product catalog, mirrored from Shopify and enriched with planning data. It has several **views** that slice your products by what needs attention.
 
-`[SCREENSHOT: Inventory page, All view]`
+![Inventory page, All view](/docs/assets/screenshots/inventory-all-view.png)
 
 ## The views
 

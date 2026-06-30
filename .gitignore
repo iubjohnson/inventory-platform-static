@@ -3,6 +3,11 @@
 *.jpg
 *.jpeg
 
+# ...but DO track committed docs screenshots (shipped assets the docs HTML references)
+!docs/assets/screenshots/*.png
+!docs/assets/screenshots/*.jpg
+!docs/assets/screenshots/*.jpeg
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db

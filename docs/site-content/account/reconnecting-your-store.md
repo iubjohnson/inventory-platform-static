@@ -1,9 +1,6 @@
 # Reconnecting your store
 
 Occasionally Stockwik will ask you to reconnect your Shopify store. It's quick, and **your data is safe** — reconnecting just restores the secure link between Stockwik and Shopify.
-
-`[SCREENSHOT: reconnect screen]`
-
 ## Two situations
 
 **"Your store is disconnected"** — this appears if Stockwik was **uninstalled** from your Shopify store. Reinstalling/reconnecting picks up right where you left off.

@@ -2,7 +2,7 @@
 
 Your locations come from Shopify. Stockwik shows them here and lets you pick which one purchase orders deliver to by default.
 
-`[SCREENSHOT: Settings → Locations]`
+![Settings — Locations](/docs/assets/screenshots/settings-locations.png)
 
 ## The locations list
 

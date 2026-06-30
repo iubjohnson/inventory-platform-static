@@ -2,7 +2,7 @@
 
 Suppliers are who you buy from. Their details — especially **lead time** — feed directly into your reorder timing and appear on the purchase orders you send.
 
-`[SCREENSHOT: suppliers list]`
+![Suppliers list](/docs/assets/screenshots/suppliers-list.png)
 
 ## The suppliers list
 

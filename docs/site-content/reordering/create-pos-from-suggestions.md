@@ -9,7 +9,7 @@ The fastest way to raise purchase orders is straight from your reorder list. Sel
 3. Click **Create draft PO(s)**. Stockwik creates **one draft purchase order per supplier** in your selection, delivering to the chosen destination.
 4. A confirmation shows the PO numbers created. Head to **Purchase orders** to review, then send them.
 
-`[SCREENSHOT: create draft POs confirmation]`
+![Create draft POs confirmation](/docs/assets/screenshots/create-draft-pos.png)
 
 > **Note:** New POs are created as **drafts** — nothing is sent to a supplier until you review and mark them as ordered. See [Creating & editing POs](../purchase-orders/creating-and-editing-pos) and [Sending a PO](../purchase-orders/sending-a-po).
 

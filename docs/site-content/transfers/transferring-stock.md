@@ -4,20 +4,21 @@
 
 A transfer moves stock from one location to another — ship it from the source, receive it at the destination, and Stockwik keeps both locations' inventory accurate in Shopify along the way.
 
-`[SCREENSHOT: transfer detail]`
+![Edit draft transfer](/docs/assets/screenshots/transfer-detail.png)
 
 ## Creating a transfer
 
 1. Go to **Transfers** → **+ New transfer**.
 2. Choose a **source** and a **destination** location (they must differ).
 3. Add products and a **quantity** for each. You can't transfer more than is available at the source.
-4. **Save as draft** to finish later, or **Confirm & ship** to send it.
+4. **Save draft** to finish later, or **Confirm transfer** to ship it now.
 
-## Ship → receive → close
+## Shipping, receiving & closing
 
-- **Confirm & ship** — Stockwik re-checks availability, then reduces the **source** location's stock and marks the transfer **In transit**.
-- **Receive** — at the destination, open the transfer and enter what arrived (full or partial). The destination's stock increases. A full receipt closes it as **Received**; a partial one keeps it open as **Partial** for the rest.
-- **Short or cancel** — if units go missing or you cancel, Stockwik asks whether to **return them to source** (credit them back) or **mark them lost**.
+- **Confirm transfer (ship)** — on a draft, click **Confirm transfer**. Stockwik re-checks availability, reduces the **source** location's stock, and marks the transfer **In transit**. (Confirming *is* shipping — there's no separate ship step.)
+- **Receive items** — open an in-transit (or partial) transfer, click **Receive items**, enter what arrived at the destination, then click **Receive**. The destination's stock increases. Receiving everything closes it as **Received**; receiving less keeps it open.
+- **Short receipt** — if you receive fewer units than are outstanding, Stockwik asks: **Keep open for more** (stays **Partial** for a later receipt) or **Close as-is** — and if you close it, whether to **Return to source** (credit the missing units back) or **Mark as lost** (write them off).
+- **Cancel** — on an open transfer, **Cancel transfer** asks the same about any outstanding units: **Return to source** or **Mark as lost**.
 
 ## Statuses
 
@@ -29,7 +30,7 @@ A transfer moves stock from one location to another — ship it from the source,
 | **Received** | Fully received. |
 | **Cancelled** | Cancelled (with missing units returned or written off). |
 
-You can print or download a **transfer document** (PDF) for the people moving the stock.
+Use **PDF / Print** to print or download a transfer document for the people moving the stock.
 
 > **Note:** While stock is in transit it's simply absent from both locations' available counts — exactly where it physically is. Each leg is a clean, separate adjustment, so transfers are safe even if sales happen at the same time.
 

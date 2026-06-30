@@ -6,7 +6,7 @@ Stockwik uses a few planning levers to calculate your reorder levels. You set se
 
 Set in **Settings → Planning defaults**, these apply to every product unless a product overrides them:
 
-- **Days of cover** — how many days of stock you want to hold; sets your *order-up-to (maximum)* level. (Default: 56.)
+- **Days of cover** — how many days of stock you want to hold; sets your *order-up-to (maximum)* level. (Default: 90.)
 - **Safety-stock days** — buffer on top of supplier lead time; feeds your *reorder point (minimum)*. (Default: 14.)
 - **Default receiving location** — where new purchase orders are delivered.
 
