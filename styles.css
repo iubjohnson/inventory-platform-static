@@ -369,3 +369,49 @@ table.mini tr:last-child td{border-bottom:none;}
 .mt-0{margin-top:0;}
 :focus-visible{outline:3px solid rgba(83,74,183,0.45);outline-offset:2px;border-radius:4px;}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
+
+/* ============ mobile overhaul ============ */
+/* Mobile menu panel (built by nav.js from the existing nav links + CTAs) */
+.mobile-menu{display:none;}
+.menu-btn{padding:6px;line-height:1;}
+.mobile-menu .mm-link{display:block;font-family:'Inter',sans-serif;font-size:16px;font-weight:600;color:var(--ink);padding:13px 2px;border-bottom:1px solid var(--line-soft);}
+.mobile-menu .mm-link:hover{color:var(--indigo);}
+.mobile-menu .mm-login{color:var(--indigo);}
+.mobile-menu .mm-cta{margin-top:14px;width:100%;justify-content:center;}
+
+/* Horizontal-scroll wrapper for wide tables on small screens */
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+
+/* Stacked hero/feature sections: keep heading above the preview/screenshot */
+@media(max-width:920px){
+  .hero-grid .preview{order:99 !important;}
+}
+
+/* Nav collapses to hamburger; CTA moves into the menu */
+@media(max-width:860px){
+  .nav-cta{display:none;}
+  .price-grid{max-width:min(420px,100%);}
+  .site-header.nav-open .mobile-menu{
+    display:flex;flex-direction:column;padding:8px 24px 22px;
+    background:var(--paper);border-top:1px solid var(--line-soft);
+    box-shadow:0 26px 40px -26px rgba(26,22,64,0.28);
+  }
+}
+
+/* Small phones: stack narrow grids, shrink dense tables */
+@media(max-width:560px){
+  .metric-row{grid-template-columns:1fr;}
+  table.mini{font-size:12px;}
+  table.mini th,table.mini td{padding:7px 7px;}
+}
+
+/* Very small phones: tighten spacing, full-width CTAs, single-col footer */
+@media(max-width:480px){
+  .wrap{padding:0 16px;}
+  .site-header.nav-open .mobile-menu{padding-left:16px;padding-right:16px;}
+  .foot-grid{grid-template-columns:1fr;}
+  .hero-actions{flex-direction:column;align-items:stretch;}
+  .hero-actions .btn{width:100%;justify-content:center;}
+  .btn{font-size:15px;padding:12px 18px;}
+  .plan .price{font-size:40px;}
+}

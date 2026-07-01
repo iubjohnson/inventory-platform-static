@@ -74,7 +74,7 @@ Encode `&` as `&amp;` in HTML. Footer About/Contact/Privacy/Terms are now live p
 ## Pre-launch TODO (placeholders to replace)
 - [x] Real pricing (Starter $29 / Growth $39 / Pro $79 — shipped)
 - [ ] Confirm current Shopify POS Pro price
-- [ ] Wire mobile hamburger menu (button exists, no toggle JS yet)
+- [x] Wire mobile hamburger menu (nav.js — shipped; builds menu from the desktop nav)
 - [ ] Phase 2 pages: About, Contact, Privacy, Terms done; **Blog** still a stub
 - [ ] App Store listing name: "Stockwik: Inventory Planning" (≤30 chars, brand-first)
 - [ ] **Legal pages — before go-live:** have an attorney review privacy.html & terms.html, and fill these placeholders:
