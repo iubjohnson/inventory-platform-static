@@ -2,8 +2,6 @@
 
 Suppliers are who you buy from. Their details — especially **lead time** — feed directly into your reorder timing and appear on the purchase orders you send.
 
-![Suppliers list](/docs/assets/screenshots/suppliers-list.png)
-
 ## The suppliers list
 
 Shows each supplier's name, contact email, the number of products that use them, and their **lead time** (editable right in the list). Click a name to open the full detail page.
@@ -23,9 +21,9 @@ A supplier record holds:
 
 > **Tip:** Lead time is the single most impactful field. Even a rough estimate makes your reorder timing far more accurate than the default.
 
-## Seeding suppliers from Shopify
+## Suppliers from Shopify
 
-On your first sync, Stockwik creates a supplier for each **vendor** on your products (name only — Shopify doesn't share more). If you add products with new vendors later, click **Seed missing** to fill in any gaps. It only adds what's missing and never overwrites details you've entered.
+Stockwik creates a supplier for each **vendor** on your products automatically — on every sync (name only; Shopify doesn't share more). When you add products with new vendors, their suppliers appear at the next sync, with no extra step. Stockwik only adds what's missing and never overwrites details you've entered.
 
 ## Buy options & POs on a supplier
 

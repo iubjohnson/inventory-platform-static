@@ -36,15 +36,14 @@
       <article class="doc-content">
 <h1>Managing suppliers</h1>
 <p>Suppliers are who you buy from. Their details — especially <strong>lead time</strong> — feed directly into your reorder timing and appear on the purchase orders you send.</p>
-<figure class="doc-figure"><img class="doc-img" src="/docs/assets/screenshots/suppliers-list.png" alt="Suppliers list" loading="lazy"></figure>
 <h2>The suppliers list</h2>
 <p>Shows each supplier's name, contact email, the number of products that use them, and their <strong>lead time</strong> (editable right in the list). Click a name to open the full detail page.</p>
 <h2>Supplier details</h2>
 <p>A supplier record holds:</p>
 <ul><li><strong>Name</strong> (required).</li><li><strong>Lead time (days)</strong> — how long they take to deliver after you order. This drives the reorder point for every product that uses this supplier. (Defaults to 7 if unset.)</li><li><strong>Contact</strong> — account number, website, contact name, email, phone. The email is where emailed POs are sent (and the reply-to).</li><li><strong>Address</strong> — used as your details on purchase orders.</li><li><strong>Currency</strong> and <strong>payment terms</strong>.</li><li><strong>Special instructions</strong> — printed on every PO to this supplier (e.g. "Call before delivery").</li><li><strong>Internal notes</strong> — for your team; never shown on POs.</li><li><strong>Archived</strong> — hide a supplier you no longer use.</li></ul>
 <div class="doc-callout tip"><div class="doc-callout-label">Tip</div><div class="doc-callout-body">Lead time is the single most impactful field. Even a rough estimate makes your reorder timing far more accurate than the default.</div></div>
-<h2>Seeding suppliers from Shopify</h2>
-<p>On your first sync, Stockwik creates a supplier for each <strong>vendor</strong> on your products (name only — Shopify doesn't share more). If you add products with new vendors later, click <strong>Seed missing</strong> to fill in any gaps. It only adds what's missing and never overwrites details you've entered.</p>
+<h2>Suppliers from Shopify</h2>
+<p>Stockwik creates a supplier for each <strong>vendor</strong> on your products automatically — on every sync (name only; Shopify doesn't share more). When you add products with new vendors, their suppliers appear at the next sync, with no extra step. Stockwik only adds what's missing and never overwrites details you've entered.</p>
 <h2>Buy options &amp; POs on a supplier</h2>
 <p>A supplier's detail page also lists the <strong>buy options</strong> that use it and its recent <strong>purchase orders</strong>, so you can see everything tied to that vendor in one place.</p>
 <h2>Related</h2>
