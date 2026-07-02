@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stocky Is Shutting Down — Migration Checklist — Stockwik</title>
+<meta name="description" content="Stocky shuts down August 31, 2026. What still works, what data you can (and can't) export, and a step-by-step plan to move your Shopify store off it.">
+<link rel="icon" type="image/svg+xml" href="/assets/mark_primary.svg">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://stockwik.com/blog/stocky-shutting-down-migration-checklist">
+<link rel="alternate" type="application/rss+xml" title="Stockwik Blog" href="/blog/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Stockwik">
+<meta property="og:title" content="Stocky Is Shutting Down — Migration Checklist">
+<meta property="og:description" content="Stocky shuts down August 31, 2026. What still works, what data you can (and can't) export, and a step-by-step plan to move your Shopify store off it.">
+<meta property="og:url" content="https://stockwik.com/blog/stocky-shutting-down-migration-checklist">
+<meta property="og:image" content="https://stockwik.com/assets/mark_primary.svg">
+<meta property="article:published_time" content="2026-07-02">
+<meta property="article:modified_time" content="2026-07-02">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stocky Is Shutting Down — Migration Checklist">
+<meta name="twitter:description" content="Stocky shuts down August 31, 2026. What still works, what data you can (and can't) export, and a step-by-step plan to move your Shopify store off it.">
+<meta name="twitter:image" content="https://stockwik.com/assets/mark_primary.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Stocky is shutting down August 31, 2026: a migration checklist for Shopify merchants","description":"Stocky shuts down August 31, 2026. What still works, what data you can (and can't) export, and a step-by-step plan to move your Shopify store off it.","datePublished":"2026-07-02","dateModified":"2026-07-02","author":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com"},"publisher":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com","logo":{"@type":"ImageObject","url":"https://stockwik.com/assets/mark_primary.svg"}},"mainEntityOfPage":"https://stockwik.com/blog/stocky-shutting-down-migration-checklist","url":"https://stockwik.com/blog/stocky-shutting-down-migration-checklist"}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/index.html"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
+    <nav class="nav-links">
+      <a href="/product.html">Product</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/stocky-alternative.html">Stocky alternative</a>
+    </nav>
+    <div class="nav-cta"><a class="login-link" href="https://app.stockwik.com" target="_blank" rel="noopener noreferrer">Log in</a><a class="btn btn-primary" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=install_cta&amp;utm_content=blog_header"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a></div>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+<section class="section post-section" style="padding-top:48px;">
+  <div class="wrap post-wrap">
+    <nav class="docs-breadcrumb"><a href="/blog/">Blog</a><span>/</span><span>Stocky migration</span></nav>
+    <header class="post-header">
+      <span class="eyebrow">Stocky migration</span>
+      <h1>Stocky is shutting down August 31, 2026: a migration checklist for Shopify merchants</h1>
+      <div class="post-meta">Published <time datetime="2026-07-02">July 2, 2026</time> · Last updated <time datetime="2026-07-02">July 2, 2026</time> · 4 min read</div>
+    </header>
+    <article class="doc-content post-body">
+<p class="post-lead">Shopify is retiring Stocky, its inventory-management app for POS Pro retailers. The app was delisted from the Shopify App Store on <strong>February 2, 2026</strong>, and on <strong>August 31, 2026</strong> Stocky shuts down completely — the app and its APIs stop working. If your store still relies on Stocky for purchase orders, forecasting, or stock counts, you need a replacement in place before that date, and one piece of your data — <strong>suppliers — cannot be exported at all</strong>, so part of the migration is manual.</p>
+<h2>The dates that matter</h2>
+<div class="doc-table-wrap"><table><thead><tr><th>Date</th><th>What happens</th></tr></thead><tbody><tr><td>July 2025</td><td>Multi-location inventory transfers (and min/max forecasting) removed from Stocky</td></tr><tr><td>February 2, 2026</td><td>Stocky delisted from the Shopify App Store — no new installs</td></tr><tr><td><strong>August 31, 2026</strong></td><td><strong>Full shutdown: the app and all Stocky APIs stop working</strong></td></tr></tbody></table></div>
+<p>There's no indication these dates will slip. Waiting until August means doing a rushed migration during the run-up to Q4 buying — the worst possible time to be without reorder visibility.</p>
+<h2>What you lose when Stocky goes</h2>
+<p>Stocky handled the <em>planning</em> side of inventory that Shopify's admin doesn't fully cover: demand forecasting, reorder suggestions, purchase orders, receiving, supplier records, and stocktakes. Your <strong>products, inventory levels, and sales history are not affected</strong> — those live in Shopify itself, not in Stocky. What disappears is the layer that told you <em>when</em> and <em>how much</em> to buy, plus any data that only existed inside Stocky.</p>
+<div class="doc-callout important"><div class="doc-callout-label">Important</div><div class="doc-callout-body">Supplier data — contacts, lead times, costs, which products come from whom — <strong>cannot be exported from Stocky</strong>. If you don't write it down before August 31, it's gone.</div></div>
+<h2>The migration checklist</h2>
+<ol><li><strong>Export what Stocky lets you export.</strong> Historical purchase orders and inventory reports can be downloaded as CSVs from Stocky's export features. Do this now and file the CSVs somewhere safe — you'll want old POs for reference and for warranty/receiving disputes. (Step-by-step: <a href="/blog/export-stocky-data-before-shutdown.html">How to export your Stocky data before the shutdown</a>.)</li><li><strong>Manually record your supplier data.</strong> For each supplier: name, contact, typical lead time in days, minimum order quantities, case/pack sizes, costs, and the products you buy from them. A simple spreadsheet is fine. This is the one step with a hard deadline and no undo.</li><li><strong>Choose a replacement before your last Stocky order cycle.</strong> Give yourself at least one full reorder cycle on the new tool while Stocky still works, so you can compare its suggestions against what you'd have done. (Our honest comparison of the options: <a href="/blog/best-stocky-alternatives.html">Best Stocky alternatives for Shopify</a>.)</li><li><strong>Reconnect your planning settings.</strong> In whatever tool you choose, re-enter supplier lead times, safety-stock buffers, and pack sizes. In <a href="/product.html">Stockwik</a>, suppliers are created automatically from your Shopify vendors — you add lead times and buy options on top.</li><li><strong>Verify the forecasts rebuild correctly.</strong> Good news: forecasting tools don't need Stocky's data. Your sales history lives in Shopify, and a replacement app reads it directly — Stockwik, for example, pulls a rolling year of order history and has reorder suggestions ready after its first sync.</li><li><strong>Run both in parallel for a couple of weeks.</strong> Sanity-check that reorder points and suggested quantities look right against your own judgment before you rely on them.</li><li><strong>Uninstall Stocky</strong> once your first real purchase orders have gone through the new tool end-to-end — created, sent, and received.</li></ol>
+<h2>Will you still need POS Pro?</h2>
+<p>Stocky required a Shopify POS Pro subscription, so some retailers keep POS Pro partly <em>for</em> Stocky. Most replacement inventory apps — Stockwik included — are standalone Shopify apps with no POS Pro requirement. If Stocky was your main reason for the subscription, the migration is a good moment to re-check whether you still need it for other POS features.</p>
+<h2>FAQ</h2>
+<h3>When exactly does Stocky stop working?</h3>
+<p>August 31, 2026. That's the full shutdown: the app stops functioning and all Stocky APIs are deactivated. It was already delisted from the App Store on February 2, 2026.</p>
+<h3>Will I lose my sales history or inventory counts?</h3>
+<p>No. Products, inventory levels, orders, and sales history are Shopify data — Stocky only read them. Any replacement app rebuilds its forecasts from your Shopify history directly.</p>
+<h3>What's the one thing I can't get back later?</h3>
+<p>Supplier records. Stocky has no supplier export, so document lead times, contacts, costs, and MOQs manually before the shutdown.</p>
+<h3>How long does switching actually take?</h3>
+<p>The manual part is documenting suppliers — an afternoon for most stores. Apps like Stockwik sync your catalog and a year of sales history on install, so you have working reorder suggestions the same day; budget a week or two of running in parallel to build trust in the numbers.</p>
+<hr>
+<p><em>Stockwik was built for exactly this: reorder points, purchase orders, receiving, transfers, and cycle counts for Shopify merchants — no POS Pro required. See <a href="/stocky-alternative.html">how it compares to Stocky</a> or the <a href="/product.html">feature tour</a>.</em></p>
+    </article>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="wrap">
+    <div class="cta-band">
+      <img class="loop-bg" src="/assets/mark_white.svg" alt="">
+      <span class="eyebrow" style="color:var(--amber);">Ready when you are</span>
+      <h2 style="margin-top:12px;">Start planning smarter buys today.</h2>
+      <p class="lede">Install Stockwik from the Shopify App Store, connect your store, and get your first reorder plan in minutes. Free to install with a 14-day trial.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=blog&amp;utm_content=stocky-shutting-down-migration-checklist"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a>
+        <a class="btn btn-white btn-lg" href="/pricing.html">See pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand"><img src="/assets/mark_white.svg" alt="" style="width:32px;height:32px;"><span class="wm">stockwik</span></div><p class="foot-about">Inventory planning, forecasting, and purchasing for small and mid-size Shopify merchants. Built by an operator who lived the problem.</p></div>
+      <div><h4>Product</h4><a href="/product.html">Features</a><a href="/pricing.html">Pricing</a><a href="/stocky-alternative.html">Stocky alternative</a><a href="/docs/">Docs</a></div>
+      <div><h4>Company</h4><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/blog/">Blog</a></div>
+      <div><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Stockwik. All rights reserved.</span><span>Made for Shopify merchants.</span></div>
+  </div>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

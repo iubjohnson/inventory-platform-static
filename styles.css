@@ -415,3 +415,16 @@ table.mini tr:last-child td{border-bottom:none;}
   .btn{font-size:15px;padding:12px 18px;}
   .plan .price{font-size:40px;}
 }
+
+/* ---------- blog ---------- */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;}
+.blog-card{display:flex;flex-direction:column;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;color:inherit;transition:border-color .15s,transform .15s;}
+.blog-card:hover{border-color:var(--mid);transform:translateY(-2px);}
+.blog-card h3{margin:0;font-size:18px;line-height:1.2;}
+.blog-card p{font-size:14px;color:#4a4757;line-height:1.55;flex:1;}
+.blog-cat{align-self:flex-start;font-family:'Inter',sans-serif;font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--indigo);background:var(--mid-soft);padding:3px 10px;border-radius:99px;}
+.blog-card-meta,.post-meta{font-size:13px;color:var(--muted);}
+.post-wrap{max-width:780px;}
+.post-header{margin:16px 0 22px;}
+.post-header h1{margin:12px 0 12px;font-size:clamp(28px,4.5vw,38px);line-height:1.08;}
+.post-body .post-lead{font-size:18px;line-height:1.65;color:#2e2a3f;}

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /docs/site-content/
+Disallow: /blog/content/
+
+Sitemap: https://stockwik.com/sitemap.xml

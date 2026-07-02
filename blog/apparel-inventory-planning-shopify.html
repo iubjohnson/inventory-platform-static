@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory Planning for Apparel Brands on Shopify — Stockwik</title>
+<meta name="description" content="Why apparel inventory is a variant problem — size curves, broken runs, case packs, long lead times — and how to plan reorders at the size/color level.">
+<link rel="icon" type="image/svg+xml" href="/assets/mark_primary.svg">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://stockwik.com/blog/apparel-inventory-planning-shopify">
+<link rel="alternate" type="application/rss+xml" title="Stockwik Blog" href="/blog/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Stockwik">
+<meta property="og:title" content="Inventory Planning for Apparel Brands on Shopify">
+<meta property="og:description" content="Why apparel inventory is a variant problem — size curves, broken runs, case packs, long lead times — and how to plan reorders at the size/color level.">
+<meta property="og:url" content="https://stockwik.com/blog/apparel-inventory-planning-shopify">
+<meta property="og:image" content="https://stockwik.com/assets/mark_primary.svg">
+<meta property="article:published_time" content="2026-07-02">
+<meta property="article:modified_time" content="2026-07-02">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Inventory Planning for Apparel Brands on Shopify">
+<meta name="twitter:description" content="Why apparel inventory is a variant problem — size curves, broken runs, case packs, long lead times — and how to plan reorders at the size/color level.">
+<meta name="twitter:image" content="https://stockwik.com/assets/mark_primary.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Inventory planning for apparel brands on Shopify: size curves, variants, and reorders","description":"Why apparel inventory is a variant problem — size curves, broken runs, case packs, long lead times — and how to plan reorders at the size/color level.","datePublished":"2026-07-02","dateModified":"2026-07-02","author":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com"},"publisher":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com","logo":{"@type":"ImageObject","url":"https://stockwik.com/assets/mark_primary.svg"}},"mainEntityOfPage":"https://stockwik.com/blog/apparel-inventory-planning-shopify","url":"https://stockwik.com/blog/apparel-inventory-planning-shopify"}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/index.html"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
+    <nav class="nav-links">
+      <a href="/product.html">Product</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/stocky-alternative.html">Stocky alternative</a>
+    </nav>
+    <div class="nav-cta"><a class="login-link" href="https://app.stockwik.com" target="_blank" rel="noopener noreferrer">Log in</a><a class="btn btn-primary" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=install_cta&amp;utm_content=blog_header"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a></div>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+<section class="section post-section" style="padding-top:48px;">
+  <div class="wrap post-wrap">
+    <nav class="docs-breadcrumb"><a href="/blog/">Blog</a><span>/</span><span>Industry playbooks</span></nav>
+    <header class="post-header">
+      <span class="eyebrow">Industry playbooks</span>
+      <h1>Inventory planning for apparel brands on Shopify: size curves, variants, and reorders</h1>
+      <div class="post-meta">Published <time datetime="2026-07-02">July 2, 2026</time> · Last updated <time datetime="2026-07-02">July 2, 2026</time> · 4 min read</div>
+    </header>
+    <article class="doc-content post-body">
+<p class="post-lead">Apparel inventory planning has one rule that generic advice misses: <strong>the unit of planning is the variant, not the product</strong>. Your "Pima Tee" doesn't stock out — the <em>M / White</em> does, while <em>XS / Olive</em> gathers dust. Plan at the style level and you'll simultaneously overstock slow variants and lose sales on the popular ones. Everything else — size curves, broken runs, case packs, long mill lead times — follows from getting that unit right.</p>
+<h2>Why apparel is harder than the average Shopify catalog</h2>
+<ul><li><strong>Variant explosion.</strong> 40 styles × 6 sizes × 4 colors is 960 SKUs, each with its own sales rate. No one maintains 960 reorder points in a spreadsheet.</li><li><strong>Size curves aren't flat.</strong> M and L might be half your tee sales while XS and XXL are single digits — and the curve differs by style and by color.</li><li><strong>Broken size runs quietly kill conversion.</strong> A product page missing its two most popular sizes still looks "in stock" in your admin totals, but to half your shoppers it's sold out.</li><li><strong>Suppliers sell in packs.</strong> Mills and factories quote MOQs and case packs — often prepacked size ratios — not the 13 loose units your math suggested.</li><li><strong>Lead times are long and mixed.</strong> A domestic knitter might restock in a week; overseas production is 60–90 days. One safety buffer can't fit both.</li><li><strong>Seasons flip the demand curve.</strong> Chino shorts in March and fleece in October don't sell like their annual averages.</li></ul>
+<h2>Plan every variant like its own product</h2>
+<p>The mechanics are the same <a href="/blog/shopify-reorder-points-guide.html">reorder-point math</a> any store uses — <strong>daily sales × (lead time + safety days)</strong> — just applied per variant:</p>
+<div class="doc-table-wrap"><table><thead><tr><th>Variant</th><th>Daily sales</th><th>Lead time + buffer</th><th>Reorder point</th><th>Available</th><th>Status</th></tr></thead><tbody><tr><td>Pima Tee · M / White</td><td>0.9</td><td>7 + 14 days</td><td>≈ 19</td><td>11</td><td><strong>Reorder</strong></td></tr><tr><td>Pima Tee · S / Olive</td><td>0.3</td><td>7 + 14 days</td><td>≈ 6</td><td>4</td><td><strong>Reorder</strong></td></tr><tr><td>Chino Shorts · 32 / Charcoal</td><td>0.5</td><td>45 + 14 days</td><td>≈ 30</td><td>26</td><td><strong>Stockout risk</strong></td></tr><tr><td>Chino Shorts · 36 / Charcoal</td><td>0.1</td><td>45 + 14 days</td><td>≈ 6</td><td>31</td><td><strong>Healthy</strong></td></tr></tbody></table></div>
+<p>Two things to notice. The shorts' reorder points dwarf the tees' — same math, longer lead time (an overseas supplier vs. a domestic knit mill). And the 36-waist is healthy at 31 units while the 32 is at risk at 26: identical product, different velocity. That's the size curve doing its work — and why the style-level total ("57 shorts in stock") tells you nothing.</p>
+<h2>Ordering: respect the pack, watch the curve</h2>
+<p>When you do reorder, two apparel-specific rules:</p>
+<ol><li><strong>Round to how the supplier sells.</strong> If Loomstate Mills ships that tee in case packs of 12, a suggested 33 units becomes 3 cases (36). Build the rounding into the plan, or you'll do case math by hand on every line of every PO.</li><li><strong>Reorder the curve, not the total.</strong> Refill each size to its own target rather than "topping up the style." This is what keeps runs unbroken — the M/L core deep, the tails shallow but present.</li></ol>
+<div class="doc-callout tip"><div class="doc-callout-label">Tip</div><div class="doc-callout-body">Track your <strong>sell-through by size</strong> on new styles early. The first few weeks of a launch tell you whether the size curve you bought matches the one your customers vote for — while there's still time to adjust the reorder.</div></div>
+<h2>Multi-location, counts, and the rest of the loop</h2>
+<p>If you run retail and warehouse (or two shops), a size can be dead in one location and sold out in the other — <strong>transfers</strong> are often faster than a new PO, and they're free. And because apparel accuracy erodes fast (try-ons, mis-scans, returns to the wrong shelf), regular <strong>cycle counts</strong> on your top styles keep the "available" number the whole plan rests on honest.</p>
+<p>This whole loop is what <a href="/product.html">Stockwik</a> runs for Shopify apparel merchants: velocity and reorder points per variant, statuses (<strong>Stockout risk / Reorder / Watch / Healthy</strong>) to surface what needs attention, POs that round to case packs and MOQs, <a href="/docs/purchase-orders/receiving-stock.html">receiving</a>, <a href="/docs/transfers/transferring-stock.html">transfers</a>, and <a href="/docs/counts/cycle-counts-and-adjustments.html">cycle counts</a> — with seasonal peaks detected from each variant's own history.</p>
+<h2>FAQ</h2>
+<h3>How do I stop breaking size runs?</h3>
+<p>Set reorder points per variant, sized to each variant's own velocity, and reorder when core sizes hit them — don't wait for the style total to look low. The style total is the last place a broken run shows up.</p>
+<h3>How much of each size should I order?</h3>
+<p>Order to each size's own target: daily sales × days of cover, minus what's available and incoming, rounded to the supplier's pack. Your sales history <em>is</em> your size curve — use it rather than a generic ratio.</p>
+<h3>What about brand-new styles with no history?</h3>
+<p>Borrow the size curve from your most comparable existing style, order conservatively, and re-order from real data once a few weeks of sales exist. New-variant velocity starts working as soon as there's history.</p>
+    </article>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="wrap">
+    <div class="cta-band">
+      <img class="loop-bg" src="/assets/mark_white.svg" alt="">
+      <span class="eyebrow" style="color:var(--amber);">Ready when you are</span>
+      <h2 style="margin-top:12px;">Start planning smarter buys today.</h2>
+      <p class="lede">Install Stockwik from the Shopify App Store, connect your store, and get your first reorder plan in minutes. Free to install with a 14-day trial.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=blog&amp;utm_content=apparel-inventory-planning-shopify"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a>
+        <a class="btn btn-white btn-lg" href="/pricing.html">See pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand"><img src="/assets/mark_white.svg" alt="" style="width:32px;height:32px;"><span class="wm">stockwik</span></div><p class="foot-about">Inventory planning, forecasting, and purchasing for small and mid-size Shopify merchants. Built by an operator who lived the problem.</p></div>
+      <div><h4>Product</h4><a href="/product.html">Features</a><a href="/pricing.html">Pricing</a><a href="/stocky-alternative.html">Stocky alternative</a><a href="/docs/">Docs</a></div>
+      <div><h4>Company</h4><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/blog/">Blog</a></div>
+      <div><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Stockwik. All rights reserved.</span><span>Made for Shopify merchants.</span></div>
+  </div>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

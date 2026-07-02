@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Stockwik Blog</title>
+  <link>https://stockwik.com/blog/</link>
+  <atom:link href="https://stockwik.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Practical guides on inventory planning, forecasting, reordering, and purchasing for Shopify merchants.</description>
+  <language>en-us</language>
+  <item>
+    <title>Stocky is shutting down August 31, 2026: a migration checklist for Shopify merchants</title>
+    <link>https://stockwik.com/blog/stocky-shutting-down-migration-checklist</link>
+    <guid isPermaLink="true">https://stockwik.com/blog/stocky-shutting-down-migration-checklist</guid>
+    <pubDate>Thu, 02 Jul 2026 12:00:00 GMT</pubDate>
+    <category>Stocky migration</category>
+    <description>Stocky shuts down August 31, 2026. What still works, what data you can (and can't) export, and a step-by-step plan to move your Shopify store off it.</description>
+  </item>
+  <item>
+    <title>How to export your Stocky data before the shutdown (and what you can't export)</title>
+    <link>https://stockwik.com/blog/export-stocky-data-before-shutdown</link>
+    <guid isPermaLink="true">https://stockwik.com/blog/export-stocky-data-before-shutdown</guid>
+    <pubDate>Thu, 02 Jul 2026 12:00:00 GMT</pubDate>
+    <category>Stocky migration</category>
+    <description>What you can export from Stocky before the Aug 31, 2026 shutdown, what you can't (supplier data), and how to save everything that matters.</description>
+  </item>
+  <item>
+    <title>Best Stocky alternatives for Shopify (2026), honestly compared</title>
+    <link>https://stockwik.com/blog/best-stocky-alternatives</link>
+    <guid isPermaLink="true">https://stockwik.com/blog/best-stocky-alternatives</guid>
+    <pubDate>Thu, 02 Jul 2026 12:00:00 GMT</pubDate>
+    <category>Stocky migration</category>
+    <description>An honest comparison of Stocky replacements for Shopify — including where each one fits, where ours doesn't, and how to choose before the Aug 31, 2026 shutdown.</description>
+  </item>
+  <item>
+    <title>How to calculate reorder points for your Shopify store (with a worked example)</title>
+    <link>https://stockwik.com/blog/shopify-reorder-points-guide</link>
+    <guid isPermaLink="true">https://stockwik.com/blog/shopify-reorder-points-guide</guid>
+    <pubDate>Thu, 02 Jul 2026 12:00:00 GMT</pubDate>
+    <category>Reordering</category>
+    <description>The reorder point formula (daily sales × lead time + safety stock), a worked example, and how to automate it across every variant in your Shopify store.</description>
+  </item>
+  <item>
+    <title>Shopify inventory forecasting: a practical guide for small merchants</title>
+    <link>https://stockwik.com/blog/shopify-inventory-forecasting-guide</link>
+    <guid isPermaLink="true">https://stockwik.com/blog/shopify-inventory-forecasting-guide</guid>
+    <pubDate>Thu, 02 Jul 2026 12:00:00 GMT</pubDate>
+    <category>Forecasting</category>
+    <description>How to forecast inventory for a Shopify store — sales velocity, days of stock, seasonality, and turning forecasts into actual purchase orders.</description>
+  </item>
+  <item>
+    <title>Inventory planning for apparel brands on Shopify: size curves, variants, and reorders</title>
+    <link>https://stockwik.com/blog/apparel-inventory-planning-shopify</link>
+    <guid isPermaLink="true">https://stockwik.com/blog/apparel-inventory-planning-shopify</guid>
+    <pubDate>Thu, 02 Jul 2026 12:00:00 GMT</pubDate>
+    <category>Industry playbooks</category>
+    <description>Why apparel inventory is a variant problem — size curves, broken runs, case packs, long lead times — and how to plan reorders at the size/color level.</description>
+  </item>
+</channel>
+</rss>

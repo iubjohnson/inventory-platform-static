@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Export Your Stocky Data Before Shutdown — Stockwik</title>
+<meta name="description" content="What you can export from Stocky before the Aug 31, 2026 shutdown, what you can't (supplier data), and how to save everything that matters.">
+<link rel="icon" type="image/svg+xml" href="/assets/mark_primary.svg">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://stockwik.com/blog/export-stocky-data-before-shutdown">
+<link rel="alternate" type="application/rss+xml" title="Stockwik Blog" href="/blog/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Stockwik">
+<meta property="og:title" content="How to Export Your Stocky Data Before Shutdown">
+<meta property="og:description" content="What you can export from Stocky before the Aug 31, 2026 shutdown, what you can't (supplier data), and how to save everything that matters.">
+<meta property="og:url" content="https://stockwik.com/blog/export-stocky-data-before-shutdown">
+<meta property="og:image" content="https://stockwik.com/assets/mark_primary.svg">
+<meta property="article:published_time" content="2026-07-02">
+<meta property="article:modified_time" content="2026-07-02">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Export Your Stocky Data Before Shutdown">
+<meta name="twitter:description" content="What you can export from Stocky before the Aug 31, 2026 shutdown, what you can't (supplier data), and how to save everything that matters.">
+<meta name="twitter:image" content="https://stockwik.com/assets/mark_primary.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to export your Stocky data before the shutdown (and what you can't export)","description":"What you can export from Stocky before the Aug 31, 2026 shutdown, what you can't (supplier data), and how to save everything that matters.","datePublished":"2026-07-02","dateModified":"2026-07-02","author":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com"},"publisher":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com","logo":{"@type":"ImageObject","url":"https://stockwik.com/assets/mark_primary.svg"}},"mainEntityOfPage":"https://stockwik.com/blog/export-stocky-data-before-shutdown","url":"https://stockwik.com/blog/export-stocky-data-before-shutdown"}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/index.html"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
+    <nav class="nav-links">
+      <a href="/product.html">Product</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/stocky-alternative.html">Stocky alternative</a>
+    </nav>
+    <div class="nav-cta"><a class="login-link" href="https://app.stockwik.com" target="_blank" rel="noopener noreferrer">Log in</a><a class="btn btn-primary" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=install_cta&amp;utm_content=blog_header"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a></div>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+<section class="section post-section" style="padding-top:48px;">
+  <div class="wrap post-wrap">
+    <nav class="docs-breadcrumb"><a href="/blog/">Blog</a><span>/</span><span>Stocky migration</span></nav>
+    <header class="post-header">
+      <span class="eyebrow">Stocky migration</span>
+      <h1>How to export your Stocky data before the shutdown (and what you can't export)</h1>
+      <div class="post-meta">Published <time datetime="2026-07-02">July 2, 2026</time> · Last updated <time datetime="2026-07-02">July 2, 2026</time> · 3 min read</div>
+    </header>
+    <article class="doc-content post-body">
+<p class="post-lead">Before Stocky shuts down on <strong>August 31, 2026</strong>, you can export most of your historical data — purchase orders and inventory reports download as CSVs from the app's export features. The critical exception is <strong>supplier data: Stocky has no supplier export</strong>, so lead times, contacts, costs, and product–supplier relationships must be written down manually before the deadline. After August 31 the app and its APIs stop working, and anything you didn't save is unrecoverable.</p>
+<h2>What exports, what doesn't</h2>
+<div class="doc-table-wrap"><table><thead><tr><th>Data</th><th>Exportable from Stocky?</th><th>Where it lives after the shutdown</th></tr></thead><tbody><tr><td>Products, variants, inventory levels</td><td>Not needed — this is Shopify data</td><td>Shopify (unaffected)</td></tr><tr><td>Orders &amp; sales history</td><td>Not needed — this is Shopify data</td><td>Shopify (unaffected)</td></tr><tr><td>Historical purchase orders</td><td><strong>Yes</strong> — CSV export</td><td>Your saved CSVs</td></tr><tr><td>Inventory reports</td><td><strong>Yes</strong> — CSV export</td><td>Your saved CSVs</td></tr><tr><td><strong>Suppliers (contacts, lead times, costs, MOQs)</strong></td><td><strong>No — cannot be exported</strong></td><td>Only what you document manually</td></tr><tr><td>Forecasting settings (min/max levels)</td><td>Partially, via reports</td><td>Your saved CSVs / manual notes</td></tr></tbody></table></div>
+<p>The first two rows are the reassuring part: the data that drives forecasting — your actual sales — never belonged to Stocky. Any replacement app reads it straight from Shopify.</p>
+<h2>Step 1: Export purchase orders and reports</h2>
+<p>In Stocky, work through the export options and download CSVs of your historical purchase orders and any inventory reports you use. Save them somewhere permanent (not just your Downloads folder). You'll want old POs for:</p>
+<ul><li>reference when re-creating orders in a new tool ("what did we order last September?"),</li><li>receiving and invoice disputes that surface months later, and</li><li>a sanity check that your new tool's suggested quantities are in the same ballpark as what you historically bought.</li></ul>
+<div class="doc-callout tip"><div class="doc-callout-label">Tip</div><div class="doc-callout-body">Export <em>everything</em> available, even reports you don't think you need. Storage is free; after August 31 there is no second chance.</div></div>
+<h2>Step 2: Document your suppliers by hand</h2>
+<p>This is the step with no shortcut. For <strong>each supplier</strong>, record:</p>
+<ul><li>Supplier name and your contact person (email, phone)</li><li><strong>Lead time</strong> — how many days from placing an order to stock arriving</li><li><strong>Minimum order quantities</strong> and <strong>case/pack sizes</strong> per product</li><li>Unit costs you currently pay</li><li>Which products you buy from them (a product list or vendor tag)</li><li>Payment terms and any seasonal ordering deadlines</li></ul>
+<p>A spreadsheet with one row per supplier–product pair covers it. An hour or two of typing now saves you re-negotiating or re-discovering all of this from old emails later.</p>
+<div class="doc-callout warning"><div class="doc-callout-label">Warning</div><div class="doc-callout-body">This is the only part of the migration that is truly time-boxed. Sales history rebuilds automatically; supplier knowledge doesn't.</div></div>
+<h2>Step 3: Move the data into your replacement</h2>
+<p>How the import works depends on the tool you pick. In <a href="/product.html">Stockwik</a>, the pieces land like this:</p>
+<ul><li><strong>Suppliers</strong> are created automatically from your Shopify vendor data when you connect the store — then you add lead times, MOQs, and pack sizes from the sheet you made in Step 2 (see <a href="/docs/suppliers/managing-suppliers.html">Managing suppliers</a>).</li><li><strong>Sales history</strong> syncs directly from Shopify — a rolling year of orders — so <a href="/docs/concepts/how-sales-velocity-works.html">sales velocity</a> and reorder suggestions work from day one without any Stocky import.</li><li><strong>Old POs</strong> stay in your CSV archive for reference; new POs are created going forward from live <a href="/docs/reordering/the-reorder-page.html">reorder suggestions</a>.</li></ul>
+<h2>FAQ</h2>
+<h3>Can I export my suppliers from Stocky?</h3>
+<p>No. Supplier data cannot be exported from Stocky. Document it manually — names, contacts, lead times, costs, MOQs, and which products each supplier provides — before August 31, 2026.</p>
+<h3>Do I need to export my sales history?</h3>
+<p>No. Sales history is Shopify data, not Stocky data. It stays in your store and any replacement forecasting app reads it directly.</p>
+<h3>What happens if I miss the deadline?</h3>
+<p>On August 31, 2026 the app and all Stocky APIs stop working. Data that only existed inside Stocky — supplier records above all — becomes unrecoverable.</p>
+<hr>
+<p><em>Full context and a step-by-step plan: <a href="/blog/stocky-shutting-down-migration-checklist.html">Stocky is shutting down — the migration checklist</a>. Weighing replacements? Start with <a href="/blog/best-stocky-alternatives.html">Best Stocky alternatives for Shopify</a>.</em></p>
+    </article>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="wrap">
+    <div class="cta-band">
+      <img class="loop-bg" src="/assets/mark_white.svg" alt="">
+      <span class="eyebrow" style="color:var(--amber);">Ready when you are</span>
+      <h2 style="margin-top:12px;">Start planning smarter buys today.</h2>
+      <p class="lede">Install Stockwik from the Shopify App Store, connect your store, and get your first reorder plan in minutes. Free to install with a 14-day trial.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=blog&amp;utm_content=export-stocky-data-before-shutdown"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a>
+        <a class="btn btn-white btn-lg" href="/pricing.html">See pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand"><img src="/assets/mark_white.svg" alt="" style="width:32px;height:32px;"><span class="wm">stockwik</span></div><p class="foot-about">Inventory planning, forecasting, and purchasing for small and mid-size Shopify merchants. Built by an operator who lived the problem.</p></div>
+      <div><h4>Product</h4><a href="/product.html">Features</a><a href="/pricing.html">Pricing</a><a href="/stocky-alternative.html">Stocky alternative</a><a href="/docs/">Docs</a></div>
+      <div><h4>Company</h4><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/blog/">Blog</a></div>
+      <div><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Stockwik. All rights reserved.</span><span>Made for Shopify merchants.</span></div>
+  </div>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

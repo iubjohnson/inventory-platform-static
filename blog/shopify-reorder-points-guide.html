@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Calculate Reorder Points for Shopify — Stockwik</title>
+<meta name="description" content="The reorder point formula (daily sales × lead time + safety stock), a worked example, and how to automate it across every variant in your Shopify store.">
+<link rel="icon" type="image/svg+xml" href="/assets/mark_primary.svg">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://stockwik.com/blog/shopify-reorder-points-guide">
+<link rel="alternate" type="application/rss+xml" title="Stockwik Blog" href="/blog/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Stockwik">
+<meta property="og:title" content="How to Calculate Reorder Points for Shopify">
+<meta property="og:description" content="The reorder point formula (daily sales × lead time + safety stock), a worked example, and how to automate it across every variant in your Shopify store.">
+<meta property="og:url" content="https://stockwik.com/blog/shopify-reorder-points-guide">
+<meta property="og:image" content="https://stockwik.com/assets/mark_primary.svg">
+<meta property="article:published_time" content="2026-07-02">
+<meta property="article:modified_time" content="2026-07-02">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Calculate Reorder Points for Shopify">
+<meta name="twitter:description" content="The reorder point formula (daily sales × lead time + safety stock), a worked example, and how to automate it across every variant in your Shopify store.">
+<meta name="twitter:image" content="https://stockwik.com/assets/mark_primary.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to calculate reorder points for your Shopify store (with a worked example)","description":"The reorder point formula (daily sales × lead time + safety stock), a worked example, and how to automate it across every variant in your Shopify store.","datePublished":"2026-07-02","dateModified":"2026-07-02","author":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com"},"publisher":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com","logo":{"@type":"ImageObject","url":"https://stockwik.com/assets/mark_primary.svg"}},"mainEntityOfPage":"https://stockwik.com/blog/shopify-reorder-points-guide","url":"https://stockwik.com/blog/shopify-reorder-points-guide"}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/index.html"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
+    <nav class="nav-links">
+      <a href="/product.html">Product</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/stocky-alternative.html">Stocky alternative</a>
+    </nav>
+    <div class="nav-cta"><a class="login-link" href="https://app.stockwik.com" target="_blank" rel="noopener noreferrer">Log in</a><a class="btn btn-primary" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=install_cta&amp;utm_content=blog_header"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a></div>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+<section class="section post-section" style="padding-top:48px;">
+  <div class="wrap post-wrap">
+    <nav class="docs-breadcrumb"><a href="/blog/">Blog</a><span>/</span><span>Reordering</span></nav>
+    <header class="post-header">
+      <span class="eyebrow">Reordering</span>
+      <h1>How to calculate reorder points for your Shopify store (with a worked example)</h1>
+      <div class="post-meta">Published <time datetime="2026-07-02">July 2, 2026</time> · Last updated <time datetime="2026-07-02">July 2, 2026</time> · 3 min read</div>
+    </header>
+    <article class="doc-content post-body">
+<p class="post-lead">A reorder point is the stock level at which you should place a new order — low enough that you're not sitting on excess cash, high enough that you don't run out before the shipment lands. The formula is simple: <strong>reorder point = daily sales × (supplier lead time in days + safety-stock days)</strong>. The hard part isn't the math; it's keeping it current for hundreds of variants whose sales pace keeps changing. This guide walks through the formula by hand, then shows how to automate it.</p>
+<h2>The formula, piece by piece</h2>
+<p><strong>Reorder point = daily sales × (supplier lead time + safety-stock days)</strong></p>
+<ul><li><strong>Daily sales</strong> — average units sold per day. Use recent history, weighted toward the last few weeks; a year-old spike shouldn't set today's reorder point.</li><li><strong>Supplier lead time</strong> — days from placing an order to stock arriving. This is per supplier: a domestic mill might be 7 days, an overseas factory 60.</li><li><strong>Safety-stock days</strong> — buffer days against a sales spike or a late delivery. Two weeks is a sensible default for most products; more for critical items with unreliable suppliers.</li></ul>
+<div class="doc-callout plain-english"><div class="doc-callout-label">Plain English</div><div class="doc-callout-body">order when you have just enough left to cover the delivery wait, plus a couple of weeks of cushion.</div></div>
+<h2>A worked example</h2>
+<p>Say a <strong>Pima Tee · M / White</strong> sells <strong>0.5 units a day</strong>, your supplier (Pacific Knit Co.) delivers in <strong>7 days</strong>, and you keep <strong>14 days</strong> of safety stock:</p>
+<div class="doc-table-wrap"><table><thead><tr><th>Level</th><th>Math</th><th>Result</th></tr></thead><tbody><tr><td><strong>Reorder point</strong></td><td>0.5 × (7 + 14)</td><td><strong>≈ 10 units</strong></td></tr><tr><td><strong>Order-up-to level</strong></td><td>0.5 × 90 days of cover</td><td><strong>45 units</strong></td></tr></tbody></table></div>
+<p>When available stock drops to about <strong>10</strong>, it's time to order. And the <em>second</em> number answers the follow-up question — how much? — which brings us to:</p>
+<h2>How much to order: the order-up-to level</h2>
+<p>The reorder point says <em>when</em>; an <strong>order-up-to level</strong> says <em>how much</em>. Decide how many days of demand you want on the shelf when a shipment lands ("days of cover" — 90 days, roughly 12 weeks, is a reasonable default for most small merchants) and refill to it:</p>
+<p><strong>Order-up-to = daily sales × days of cover</strong></p>
+<p><strong>Suggested order quantity = order-up-to − available − incoming</strong></p>
+<p>Subtracting <strong>incoming</strong> (units already on an open purchase order) is what stops you from double-ordering. Continuing the example: order-up-to is 45, you have 12 available and 0 incoming → order <strong>33 units</strong>. If Pacific Knit Co. sells that tee in cases of 12, round up to <strong>3 cases (36 units)</strong>.</p>
+<div class="doc-callout tip"><div class="doc-callout-label">Tip</div><div class="doc-callout-body">Always compute from <strong>available</strong> stock (free to sell), not on-hand — units already committed to unfulfilled orders can't cover future demand. More on the difference: <a href="/docs/concepts/inventory-on-hand-available-committed.html">On hand, available &amp; committed</a>.</div></div>
+<h2>Why spreadsheets fall over</h2>
+<p>The formula works in a spreadsheet for a dozen products. It stops working when:</p>
+<ul><li><strong>Sales pace changes</strong> — daily sales is a moving number, and a stale velocity gives you a wrong reorder point in whichever direction hurts more.</li><li><strong>You have variants</strong> — an apparel store with 40 styles in 6 sizes and 4 colors is ~960 reorder points, each with its own velocity.</li><li><strong>Seasonality</strong> — a product heading into its peak needs a bigger buffer than its off-season average suggests.</li><li><strong>Lead times differ by supplier</strong> — one formula column can't reflect that your reorder point on domestic goods should be a third of the one on container-shipped goods.</li></ul>
+<p>This is the job <a href="/product.html">Stockwik</a> automates: it computes <a href="/docs/concepts/how-sales-velocity-works.html">sales velocity</a> from a rolling year of your Shopify order history (recent sales weighted heavier), applies each supplier's real lead time and your safety-stock buffer, recalculates every variant's reorder point continuously, and rounds suggested quantities to your supplier's case sizes and MOQs. Products then surface by status — <strong>Stockout risk</strong>, <strong>Reorder</strong>, <strong>Watch</strong>, or <strong>Healthy</strong> — so the morning check is a glance, not a spreadsheet session. (Full math, with defaults and overrides: <a href="/docs/concepts/how-reorder-levels-are-calculated.html">How reorder levels are calculated</a>.)</p>
+<h2>FAQ</h2>
+<h3>What is the reorder point formula?</h3>
+<p>Reorder point = daily sales × (supplier lead time in days + safety-stock days). Example: 0.5 sales/day × (7-day lead time + 14 safety days) ≈ 10 units.</p>
+<h3>What's a good safety stock?</h3>
+<p>Around 14 days of demand is a sensible default. Raise it for critical products or unreliable suppliers; lower it for slow movers where overstock ties up cash.</p>
+<h3>How is a reorder point different from a low-stock alert?</h3>
+<p>A low-stock alert fires at a number you picked once, by hand. A reorder point is <em>calculated</em> from current sales pace and lead time — it moves when your business does.</p>
+<h3>Should reorder points be per variant?</h3>
+<p>Yes. Sizes and colors sell at very different rates; a style-level reorder point overstocks slow variants while the popular size stocks out.</p>
+    </article>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="wrap">
+    <div class="cta-band">
+      <img class="loop-bg" src="/assets/mark_white.svg" alt="">
+      <span class="eyebrow" style="color:var(--amber);">Ready when you are</span>
+      <h2 style="margin-top:12px;">Start planning smarter buys today.</h2>
+      <p class="lede">Install Stockwik from the Shopify App Store, connect your store, and get your first reorder plan in minutes. Free to install with a 14-day trial.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=blog&amp;utm_content=shopify-reorder-points-guide"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a>
+        <a class="btn btn-white btn-lg" href="/pricing.html">See pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand"><img src="/assets/mark_white.svg" alt="" style="width:32px;height:32px;"><span class="wm">stockwik</span></div><p class="foot-about">Inventory planning, forecasting, and purchasing for small and mid-size Shopify merchants. Built by an operator who lived the problem.</p></div>
+      <div><h4>Product</h4><a href="/product.html">Features</a><a href="/pricing.html">Pricing</a><a href="/stocky-alternative.html">Stocky alternative</a><a href="/docs/">Docs</a></div>
+      <div><h4>Company</h4><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/blog/">Blog</a></div>
+      <div><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Stockwik. All rights reserved.</span><span>Made for Shopify merchants.</span></div>
+  </div>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

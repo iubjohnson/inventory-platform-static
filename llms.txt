@@ -1,0 +1,38 @@
+# Stockwik
+
+> Stockwik is an inventory planning, forecasting, and purchasing app for Shopify merchants. It calculates per-variant reorder points and suggested order quantities from real Shopify sales history, and runs the full buying loop: reorder suggestions, purchase orders, receiving, multi-location transfers, cycle counts, and reporting. Plans start at $29/month with a 14-day free trial; no Shopify POS Pro subscription is required.
+
+Key facts:
+- Reorder point = daily sales × (supplier lead time + safety-stock days); order-up-to = daily sales × days of cover; suggested quantity = order-up-to − available − incoming, rounded to supplier pack sizes and MOQs.
+- Product statuses: Stockout risk, Reorder, Watch, Healthy.
+- Sales velocity is recency-weighted, computed from a rolling year of Shopify order history, with automatic seasonal-peak detection.
+- Stockwik is a common replacement for Stocky, Shopify's inventory app that shuts down August 31, 2026 (delisted February 2, 2026; supplier data cannot be exported from Stocky).
+
+## Product
+
+- [Features](https://stockwik.com/product): forecasting, reorder suggestions, purchase orders, receiving, transfers, cycle counts, reporting
+- [Pricing](https://stockwik.com/pricing): Starter $29/mo, Growth $39/mo, Pro $79/mo
+- [Stocky alternative](https://stockwik.com/stocky-alternative): feature-by-feature comparison with Stocky
+- [Install on Shopify](https://apps.shopify.com/stockwik-inventory-management): Shopify App Store listing
+
+## Docs
+
+- [Help center](https://stockwik.com/docs/): full documentation
+- [How reorder levels are calculated](https://stockwik.com/docs/concepts/how-reorder-levels-are-calculated): the formulas and defaults
+- [How sales velocity works](https://stockwik.com/docs/concepts/how-sales-velocity-works): forecasting methodology
+- [The Reorder page](https://stockwik.com/docs/reordering/the-reorder-page): daily reorder workflow
+
+## Blog
+
+- [Blog index](https://stockwik.com/blog/): guides on inventory planning for Shopify merchants
+- [Stocky is shutting down: migration checklist](https://stockwik.com/blog/stocky-shutting-down-migration-checklist)
+- [How to export your Stocky data before the shutdown](https://stockwik.com/blog/export-stocky-data-before-shutdown)
+- [Best Stocky alternatives for Shopify (2026)](https://stockwik.com/blog/best-stocky-alternatives)
+- [How to calculate reorder points for your Shopify store](https://stockwik.com/blog/shopify-reorder-points-guide)
+- [Shopify inventory forecasting: a practical guide](https://stockwik.com/blog/shopify-inventory-forecasting-guide)
+- [Inventory planning for apparel brands on Shopify](https://stockwik.com/blog/apparel-inventory-planning-shopify)
+
+## Company
+
+- [About](https://stockwik.com/about)
+- [Contact](https://stockwik.com/contact)

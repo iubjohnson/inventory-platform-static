@@ -14,6 +14,11 @@ no framework. Deployed via Cloudflare Pages (Git auto-deploy on push to `main`).
 - `stocky-alternative.html` — "Stocky alternative" SEO page (highest-intent traffic)
 - `styles.css` — shared design system; SINGLE SOURCE OF TRUTH for all styling
 - `assets/` — logo SVGs (the "replenish loop" mark)
+- `docs/` — help center, generated from `docs/site-content/*.md` via `node docs/build-docs.mjs`
+- `blog/` — SEO blog, generated from `blog/content/*.md` via `node blog/build-blog.mjs`
+  (also emits `blog/feed.xml` + the site-wide `/sitemap.xml`). Conventions in
+  `blog/content/README.md`. Never hand-edit generated HTML — edit markdown + rebuild.
+- `robots.txt`, `llms.txt`, `sitemap.xml` — SEO/AI-crawler plumbing at root
 
 When adding a page, copy the header/footer from an existing page so nav stays consistent.
 
@@ -63,7 +68,8 @@ All "Install on Shopify" + "Start free trial" buttons link to:
 `https://apps.shopify.com/stockwik-inventory-management`
 with UTM params: `utm_source=stockwik_site&utm_medium=referral&utm_campaign=install_cta`
 and a per-location `utm_content` (e.g. home_hero, pricing_growth, stocky_cta).
-Encode `&` as `&amp;` in HTML. Footer About/Contact/Privacy/Terms are now live pages; only Blog remains a Phase 2 stub (href="#").
+Encode `&` as `&amp;` in HTML. All footer pages (About/Contact/Privacy/Terms/Blog) are live.
+Blog post CTA bands use `utm_campaign=blog&utm_content=<slug>` (emitted by the generator).
 
 ## Verified Stocky facts (for the stocky-alternative page)
 - Full shutdown + API deactivation: **Aug 31, 2026**. App Store delisting: **Feb 2, 2026**.
@@ -75,7 +81,8 @@ Encode `&` as `&amp;` in HTML. Footer About/Contact/Privacy/Terms are now live p
 - [x] Real pricing (Starter $29 / Growth $39 / Pro $79 — shipped)
 - [ ] Confirm current Shopify POS Pro price
 - [x] Wire mobile hamburger menu (nav.js — shipped; builds menu from the desktop nav)
-- [ ] Phase 2 pages: About, Contact, Privacy, Terms done; **Blog** still a stub
+- [x] Phase 2 pages: About, Contact, Privacy, Terms, Blog — all live (blog launched Jul 2026, 6 posts; 24-post campaign plan in project memory)
+- [ ] After deploy: submit sitemap.xml in Google Search Console **and Bing Webmaster Tools** (ChatGPT search runs on Bing)
 - [ ] App Store listing name: "Stockwik: Inventory Planning" (≤30 chars, brand-first)
 - [ ] **Legal pages — before go-live:** have an attorney review privacy.html & terms.html, and fill these placeholders:
   - `[Legal Entity Name]` — privacy.html + terms.html
