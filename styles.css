@@ -428,3 +428,16 @@ table.mini tr:last-child td{border-bottom:none;}
 .post-header{margin:16px 0 22px;}
 .post-header h1{margin:12px 0 12px;font-size:clamp(28px,4.5vw,38px);line-height:1.08;}
 .post-body .post-lead{font-size:18px;line-height:1.65;color:#2e2a3f;}
+
+/* Full-bleed wrap variant (feature/hero grids): flush on desktop, but side
+   padding returns when the grid stacks — text must never touch the edge */
+.wrap-flush{padding:0;}
+@media(max-width:920px){.wrap-flush{padding:0 24px;}}
+@media(max-width:480px){.wrap-flush{padding:0 16px;}}
+
+/* 320px-class devices: preview tables need one more squeeze to fit the card */
+@media(max-width:360px){
+  table.mini{font-size:11px;}
+  table.mini th,table.mini td{padding:6px 5px;}
+  .preview-body{padding:14px 12px;}
+}
