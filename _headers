@@ -1,0 +1,16 @@
+# Cloudflare Pages custom headers.
+# styles.css and the shared JS aren't fingerprinted, so browsers must
+# revalidate them on each load (cheap 304s via ETag) — otherwise a CSS push
+# leaves returning visitors on the stale stylesheet for up to 4 hours.
+
+/styles.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/nav.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/docs/docs.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/docs/search-index.js
+  Cache-Control: public, max-age=0, must-revalidate
