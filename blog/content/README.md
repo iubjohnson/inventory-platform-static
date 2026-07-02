@@ -11,7 +11,9 @@ rebuild (same rule as the docs).
 ---
 title: How to Calculate Reorder Points for Shopify   # SEO <title>; aim ≤49 chars so " — Stockwik" fits in 60
 description: One-sentence summary, ≤155 chars — used for meta description, cards, and the RSS feed.
-date: 2026-07-02          # publish date, YYYY-MM-DD
+date: 2026-07-02          # publish date, YYYY-MM-DD. FUTURE dates = scheduled:
+                          # the post is skipped by the build (page, listing,
+                          # feed, sitemap) until a build runs on/after this date.
 updated: 2026-07-20       # optional; bump when you materially refresh the post
 category: Reordering      # shown as the card pill + breadcrumb
 slug: shopify-reorder-points-guide
@@ -34,6 +36,15 @@ image: /assets/og/….png   # optional OG image (1200×630); falls back to the l
   `/product.html`, `/stocky-alternative.html`, `/docs/concepts/glossary.html`.
 - Every post automatically gets the install CTA band appended with
   `utm_campaign=blog&utm_content=<slug>` — don't add your own.
+- **Link ordering rule:** a post may only link to blog posts dated on/before its
+  own date (the build warns otherwise) — a link to a not-yet-live post 404s.
+
+## Publishing scheduled posts
+
+Once a week (or any day a post comes due): `node blog/build-blog.mjs`, then
+commit and push. Posts whose date has arrived are built and added to the
+listing, feed, and sitemap. When a post goes live, also add its line to
+`/llms.txt` by hand.
 
 ## Content rules (from CLAUDE.md — non-negotiable)
 

@@ -349,7 +349,27 @@ for (const f of files) {
 posts.sort((a, b) => (a.meta.date < b.meta.date ? 1 : a.meta.date > b.meta.date ? -1 :
   (Number(a.meta.order) || 99) - (Number(b.meta.order) || 99) || a.slug.localeCompare(b.slug)));
 
-for (const post of posts) {
+// Scheduled publishing: posts dated in the future are parsed and validated but
+// not built, listed, fed, or sitemapped until a build runs on/after their date.
+const TODAY = new Date().toISOString().slice(0, 10);
+const live = posts.filter(p => p.meta.date <= TODAY);
+const scheduled = posts.filter(p => p.meta.date > TODAY);
+
+// A post may only link to blog posts that are live by its own publish date —
+// otherwise it ships with a link that 404s until the target's build day.
+const bySlug = new Map(posts.map(p => [p.slug, p]));
+for (const p of posts) {
+  for (const m of p.body.matchAll(/\]\(\/blog\/([a-z0-9-]+)\.html/g)) {
+    const target = bySlug.get(m[1]);
+    if (!target) console.warn('WARN ' + p.slug + ': links to unknown post /blog/' + m[1]);
+    else if (target.meta.date > p.meta.date) console.warn('WARN ' + p.slug + ' (' + p.meta.date +
+      '): links to ' + m[1] + ' which only goes live ' + target.meta.date);
+  }
+  if (fs.existsSync(path.join(BLOG_DIR, p.slug + '.html')) && p.meta.date > TODAY)
+    console.warn('WARN ' + p.slug + ': generated HTML exists but the post is now future-dated');
+}
+
+for (const post of live) {
   const { meta } = post;
   const pageTitle = (meta.title + ' — Stockwik').length <= 60 ? meta.title + ' — Stockwik' : meta.title;
   if (pageTitle.length > 60) console.warn('WARN ' + post.slug + ': <title> is ' + pageTitle.length + ' chars (>60)');
@@ -388,7 +408,7 @@ ${ctaBand(post.slug)}`;
 
 // ---------- listing page ----------
 let cards = '<div class="blog-grid">';
-for (const post of posts) {
+for (const post of live) {
   cards += `<a class="blog-card" href="/blog/${escAttr(post.slug)}.html">
     <span class="blog-cat">${esc(post.meta.category)}</span>
     <h3>${esc(post.h1)}</h3>
@@ -424,7 +444,7 @@ fs.writeFileSync(path.join(BLOG_DIR, 'index.html'), shell({
 // ---------- RSS feed ----------
 function buildFeed() {
   let items = '';
-  for (const post of posts) {
+  for (const post of live) {
     const link = SITE + '/blog/' + post.slug;
     items += `  <item>
     <title>${esc(post.h1)}</title>
@@ -472,7 +492,7 @@ function buildSitemap() {
   const marketing = ['', '/product', '/pricing', '/stocky-alternative', '/about', '/contact', '/privacy', '/terms']
     .map(p => ({ loc: SITE + (p || '/') }));
   const docs = docsUrls().map(u => ({ loc: u }));
-  const blog = [{ loc: SITE + '/blog/' }].concat(posts.map(p => ({
+  const blog = [{ loc: SITE + '/blog/' }].concat(live.map(p => ({
     loc: SITE + '/blog/' + p.slug,
     lastmod: p.meta.updated || p.meta.date
   })));
@@ -485,4 +505,8 @@ function buildSitemap() {
 }
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), buildSitemap());
 
-console.log('Built ' + posts.length + ' blog posts + listing + feed.xml + sitemap.xml.');
+console.log('Built ' + live.length + ' live blog posts + listing + feed.xml + sitemap.xml.');
+if (scheduled.length) {
+  console.log('Scheduled (not built until their date):');
+  for (const p of scheduled) console.log('  ' + p.meta.date + '  ' + p.slug);
+}
