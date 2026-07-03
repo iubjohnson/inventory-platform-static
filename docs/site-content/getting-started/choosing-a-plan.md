@@ -8,7 +8,7 @@ Right after you install, Stockwik asks you to pick a plan. Every plan starts wit
 |---|---|---|
 | **Starter** | $29/mo | Knowing what to buy — inventory visibility and reorder suggestions (view-only). |
 | **Growth** | $39/mo | Closing the loop — purchase orders, receiving, counts, cost edits, and reports. |
-| **Pro** | $79/mo | Running multiple locations — everything in Growth plus stock transfers. |
+| **Pro** | $49/mo | Running multiple locations — everything in Growth plus stock transfers. |
 
 For the full breakdown of what each plan unlocks, see [Plans & features](../account/plans-and-features).
 

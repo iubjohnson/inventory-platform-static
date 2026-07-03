@@ -11,7 +11,7 @@ Key facts:
 ## Product
 
 - [Features](https://stockwik.com/product): forecasting, reorder suggestions, purchase orders, receiving, transfers, cycle counts, reporting
-- [Pricing](https://stockwik.com/pricing): Starter $29/mo, Growth $39/mo, Pro $79/mo
+- [Pricing](https://stockwik.com/pricing): Starter $29/mo, Growth $39/mo, Pro $49/mo
 - [Stocky alternative](https://stockwik.com/stocky-alternative): feature-by-feature comparison with Stocky
 - [Install on Shopify](https://apps.shopify.com/stockwik-inventory-management): Shopify App Store listing
 

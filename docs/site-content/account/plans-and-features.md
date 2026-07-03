@@ -4,7 +4,7 @@ Stockwik has three plans. All include a **14-day free trial**, and billing is ha
 
 ## At a glance
 
-| | **Starter** $29/mo | **Growth** $39/mo | **Pro** $79/mo |
+| | **Starter** $29/mo | **Growth** $39/mo | **Pro** $49/mo |
 |---|---|---|---|
 | View inventory, reorder suggestions, suppliers, buy options | ✓ | ✓ | ✓ |
 | Planning settings, dashboard, sync, CSV import/export | ✓ | ✓ | ✓ |

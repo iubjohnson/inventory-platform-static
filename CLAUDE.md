@@ -78,7 +78,7 @@ Blog post CTA bands use `utm_campaign=blog&utm_content=<slug>` (emitted by the g
 - Always keep competitive claims factual and verifiable.
 
 ## Pre-launch TODO (placeholders to replace)
-- [x] Real pricing (Starter $29 / Growth $39 / Pro $79 — shipped)
+- [x] Real pricing (Starter $29 / Growth $39 / Pro $49 — shipped)
 - [ ] Confirm current Shopify POS Pro price
 - [x] Wire mobile hamburger menu (nav.js — shipped; builds menu from the desktop nav)
 - [x] Phase 2 pages: About, Contact, Privacy, Terms, Blog — all live (blog launched Jul 2026, 6 posts; 24-post campaign plan in project memory)
