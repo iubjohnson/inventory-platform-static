@@ -73,7 +73,7 @@ Blog post CTA bands use `utm_campaign=blog&utm_content=<slug>` (emitted by the g
 
 ## Verified Stocky facts (for the stocky-alternative page)
 - Full shutdown + API deactivation: **Aug 31, 2026**. App Store delisting: **Feb 2, 2026**.
-- Stocky required **Shopify POS Pro** (~$89/mo — VERIFY current price before relying on it).
+- Stocky required **Shopify POS Pro** ($89/mo/location, $79 on annual — verified 2026-07-16).
 - Multi-location transfers **removed in 2025**. Supplier data **cannot** be exported.
 - Always keep competitive claims factual and verifiable.
 
@@ -83,7 +83,9 @@ Blog post CTA bands use `utm_campaign=blog&utm_content=<slug>` (emitted by the g
 - [x] Wire mobile hamburger menu (nav.js — shipped; builds menu from the desktop nav)
 - [x] Phase 2 pages: About, Contact, Privacy, Terms, Blog — all live (blog launched Jul 2026, 6 posts; 24-post campaign plan in project memory)
 - [ ] After deploy: submit sitemap.xml in Google Search Console **and Bing Webmaster Tools** (ChatGPT search runs on Bing)
-- [ ] App Store listing name: "Stockwik: Inventory Planning" (≤30 chars, brand-first)
+- [x] App Store listing: shipped as **"Stockwik Inventory Manager"**, APPROVED + live 2026-07-16.
+  Listing URL stays `apps.shopify.com/stockwik-inventory-management` (the app-handle rename to
+  `-manager` did NOT change the listing slug — all site CTAs are correct as-is).
 - [ ] **Legal pages — before go-live:** have an attorney review privacy.html & terms.html, and fill these placeholders:
   - `[Legal Entity Name]` — privacy.html + terms.html
   - `[State/Country]` governing law — terms.html (appears twice)
