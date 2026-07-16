@@ -18,6 +18,7 @@ import { fileURLToPath } from 'url';
 
 const DOCS_DIR = path.dirname(fileURLToPath(import.meta.url));
 const SRC = path.join(DOCS_DIR, 'site-content');
+const SITE = 'https://stockwik.com';
 const INSTALL = 'https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=install_cta&amp;utm_content=docs_header';
 const SHOPIFY_IC = '<svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>';
 
@@ -260,7 +261,7 @@ function sidebar(sections, currentUrl) {
   return h + '</nav>';
 }
 
-function shell({ title, descr, body, scripts }) {
+function shell({ title, descr, body, scripts, canonical }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -270,6 +271,7 @@ function shell({ title, descr, body, scripts }) {
 <meta name="description" content="${escAttr(descr || '')}">
 <link rel="icon" type="image/svg+xml" href="/assets/mark_primary.svg">
 <link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="${escAttr(canonical)}">
 </head>
 <body>
 ${header()}
@@ -340,7 +342,8 @@ ${contentHtml}
       title: h1 + ' — Stockwik Help',
       descr,
       body,
-      scripts: '<script src="/docs/search-index.js"></script>\n<script src="/docs/docs.js"></script>'
+      scripts: '<script src="/docs/search-index.js"></script>\n<script src="/docs/docs.js"></script>',
+      canonical: SITE + pg.url.replace(/\.html$/, '')
     });
     const outFile = path.join(DOCS_DIR, pg.href + '.html');
     fs.mkdirSync(path.dirname(outFile), { recursive: true });
@@ -379,7 +382,8 @@ fs.writeFileSync(path.join(DOCS_DIR, 'index.html'), shell({
   title: siteTitle + ' — Stockwik',
   descr: plainText(landingIntro).slice(0, 180),
   body: landingBody,
-  scripts: '<script src="/docs/search-index.js"></script>\n<script src="/docs/docs.js"></script>'
+  scripts: '<script src="/docs/search-index.js"></script>\n<script src="/docs/docs.js"></script>',
+  canonical: SITE + '/docs/'
 }));
 
 fs.writeFileSync(path.join(DOCS_DIR, 'search-index.js'),
