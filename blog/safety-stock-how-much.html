@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safety Stock: How Much Do You Actually Need? — Stockwik</title>
+<meta name="description" content="Safety stock protects you from demand spikes and late deliveries. How to size the buffer in days of demand, when to raise or lower it, and what it costs.">
+<link rel="icon" type="image/svg+xml" href="/assets/mark_primary.svg">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://stockwik.com/blog/safety-stock-how-much">
+<link rel="alternate" type="application/rss+xml" title="Stockwik Blog" href="/blog/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Stockwik">
+<meta property="og:title" content="Safety Stock: How Much Do You Actually Need?">
+<meta property="og:description" content="Safety stock protects you from demand spikes and late deliveries. How to size the buffer in days of demand, when to raise or lower it, and what it costs.">
+<meta property="og:url" content="https://stockwik.com/blog/safety-stock-how-much">
+<meta property="og:image" content="https://stockwik.com/assets/mark_primary.svg">
+<meta property="article:published_time" content="2026-07-09">
+<meta property="article:modified_time" content="2026-07-09">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Safety Stock: How Much Do You Actually Need?">
+<meta name="twitter:description" content="Safety stock protects you from demand spikes and late deliveries. How to size the buffer in days of demand, when to raise or lower it, and what it costs.">
+<meta name="twitter:image" content="https://stockwik.com/assets/mark_primary.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Safety stock: how much buffer does your store actually need?","description":"Safety stock protects you from demand spikes and late deliveries. How to size the buffer in days of demand, when to raise or lower it, and what it costs.","datePublished":"2026-07-09","dateModified":"2026-07-09","author":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com"},"publisher":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com","logo":{"@type":"ImageObject","url":"https://stockwik.com/assets/mark_primary.svg"}},"mainEntityOfPage":"https://stockwik.com/blog/safety-stock-how-much","url":"https://stockwik.com/blog/safety-stock-how-much"}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/index.html"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
+    <nav class="nav-links">
+      <a href="/product.html">Product</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/stocky-alternative.html">Stocky alternative</a>
+    </nav>
+    <div class="nav-cta"><a class="login-link" href="https://app.stockwik.com" target="_blank" rel="noopener noreferrer">Log in</a><a class="btn btn-primary" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=install_cta&amp;utm_content=blog_header"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a></div>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+<section class="section post-section" style="padding-top:48px;">
+  <div class="wrap post-wrap">
+    <nav class="docs-breadcrumb"><a href="/blog/">Blog</a><span>/</span><span>Reordering</span></nav>
+    <header class="post-header">
+      <span class="eyebrow">Reordering</span>
+      <h1>Safety stock: how much buffer does your store actually need?</h1>
+      <div class="post-meta">Published <time datetime="2026-07-09">July 9, 2026</time> · Last updated <time datetime="2026-07-09">July 9, 2026</time> · 3 min read</div>
+    </header>
+    <article class="doc-content post-body">
+<p class="post-lead">Safety stock is the cushion between "the math said we'd be fine" and reality — extra inventory that absorbs a sales spike or a late delivery so you don't stock out. The practical way to size it is in <strong>days of demand</strong>, not units: around <strong>14 days</strong> is a sensible default for most products, more for critical items with unreliable suppliers, less for slow movers where the buffer just ties up cash. Sizing it in days means the buffer automatically scales with how fast each product actually sells.</p>
+<h2>Why days beat units</h2>
+<p>"Keep 20 extra units of everything" is the spreadsheet-era approach, and it fails in both directions: 20 units is a month of cushion on a slow mover (dead cash) and two days on your best seller (no protection at all). Expressed in days, the same rule sizes itself:</p>
+<div class="doc-table-wrap"><table><thead><tr><th>Product</th><th>Daily sales</th><th>14 days of safety stock</th></tr></thead><tbody><tr><td>Pima Tee · M / White</td><td>0.9/day</td><td>≈ 13 units</td></tr><tr><td>Pima Tee · XS / Olive</td><td>0.1/day</td><td>≈ 1–2 units</td></tr><tr><td>Chino Shorts · 32 / Charcoal</td><td>0.5/day</td><td>≈ 7 units</td></tr></tbody></table></div>
+<p>Same policy, three very different buffers — each proportional to the risk it's protecting against.</p>
+<h2>Where safety stock sits in the math</h2>
+<p>Safety stock doesn't sit on a shelf with a label; it lives inside your reorder point:</p>
+<p><strong>Reorder point = daily sales × (supplier lead time + safety-stock days)</strong></p>
+<p>The lead-time part covers demand <em>while you wait</em> for a normal delivery. The safety days cover the two things that go wrong: demand running hotter than expected, and the delivery landing later than promised. If both behave, the buffer just rolls forward untouched. (Full walk-through with a worked example: <a href="/blog/shopify-reorder-points-guide.html">How to calculate reorder points</a>.)</p>
+<h2>When to raise it</h2>
+<ul><li><strong>Unreliable or long lead times.</strong> A supplier who's "45 days, usually" deserves more cushion than one who hits 7 days every time. Overseas production with a missed boat can slip weeks, not days.</li><li><strong>Critical products.</strong> Your best sellers and anything a customer came specifically to buy — the cost of a stockout (lost sale, lost ad spend, lost momentum) dwarfs the cost of a few extra units. See <a href="/blog/sales-velocity-explained.html">how sales velocity identifies these</a>.</li><li><strong>Volatile demand.</strong> Products whose weekly sales swing hard need more buffer than steady sellers with the same average.</li><li><strong>Single-source items.</strong> No backup supplier means no plan B — the buffer <em>is</em> the plan B.</li></ul>
+<h2>When to lower it</h2>
+<ul><li><strong>Slow movers.</strong> Two weeks of buffer on a 0.1/day product is ~1 unit; rounding up beyond that is just parked cash.</li><li><strong>Fast, reliable, nearby suppliers.</strong> If a reorder reliably lands in 5 days, a 14-day cushion may be double what you need.</li><li><strong>Cash is tight.</strong> Safety stock is insurance, and insurance has a premium: carrying cost. Trimming buffer on B- and C-tier products frees cash for the A-tier where stockouts actually hurt.</li></ul>
+<div class="doc-callout note"><div class="doc-callout-label">Note</div><div class="doc-callout-body">Textbook safety-stock formulas (z-scores, demand standard deviation) exist and are statistically sound — but they need clean demand-variance data per SKU and assume you'll maintain the model. For a small merchant, days-of-demand with per-product overrides captures most of the benefit with none of the ceremony.</div></div>
+<h2>Set the default, override the exceptions</h2>
+<p>The workable pattern: one org-wide default (14 days), then per-product overrides for the exceptions — raise it on the critical single-source item, drop it on the slow tail. That's exactly how <a href="/product.html">Stockwik</a> is set up: safety stock is a planning default in Settings, adjustable per product, and it's baked into every reorder point automatically (<a href="/docs/concepts/planning-defaults-and-overrides.html">Planning defaults &amp; overrides</a>).</p>
+<h2>FAQ</h2>
+<h3>What is safety stock?</h3>
+<p>Extra inventory held to absorb demand spikes and delivery delays. It's the buffer between your forecast and reality.</p>
+<h3>How much safety stock should I keep?</h3>
+<p>Start at about 14 days of demand per product. Raise it for critical items, volatile sellers, and unreliable suppliers; lower it for slow movers and fast, dependable ones.</p>
+<h3>Is safety stock the same as a reorder point?</h3>
+<p>No — safety stock is one ingredient. Reorder point = daily sales × (lead time + safety-stock days). The buffer extends the reorder point so an order gets placed earlier.</p>
+<h3>Does more safety stock always mean fewer stockouts?</h3>
+<p>Diminishing returns kick in fast. The first two weeks of buffer prevent most stockouts; beyond that you're mostly paying carrying cost for rare events.</p>
+    </article>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="wrap">
+    <div class="cta-band">
+      <img class="loop-bg" src="/assets/mark_white.svg" alt="">
+      <span class="eyebrow" style="color:var(--amber);">Ready when you are</span>
+      <h2 style="margin-top:12px;">Start planning smarter buys today.</h2>
+      <p class="lede">Install Stockwik from the Shopify App Store, connect your store, and get your first reorder plan in minutes. Free to install with a 14-day trial.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=blog&amp;utm_content=safety-stock-how-much"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a>
+        <a class="btn btn-white btn-lg" href="/pricing.html">See pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand"><img src="/assets/mark_white.svg" alt="" style="width:32px;height:32px;"><span class="wm">stockwik</span></div><p class="foot-about">Inventory planning, forecasting, and purchasing for small and mid-size Shopify merchants. Built by an operator who lived the problem.</p></div>
+      <div><h4>Product</h4><a href="/product.html">Features</a><a href="/pricing.html">Pricing</a><a href="/stocky-alternative.html">Stocky alternative</a><a href="/docs/">Docs</a><a href="/changelog.html">Changelog</a></div>
+      <div><h4>Company</h4><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/blog/">Blog</a></div>
+      <div><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Stockwik. All rights reserved.</span><span>Made for Shopify merchants.</span></div>
+  </div>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

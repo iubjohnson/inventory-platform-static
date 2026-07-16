@@ -7,6 +7,30 @@
   <description>Practical guides on inventory planning, forecasting, reordering, and purchasing for Shopify merchants.</description>
   <language>en-us</language>
   <item>
+    <title>How to create purchase orders for your Shopify store (without spreadsheets)</title>
+    <link>https://stockwik.com/blog/shopify-purchase-orders-guide</link>
+    <guid isPermaLink="true">https://stockwik.com/blog/shopify-purchase-orders-guide</guid>
+    <pubDate>Thu, 16 Jul 2026 12:00:00 GMT</pubDate>
+    <category>Purchasing</category>
+    <description>A practical purchase-order workflow for Shopify merchants — from reorder suggestion to sent PO to received stock — without spreadsheets or email archaeology.</description>
+  </item>
+  <item>
+    <title>Multi-location stock transfers on Shopify (now that Stocky's are gone)</title>
+    <link>https://stockwik.com/blog/shopify-multi-location-transfers</link>
+    <guid isPermaLink="true">https://stockwik.com/blog/shopify-multi-location-transfers</guid>
+    <pubDate>Tue, 14 Jul 2026 12:00:00 GMT</pubDate>
+    <category>Operations</category>
+    <description>How to move stock between Shopify locations without losing track of it — statuses, receiving, short shipments, and when to transfer instead of reorder.</description>
+  </item>
+  <item>
+    <title>Safety stock: how much buffer does your store actually need?</title>
+    <link>https://stockwik.com/blog/safety-stock-how-much</link>
+    <guid isPermaLink="true">https://stockwik.com/blog/safety-stock-how-much</guid>
+    <pubDate>Thu, 09 Jul 2026 12:00:00 GMT</pubDate>
+    <category>Reordering</category>
+    <description>Safety stock protects you from demand spikes and late deliveries. How to size the buffer in days of demand, when to raise or lower it, and what it costs.</description>
+  </item>
+  <item>
     <title>Sales velocity: the number behind every good reorder decision</title>
     <link>https://stockwik.com/blog/sales-velocity-explained</link>
     <guid isPermaLink="true">https://stockwik.com/blog/sales-velocity-explained</guid>
