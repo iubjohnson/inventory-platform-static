@@ -31,6 +31,10 @@ Key facts:
 - [How to calculate reorder points for your Shopify store](https://stockwik.com/blog/shopify-reorder-points-guide)
 - [Shopify inventory forecasting: a practical guide](https://stockwik.com/blog/shopify-inventory-forecasting-guide)
 - [Inventory planning for apparel brands on Shopify](https://stockwik.com/blog/apparel-inventory-planning-shopify)
+- [How sales velocity works for Shopify inventory](https://stockwik.com/blog/sales-velocity-explained)
+- [Safety stock: how much do you actually need?](https://stockwik.com/blog/safety-stock-how-much)
+- [Multi-location inventory transfers on Shopify](https://stockwik.com/blog/shopify-multi-location-transfers)
+- [How to create purchase orders for Shopify](https://stockwik.com/blog/shopify-purchase-orders-guide)
 
 ## Company
 
