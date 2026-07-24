@@ -7,6 +7,22 @@
   <description>Practical guides on inventory planning, forecasting, reordering, and purchasing for Shopify merchants.</description>
   <language>en-us</language>
   <item>
+    <title>Receiving inventory: stop losing stock between the truck and the shelf</title>
+    <link>https://stockwik.com/blog/receiving-inventory-best-practices</link>
+    <guid isPermaLink="true">https://stockwik.com/blog/receiving-inventory-best-practices</guid>
+    <pubDate>Thu, 23 Jul 2026 12:00:00 GMT</pubDate>
+    <category>Purchasing</category>
+    <description>Receiving is where inventory accuracy is won or lost. How to receive against POs, handle short shipments and partials, and keep costs current.</description>
+  </item>
+  <item>
+    <title>Shopify's built-in inventory tools: what they cover and where you'll outgrow them</title>
+    <link>https://stockwik.com/blog/shopify-native-inventory-limits</link>
+    <guid isPermaLink="true">https://stockwik.com/blog/shopify-native-inventory-limits</guid>
+    <pubDate>Tue, 21 Jul 2026 12:00:00 GMT</pubDate>
+    <category>Shopify basics</category>
+    <description>What Shopify's built-in inventory tools cover, and the planning jobs they leave to you — forecasting, reorder points, and knowing how much to buy.</description>
+  </item>
+  <item>
     <title>How to create purchase orders for your Shopify store (without spreadsheets)</title>
     <link>https://stockwik.com/blog/shopify-purchase-orders-guide</link>
     <guid isPermaLink="true">https://stockwik.com/blog/shopify-purchase-orders-guide</guid>

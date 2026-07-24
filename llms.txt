@@ -35,6 +35,8 @@ Key facts:
 - [Safety stock: how much do you actually need?](https://stockwik.com/blog/safety-stock-how-much)
 - [Multi-location inventory transfers on Shopify](https://stockwik.com/blog/shopify-multi-location-transfers)
 - [How to create purchase orders for Shopify](https://stockwik.com/blog/shopify-purchase-orders-guide)
+- [Shopify built-in inventory tools: the limits](https://stockwik.com/blog/shopify-native-inventory-limits)
+- [Receiving inventory: best practices for Shopify](https://stockwik.com/blog/receiving-inventory-best-practices)
 
 ## Company
 
