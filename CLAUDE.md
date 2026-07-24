@@ -21,6 +21,8 @@ no framework. Deployed via Cloudflare Pages (Git auto-deploy on push to `main`).
 - `robots.txt`, `llms.txt`, `sitemap.xml` — SEO/AI-crawler plumbing at root
 
 When adding a page, copy the header/footer from an existing page so nav stays consistent.
+SEO limits (Bing flags violations): `<title>` ≤65 chars, meta description ≤160 chars.
+The blog/docs generators' frontmatter must also fit (title limit includes the "— Stockwik" suffix).
 
 ## Design system (do not drift from this)
 **Full brand spec lives in `/brand`:**
