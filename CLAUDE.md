@@ -82,7 +82,7 @@ Blog post CTA bands use `utm_campaign=blog&utm_content=<slug>` (emitted by the g
 - [ ] Confirm current Shopify POS Pro price
 - [x] Wire mobile hamburger menu (nav.js — shipped; builds menu from the desktop nav)
 - [x] Phase 2 pages: About, Contact, Privacy, Terms, Blog — all live (blog launched Jul 2026, 6 posts; 24-post campaign plan in project memory)
-- [ ] After deploy: submit sitemap.xml in Google Search Console **and Bing Webmaster Tools** (ChatGPT search runs on Bing)
+- [x] Submit sitemap.xml in Google Search Console + Bing Webmaster Tools (done 2026-07-16; GSC sitemap Success, ~12 pages indexed by Google as of 2026-07-24 — Bing has only the homepage so far, see seo-indexing-setup memory)
 - [x] App Store listing: shipped as **"Stockwik Inventory Manager"**, APPROVED + live 2026-07-16.
   Listing URL stays `apps.shopify.com/stockwik-inventory-management` (the app-handle rename to
   `-manager` did NOT change the listing slug — all site CTAs are correct as-is).
