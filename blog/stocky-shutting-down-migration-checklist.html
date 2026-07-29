@@ -26,11 +26,11 @@
 <body>
 <header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="/index.html"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
+    <a class="brand" href="/"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
     <nav class="nav-links">
-      <a href="/product.html">Product</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/stocky-alternative.html">Stocky alternative</a>
+      <a href="/product">Product</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/stocky-alternative">Stocky alternative</a>
     </nav>
     <div class="nav-cta"><a class="login-link" href="https://app.stockwik.com" target="_blank" rel="noopener noreferrer">Log in</a><a class="btn btn-primary" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=install_cta&amp;utm_content=blog_header"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a></div>
     <button class="menu-btn" aria-label="Menu">☰</button>
@@ -53,7 +53,7 @@
 <p>Stocky handled the <em>planning</em> side of inventory that Shopify's admin doesn't fully cover: demand forecasting, reorder suggestions, purchase orders, receiving, supplier records, and stocktakes. Your <strong>products, inventory levels, and sales history are not affected</strong> — those live in Shopify itself, not in Stocky. What disappears is the layer that told you <em>when</em> and <em>how much</em> to buy, plus any data that only existed inside Stocky.</p>
 <div class="doc-callout important"><div class="doc-callout-label">Important</div><div class="doc-callout-body">Supplier data — contacts, lead times, costs, which products come from whom — <strong>cannot be exported from Stocky</strong>. If you don't write it down before August 31, it's gone.</div></div>
 <h2>The migration checklist</h2>
-<ol><li><strong>Export what Stocky lets you export.</strong> Historical purchase orders and inventory reports can be downloaded as CSVs from Stocky's export features. Do this now and file the CSVs somewhere safe — you'll want old POs for reference and for warranty/receiving disputes. (Step-by-step: <a href="/blog/export-stocky-data-before-shutdown.html">How to export your Stocky data before the shutdown</a>.)</li><li><strong>Manually record your supplier data.</strong> For each supplier: name, contact, typical lead time in days, minimum order quantities, case/pack sizes, costs, and the products you buy from them. A simple spreadsheet is fine. This is the one step with a hard deadline and no undo.</li><li><strong>Choose a replacement before your last Stocky order cycle.</strong> Give yourself at least one full reorder cycle on the new tool while Stocky still works, so you can compare its suggestions against what you'd have done. (Our honest comparison of the options: <a href="/blog/best-stocky-alternatives.html">Best Stocky alternatives for Shopify</a>.)</li><li><strong>Reconnect your planning settings.</strong> In whatever tool you choose, re-enter supplier lead times, safety-stock buffers, and pack sizes. In <a href="/product.html">Stockwik</a>, suppliers are created automatically from your Shopify vendors — you add lead times and buy options on top.</li><li><strong>Verify the forecasts rebuild correctly.</strong> Good news: forecasting tools don't need Stocky's data. Your sales history lives in Shopify, and a replacement app reads it directly — Stockwik, for example, pulls a rolling year of order history and has reorder suggestions ready after its first sync.</li><li><strong>Run both in parallel for a couple of weeks.</strong> Sanity-check that reorder points and suggested quantities look right against your own judgment before you rely on them.</li><li><strong>Uninstall Stocky</strong> once your first real purchase orders have gone through the new tool end-to-end — created, sent, and received.</li></ol>
+<ol><li><strong>Export what Stocky lets you export.</strong> Historical purchase orders and inventory reports can be downloaded as CSVs from Stocky's export features. Do this now and file the CSVs somewhere safe — you'll want old POs for reference and for warranty/receiving disputes. (Step-by-step: <a href="/blog/export-stocky-data-before-shutdown">How to export your Stocky data before the shutdown</a>.)</li><li><strong>Manually record your supplier data.</strong> For each supplier: name, contact, typical lead time in days, minimum order quantities, case/pack sizes, costs, and the products you buy from them. A simple spreadsheet is fine. This is the one step with a hard deadline and no undo.</li><li><strong>Choose a replacement before your last Stocky order cycle.</strong> Give yourself at least one full reorder cycle on the new tool while Stocky still works, so you can compare its suggestions against what you'd have done. (Our honest comparison of the options: <a href="/blog/best-stocky-alternatives">Best Stocky alternatives for Shopify</a>.)</li><li><strong>Reconnect your planning settings.</strong> In whatever tool you choose, re-enter supplier lead times, safety-stock buffers, and pack sizes. In <a href="/product">Stockwik</a>, suppliers are created automatically from your Shopify vendors — you add lead times and buy options on top.</li><li><strong>Verify the forecasts rebuild correctly.</strong> Good news: forecasting tools don't need Stocky's data. Your sales history lives in Shopify, and a replacement app reads it directly — Stockwik, for example, pulls a rolling year of order history and has reorder suggestions ready after its first sync.</li><li><strong>Run both in parallel for a couple of weeks.</strong> Sanity-check that reorder points and suggested quantities look right against your own judgment before you rely on them.</li><li><strong>Uninstall Stocky</strong> once your first real purchase orders have gone through the new tool end-to-end — created, sent, and received.</li></ol>
 <h2>Will you still need POS Pro?</h2>
 <p>Stocky required a Shopify POS Pro subscription, so some retailers keep POS Pro partly <em>for</em> Stocky. Most replacement inventory apps — Stockwik included — are standalone Shopify apps with no POS Pro requirement. If Stocky was your main reason for the subscription, the migration is a good moment to re-check whether you still need it for other POS features.</p>
 <h2>FAQ</h2>
@@ -66,7 +66,7 @@
 <h3>How long does switching actually take?</h3>
 <p>The manual part is documenting suppliers — an afternoon for most stores. Apps like Stockwik sync your catalog and a year of sales history on install, so you have working reorder suggestions the same day; budget a week or two of running in parallel to build trust in the numbers.</p>
 <hr>
-<p><em>Stockwik was built for exactly this: reorder points, purchase orders, receiving, transfers, and cycle counts for Shopify merchants — no POS Pro required. See <a href="/stocky-alternative.html">how it compares to Stocky</a> or the <a href="/product.html">feature tour</a>.</em></p>
+<p><em>Stockwik was built for exactly this: reorder points, purchase orders, receiving, transfers, and cycle counts for Shopify merchants — no POS Pro required. See <a href="/stocky-alternative">how it compares to Stocky</a> or the <a href="/product">feature tour</a>.</em></p>
     </article>
   </div>
 </section>
@@ -79,7 +79,7 @@
       <p class="lede">Install Stockwik from the Shopify App Store, connect your store, and get your first reorder plan in minutes. Free to install with a 14-day trial.</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=blog&amp;utm_content=stocky-shutting-down-migration-checklist"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a>
-        <a class="btn btn-white btn-lg" href="/pricing.html">See pricing</a>
+        <a class="btn btn-white btn-lg" href="/pricing">See pricing</a>
       </div>
     </div>
   </div>
@@ -88,9 +88,9 @@
   <div class="wrap">
     <div class="foot-grid">
       <div><div class="brand"><img src="/assets/mark_white.svg" alt="" style="width:32px;height:32px;"><span class="wm">stockwik</span></div><p class="foot-about">Inventory planning, forecasting, and purchasing for small and mid-size Shopify merchants. Built by an operator who lived the problem.</p></div>
-      <div><h4>Product</h4><a href="/product.html">Features</a><a href="/pricing.html">Pricing</a><a href="/stocky-alternative.html">Stocky alternative</a><a href="/docs/">Docs</a><a href="/changelog.html">Changelog</a></div>
-      <div><h4>Company</h4><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/blog/">Blog</a></div>
-      <div><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+      <div><h4>Product</h4><a href="/product">Features</a><a href="/pricing">Pricing</a><a href="/stocky-alternative">Stocky alternative</a><a href="/docs/">Docs</a><a href="/changelog">Changelog</a></div>
+      <div><h4>Company</h4><a href="/about">About</a><a href="/contact">Contact</a><a href="/blog/">Blog</a></div>
+      <div><h4>Legal</h4><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
     </div>
     <div class="foot-bottom"><span>© 2026 Stockwik. All rights reserved.</span><span>Made for Shopify merchants.</span></div>
   </div>

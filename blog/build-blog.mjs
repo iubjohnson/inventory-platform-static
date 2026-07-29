@@ -9,8 +9,9 @@
 //    Optional: updated, image.
 //  - H1 in the markdown = visible headline (rendered in the post header).
 //  - The first paragraph after the H1 becomes the styled answer-first lead.
-//  - Internal links use absolute site paths with .html (e.g. /product.html,
-//    /docs/concepts/glossary.html).
+//  - Internal links use absolute extensionless site paths (e.g. /product,
+//    /docs/concepts/glossary) — the "pretty" URLs Cloudflare Pages serves and
+//    the sitemap/canonicals declare. resolveLink() strips a stray .html.
 //
 // The markdown converter below is copied from docs/build-docs.mjs — keep the
 // two in sync manually. One deliberate difference: inline() here stashes code
@@ -35,11 +36,12 @@ const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&
 const escAttr = s => esc(s).replace(/"/g, '&quot;');
 
 function resolveLink(url, dir) {
-  if (/^(https?:|mailto:|tel:|#|\/)/i.test(url)) return url;
-  let p = path.posix.normalize(dir + url);
-  if (p.endsWith('/')) p = p.slice(0, -1);
-  if (!/\.[a-z0-9]+$/i.test(p)) p += '.html';
-  return p;
+  if (/^(https?:|mailto:|tel:|#)/i.test(url)) return url;
+  let p = url.startsWith('/') ? url : path.posix.normalize(dir + url);
+  // Emit extensionless "pretty" URLs (what the sitemap + canonicals declare);
+  // strip .html so older markdown that still uses it normalizes too.
+  p = p.replace(/\.html(?=[#?]|$)/i, '').replace(/\/index(?=[#?]|$)/i, '/');
+  return p || '/';
 }
 
 // Sentinel for stashed code spans: a char that can never appear in markdown
@@ -220,11 +222,11 @@ function readTime(md) {
 function header() {
   return `<header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="/index.html"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
+    <a class="brand" href="/"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
     <nav class="nav-links">
-      <a href="/product.html">Product</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/stocky-alternative.html">Stocky alternative</a>
+      <a href="/product">Product</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/stocky-alternative">Stocky alternative</a>
     </nav>
     <div class="nav-cta"><a class="login-link" href="https://app.stockwik.com" target="_blank" rel="noopener noreferrer">Log in</a><a class="btn btn-primary" href="${INSTALL}">${SHOPIFY_IC}Install on Shopify</a></div>
     <button class="menu-btn" aria-label="Menu">☰</button>
@@ -237,9 +239,9 @@ function footer() {
   <div class="wrap">
     <div class="foot-grid">
       <div><div class="brand"><img src="/assets/mark_white.svg" alt="" style="width:32px;height:32px;"><span class="wm">stockwik</span></div><p class="foot-about">Inventory planning, forecasting, and purchasing for small and mid-size Shopify merchants. Built by an operator who lived the problem.</p></div>
-      <div><h4>Product</h4><a href="/product.html">Features</a><a href="/pricing.html">Pricing</a><a href="/stocky-alternative.html">Stocky alternative</a><a href="/docs/">Docs</a><a href="/changelog.html">Changelog</a></div>
-      <div><h4>Company</h4><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/blog/">Blog</a></div>
-      <div><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+      <div><h4>Product</h4><a href="/product">Features</a><a href="/pricing">Pricing</a><a href="/stocky-alternative">Stocky alternative</a><a href="/docs/">Docs</a><a href="/changelog">Changelog</a></div>
+      <div><h4>Company</h4><a href="/about">About</a><a href="/contact">Contact</a><a href="/blog/">Blog</a></div>
+      <div><h4>Legal</h4><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
     </div>
     <div class="foot-bottom"><span>© 2026 Stockwik. All rights reserved.</span><span>Made for Shopify merchants.</span></div>
   </div>
@@ -278,7 +280,7 @@ function ctaBand(slug) {
       <p class="lede">Install Stockwik from the Shopify App Store, connect your store, and get your first reorder plan in minutes. Free to install with a 14-day trial.</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href="${url}">${SHOPIFY_IC}Install on Shopify</a>
-        <a class="btn btn-white btn-lg" href="/pricing.html">See pricing</a>
+        <a class="btn btn-white btn-lg" href="/pricing">See pricing</a>
       </div>
     </div>
   </div>
@@ -359,7 +361,7 @@ const scheduled = posts.filter(p => p.meta.date > TODAY);
 // otherwise it ships with a link that 404s until the target's build day.
 const bySlug = new Map(posts.map(p => [p.slug, p]));
 for (const p of posts) {
-  for (const m of p.body.matchAll(/\]\(\/blog\/([a-z0-9-]+)\.html/g)) {
+  for (const m of p.body.matchAll(/\]\(\/blog\/([a-z0-9-]+)(?:\.html)?(?=[)#])/g)) {
     const target = bySlug.get(m[1]);
     if (!target) console.warn('WARN ' + p.slug + ': links to unknown post /blog/' + m[1]);
     else if (target.meta.date > p.meta.date) console.warn('WARN ' + p.slug + ' (' + p.meta.date +
@@ -409,7 +411,7 @@ ${ctaBand(post.slug)}`;
 // ---------- listing page ----------
 let cards = '<div class="blog-grid">';
 for (const post of live) {
-  cards += `<a class="blog-card" href="/blog/${escAttr(post.slug)}.html">
+  cards += `<a class="blog-card" href="/blog/${escAttr(post.slug)}">
     <span class="blog-cat">${esc(post.meta.category)}</span>
     <h3>${esc(post.h1)}</h3>
     <p>${esc(post.meta.description)}</p>

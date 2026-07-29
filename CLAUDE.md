@@ -21,6 +21,10 @@ no framework. Deployed via Cloudflare Pages (Git auto-deploy on push to `main`).
 - `robots.txt`, `llms.txt`, `sitemap.xml` — SEO/AI-crawler plumbing at root
 
 When adding a page, copy the header/footer from an existing page so nav stays consistent.
+**Internal links always use extensionless "pretty" URLs** (`/pricing`, `/docs/concepts/glossary`,
+`/` for home) — never `.html` paths. Cloudflare Pages serves both but 308-redirects `.html`,
+and sitemap/canonicals declare the pretty form; linking `.html` wastes crawl budget (fixed
+site-wide 2026-07-29). The blog/docs generators emit pretty URLs and strip stray `.html`.
 SEO limits (Bing flags violations): `<title>` ≤65 chars, meta description ≤160 chars.
 The blog/docs generators' frontmatter must also fit (title limit includes the "— Stockwik" suffix).
 
@@ -95,7 +99,9 @@ Blog post CTA bands use `utm_campaign=blog&utm_content=<slug>` (emitted by the g
   - Confirm Google Analytics is actually deployed (named as a subprocessor in privacy.html); remove that row if not
 
 ## Local dev
-Static site — just serve the folder:
+Static site, but internal links are extensionless, so use a server that resolves
+clean URLs the way Cloudflare Pages does:
 ```
-python3 -m http.server 8000   # http://localhost:8000
+npx serve .   # http://localhost:3000 — maps /pricing -> pricing.html
 ```
+(`python3 -m http.server` serves files literally, so extensionless nav links 404 there.)

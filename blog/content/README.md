@@ -32,8 +32,9 @@ image: /assets/og/….png   # optional OG image (1200×630); falls back to the l
 - Same markdown dialect as the docs: `## / ###` headings, pipe tables,
   `> **Tip/Note/Example/Plain English/Warning/Important:** …` callouts, one
   level of list nesting, `![alt](src)` images.
-- Internal links use **absolute site paths with `.html`**:
-  `/product.html`, `/stocky-alternative.html`, `/docs/concepts/glossary.html`.
+- Internal links use **absolute extensionless site paths** (the "pretty" URLs):
+  `/product`, `/stocky-alternative`, `/docs/concepts/glossary`. The build strips
+  a stray `.html` from older content, but write new links without it.
 - Every post automatically gets the install CTA band appended with
   `utm_campaign=blog&utm_content=<slug>` — don't add your own.
 - **Link ordering rule:** a post may only link to blog posts dated on/before its

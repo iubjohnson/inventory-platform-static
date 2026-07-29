@@ -26,11 +26,11 @@
 <body>
 <header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="/index.html"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
+    <a class="brand" href="/"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
     <nav class="nav-links">
-      <a href="/product.html">Product</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/stocky-alternative.html">Stocky alternative</a>
+      <a href="/product">Product</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/stocky-alternative">Stocky alternative</a>
     </nav>
     <div class="nav-cta"><a class="login-link" href="https://app.stockwik.com" target="_blank" rel="noopener noreferrer">Log in</a><a class="btn btn-primary" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=install_cta&amp;utm_content=blog_header"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a></div>
     <button class="menu-btn" aria-label="Menu">☰</button>
@@ -53,9 +53,9 @@
 <div class="doc-table-wrap"><table><thead><tr><th>Tool</th><th>Focus</th><th>Best fit</th></tr></thead><tbody><tr><td><strong>Stockwik</strong> (that's us)</td><td>Reorder planning, POs, receiving, transfers, cycle counts for Shopify</td><td>Small and mid-size Shopify merchants who want Stocky's job done without ERP weight</td></tr><tr><td><strong>Inventory Planner (Sage)</strong></td><td>Forecasting &amp; purchasing analytics</td><td>Merchants who want deep forecasting reports and buy-plan analysis</td></tr><tr><td><strong>Prediko</strong></td><td>AI-driven forecasting &amp; purchasing</td><td>DTC brands wanting forecasting with raise-a-PO workflows</td></tr><tr><td><strong>Qoblex</strong></td><td>Inventory + orders across channels</td><td>Multichannel sellers, B2B/wholesale, light manufacturing</td></tr><tr><td><strong>inFlow</strong></td><td>Standalone inventory &amp; warehouse management</td><td>Businesses that want inventory software that isn't Shopify-first</td></tr><tr><td><strong>ApparelMagic</strong></td><td>Apparel ERP</td><td>Fashion brands needing style/size/color ERP, production, and wholesale</td></tr><tr><td><strong>Shopify admin (built-in)</strong></td><td>Basic stock tracking</td><td>Stores that only need levels, transfers, and simple POs — no forecasting</td></tr></tbody></table></div>
 <p>Shopify's own admin has been absorbing basic pieces of Stocky's job — stock tracking by location, transfers, simple purchase orders, low-stock alerts. If all you used Stocky for was recording POs, the built-ins may be enough. What the admin doesn't do is the <em>planning</em>: it won't calculate when to reorder or how much to buy.</p>
 <h2>How to choose: six questions</h2>
-<ol><li><strong>Does it forecast, or just record?</strong> The core of Stocky was telling you when and how much to order. Make sure the replacement computes real reorder points from your sales history — not just low-stock alerts at a level you set by hand. (How this should work: <a href="/docs/concepts/how-reorder-levels-are-calculated.html">How reorder levels are calculated</a>.)</li><li><strong>Does it cover the full buying loop?</strong> Suggestion → purchase order → send to supplier → <strong>receive against the PO</strong>. Receiving is where many tools stop short, and it's where inventory accuracy is won or lost.</li><li><strong>Does it handle how your suppliers actually sell?</strong> Case packs, MOQs, and pack-size rounding — or will you be converting units to cases in your head forever?</li><li><strong>Multi-location?</strong> If you run more than one location, check both planning-per-location and transfers — the feature Stocky dropped in 2025.</li><li><strong>What does it cost, all-in?</strong> Stocky was "free" but required POS Pro. Most replacements are standalone apps: compare their monthly price against what you're really paying today. (<a href="/pricing.html">Stockwik's pricing</a> is public: plans from $29/mo with a 14-day trial.)</li><li><strong>Can you be running before August?</strong> You want at least one full reorder cycle in parallel with Stocky. Tools that read your Shopify sales history directly — rather than needing a data migration — are running the same day you install.</li></ol>
+<ol><li><strong>Does it forecast, or just record?</strong> The core of Stocky was telling you when and how much to order. Make sure the replacement computes real reorder points from your sales history — not just low-stock alerts at a level you set by hand. (How this should work: <a href="/docs/concepts/how-reorder-levels-are-calculated">How reorder levels are calculated</a>.)</li><li><strong>Does it cover the full buying loop?</strong> Suggestion → purchase order → send to supplier → <strong>receive against the PO</strong>. Receiving is where many tools stop short, and it's where inventory accuracy is won or lost.</li><li><strong>Does it handle how your suppliers actually sell?</strong> Case packs, MOQs, and pack-size rounding — or will you be converting units to cases in your head forever?</li><li><strong>Multi-location?</strong> If you run more than one location, check both planning-per-location and transfers — the feature Stocky dropped in 2025.</li><li><strong>What does it cost, all-in?</strong> Stocky was "free" but required POS Pro. Most replacements are standalone apps: compare their monthly price against what you're really paying today. (<a href="/pricing">Stockwik's pricing</a> is public: plans from $29/mo with a 14-day trial.)</li><li><strong>Can you be running before August?</strong> You want at least one full reorder cycle in parallel with Stocky. Tools that read your Shopify sales history directly — rather than needing a data migration — are running the same day you install.</li></ol>
 <h2>Where Stockwik is the right call — and where it isn't</h2>
-<p><strong>Right call:</strong> you're a small or mid-size Shopify merchant, you want reorder points and order quantities calculated from your real sales, and you want the whole buying loop — <a href="/docs/reordering/the-reorder-page.html">reorder suggestions</a>, POs, receiving, transfers, cycle counts — in one plain tool. Suppliers are created automatically from your Shopify vendors, which matters this year because <a href="/blog/export-stocky-data-before-shutdown.html">Stocky's supplier data can't be exported</a>.</p>
+<p><strong>Right call:</strong> you're a small or mid-size Shopify merchant, you want reorder points and order quantities calculated from your real sales, and you want the whole buying loop — <a href="/docs/reordering/the-reorder-page">reorder suggestions</a>, POs, receiving, transfers, cycle counts — in one plain tool. Suppliers are created automatically from your Shopify vendors, which matters this year because <a href="/blog/export-stocky-data-before-shutdown">Stocky's supplier data can't be exported</a>.</p>
 <p><strong>Not the right call:</strong> you manufacture goods with bills of materials, you need warehouse operations (bins, pick/pack), you sell heavily through non-Shopify channels, or you need apparel-ERP features like style-level costing and wholesale line sheets. Look at Qoblex, inFlow, or ApparelMagic for those — genuinely.</p>
 <h2>FAQ</h2>
 <h3>What is the best Stocky alternative?</h3>
@@ -63,9 +63,9 @@
 <h3>Do Stocky alternatives require POS Pro?</h3>
 <p>Generally no. Stocky required a Shopify POS Pro subscription; most replacements, Stockwik included, are standalone Shopify apps.</p>
 <h3>Can I try an alternative while Stocky still works?</h3>
-<p>Yes, and you should — run both through at least one reorder cycle before August 31, 2026 and compare suggestions. See the full <a href="/blog/stocky-shutting-down-migration-checklist.html">migration checklist</a>.</p>
+<p>Yes, and you should — run both through at least one reorder cycle before August 31, 2026 and compare suggestions. See the full <a href="/blog/stocky-shutting-down-migration-checklist">migration checklist</a>.</p>
 <hr>
-<p><em>Want the direct comparison? <a href="/stocky-alternative.html">Stockwik vs Stocky, feature by feature</a>.</em></p>
+<p><em>Want the direct comparison? <a href="/stocky-alternative">Stockwik vs Stocky, feature by feature</a>.</em></p>
     </article>
   </div>
 </section>
@@ -78,7 +78,7 @@
       <p class="lede">Install Stockwik from the Shopify App Store, connect your store, and get your first reorder plan in minutes. Free to install with a 14-day trial.</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=blog&amp;utm_content=best-stocky-alternatives"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a>
-        <a class="btn btn-white btn-lg" href="/pricing.html">See pricing</a>
+        <a class="btn btn-white btn-lg" href="/pricing">See pricing</a>
       </div>
     </div>
   </div>
@@ -87,9 +87,9 @@
   <div class="wrap">
     <div class="foot-grid">
       <div><div class="brand"><img src="/assets/mark_white.svg" alt="" style="width:32px;height:32px;"><span class="wm">stockwik</span></div><p class="foot-about">Inventory planning, forecasting, and purchasing for small and mid-size Shopify merchants. Built by an operator who lived the problem.</p></div>
-      <div><h4>Product</h4><a href="/product.html">Features</a><a href="/pricing.html">Pricing</a><a href="/stocky-alternative.html">Stocky alternative</a><a href="/docs/">Docs</a><a href="/changelog.html">Changelog</a></div>
-      <div><h4>Company</h4><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/blog/">Blog</a></div>
-      <div><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+      <div><h4>Product</h4><a href="/product">Features</a><a href="/pricing">Pricing</a><a href="/stocky-alternative">Stocky alternative</a><a href="/docs/">Docs</a><a href="/changelog">Changelog</a></div>
+      <div><h4>Company</h4><a href="/about">About</a><a href="/contact">Contact</a><a href="/blog/">Blog</a></div>
+      <div><h4>Legal</h4><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
     </div>
     <div class="foot-bottom"><span>© 2026 Stockwik. All rights reserved.</span><span>Made for Shopify merchants.</span></div>
   </div>
