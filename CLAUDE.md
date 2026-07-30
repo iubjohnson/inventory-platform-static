@@ -96,7 +96,10 @@ Blog post CTA bands use `utm_campaign=blog&utm_content=<slug>` (emitted by the g
   - `[Legal Entity Name]` — privacy.html + terms.html
   - `[State/Country]` governing law — terms.html (appears twice)
   - `[Business mailing address]` — privacy.html + terms.html
-  - Confirm Google Analytics is actually deployed (named as a subprocessor in privacy.html); remove that row if not
+  - ~~Confirm Google Analytics is actually deployed~~ — GA4 live since 2026-07-30 (`G-NLFR1F2THM`);
+    the privacy.html subprocessor row is accurate. Tag is in every public page's `<head>`:
+    root pages directly, blog/docs via their generators (new pages get it automatically).
+    `brand/*.html` stays untagged.
 
 ## Local dev
 Static site, but internal links are extensionless, so use a server that resolves

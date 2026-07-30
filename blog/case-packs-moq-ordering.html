@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Packs, MOQs &amp; Pack Sizes: Ordering Guide — Stockwik</title>
+<meta name="description" content="Suppliers sell in cases and minimums, not the 33 loose units your math suggested. How to order the way suppliers actually sell without breaking your planning.">
+<link rel="icon" type="image/svg+xml" href="/assets/mark_primary.svg">
+<link rel="stylesheet" href="/styles.css">
+<link rel="canonical" href="https://stockwik.com/blog/case-packs-moq-ordering">
+<link rel="alternate" type="application/rss+xml" title="Stockwik Blog" href="/blog/feed.xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Stockwik">
+<meta property="og:title" content="Case Packs, MOQs &amp; Pack Sizes: Ordering Guide">
+<meta property="og:description" content="Suppliers sell in cases and minimums, not the 33 loose units your math suggested. How to order the way suppliers actually sell without breaking your planning.">
+<meta property="og:url" content="https://stockwik.com/blog/case-packs-moq-ordering">
+<meta property="og:image" content="https://stockwik.com/assets/mark_primary.svg">
+<meta property="article:published_time" content="2026-07-30">
+<meta property="article:modified_time" content="2026-07-30">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Case Packs, MOQs &amp; Pack Sizes: Ordering Guide">
+<meta name="twitter:description" content="Suppliers sell in cases and minimums, not the 33 loose units your math suggested. How to order the way suppliers actually sell without breaking your planning.">
+<meta name="twitter:image" content="https://stockwik.com/assets/mark_primary.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Case packs, MOQs, and pack sizes: order the way suppliers actually sell","description":"Suppliers sell in cases and minimums, not the 33 loose units your math suggested. How to order the way suppliers actually sell without breaking your planning.","datePublished":"2026-07-30","dateModified":"2026-07-30","author":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com"},"publisher":{"@type":"Organization","name":"Stockwik","url":"https://stockwik.com","logo":{"@type":"ImageObject","url":"https://stockwik.com/assets/mark_primary.svg"}},"mainEntityOfPage":"https://stockwik.com/blog/case-packs-moq-ordering","url":"https://stockwik.com/blog/case-packs-moq-ordering"}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLFR1F2THM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NLFR1F2THM');
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/"><img src="/assets/mark_primary.svg" alt="Stockwik" style="width:34px;height:34px;"><span class="wm">stockwik</span></a>
+    <nav class="nav-links">
+      <a href="/product">Product</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/stocky-alternative">Stocky alternative</a>
+    </nav>
+    <div class="nav-cta"><a class="login-link" href="https://app.stockwik.com" target="_blank" rel="noopener noreferrer">Log in</a><a class="btn btn-primary" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=install_cta&amp;utm_content=blog_header"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a></div>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+<section class="section post-section" style="padding-top:48px;">
+  <div class="wrap post-wrap">
+    <nav class="docs-breadcrumb"><a href="/blog/">Blog</a><span>/</span><span>Purchasing</span></nav>
+    <header class="post-header">
+      <span class="eyebrow">Purchasing</span>
+      <h1>Case packs, MOQs, and pack sizes: order the way suppliers actually sell</h1>
+      <div class="post-meta">Published <time datetime="2026-07-30">July 30, 2026</time> · Last updated <time datetime="2026-07-30">July 30, 2026</time> · 3 min read</div>
+    </header>
+    <article class="doc-content post-body">
+<p class="post-lead">Your inventory math lives in single units — you sell one tee at a time — but your suppliers live in <strong>cases, boxes, pallets, and minimums</strong>. The mill doesn't ship 33 tees; it ships cases of 12, three-case minimum. Every reorder therefore ends with a conversion step, and if that conversion happens in someone's head on every line of every PO, it's slow, error-prone, and quietly distorts your stock levels in both directions. The fix is to make pack rules part of the product's data, so the conversion happens in the math instead of in your head.</p>
+<h2>The vocabulary, quickly</h2>
+<ul><li><strong>Pack size (units per pack)</strong> — how many sellable units come in one orderable pack: a case of 12, a box of 50. This is the key conversion between "how you sell" and "how you buy."</li><li><strong>MOQ (minimum order quantity)</strong> — the smallest order the supplier will accept, usually expressed in packs: "three-case minimum."</li><li><strong>Supplier SKU</strong> — the supplier's item number for that pack, which is what belongs on the PO.</li><li><strong>Pack cost</strong> — the price per case/box; your <em>unit</em> cost is pack cost ÷ units per pack.</li></ul>
+<h2>Rounding: the decision hidden in every order line</h2>
+<p>Say the suggestion is <strong>33 units</strong> and the supplier sells cases of 12. Your options are 2 cases (24 — under-buying by 9) or 3 cases (36 — over by 3). The default should be <strong>round up</strong>: the shortfall from under-buying usually costs more (an earlier stockout, another order cycle, more freight) than a few units of extra cover on a product you know sells.</p>
+<p>But watch the two exceptions:</p>
+<ul><li><strong>Slow movers with big packs.</strong> A 0.1/day product suggested at 4 units, sold in cases of 48, "rounds up" to more than a year of stock. That's not a rounding decision anymore — it's a buying decision: is this product worth a case? Sometimes the right answer is no, or a different supplier with smaller packs.</li><li><strong>MOQs that dwarf the need.</strong> A three-case minimum on a product that needs half a case turns the reorder into "buy 4½ months of cover or none." Batch it with the next real need for that supplier rather than triggering an order for one line.</li></ul>
+<div class="doc-callout tip"><div class="doc-callout-label">Tip</div><div class="doc-callout-body">MOQs are also why <strong>one PO per supplier per cycle</strong> beats scattered single-product orders — several half-case needs across products clear a minimum together that none would alone. (More on that flow: <a href="/blog/shopify-purchase-orders-guide">our purchase-orders guide</a>.)</div></div>
+<h2>Same product, more than one way to buy it</h2>
+<p>Real catalogs have wrinkles the simple model misses: the same tee available from two suppliers at different case sizes and prices, or one supplier offering both singles (expensive) and cases (cheap). Model each as its own <strong>buy option</strong> — supplier, pack, cost, MOQ — and mark one as the <strong>primary</strong> that reorder suggestions use. When the backup supplier becomes the main one, you switch the primary rather than re-keying data.</p>
+<h2>What this looks like in Stockwik</h2>
+<p>This is exactly how <a href="/product">Stockwik</a> models purchasing: every product carries <a href="/docs/concepts/buy-options-and-pack-sizes">buy options</a> (pack type, units per pack, pack cost, supplier SKU, MOQ, primary flag), suggestions arrive <strong>already converted</strong> — 33 units becomes <em>3 cases (36 units)</em> on the draft PO — and MOQs are respected automatically. New products start with a simple "Each" option so nothing blocks a reorder; you add pack rules only for products you genuinely buy by the case. The result: <a href="/docs/reordering/the-reorder-page">the reorder page</a> speaks supplier language, and nobody does case math at 7am.</p>
+<h2>FAQ</h2>
+<h3>What's the difference between a pack size and an MOQ?</h3>
+<p>Pack size is how many units are in one orderable pack (case of 12). MOQ is the fewest packs the supplier will accept per order (3-case minimum). They compound: a 3-case MOQ of 12-packs means 36 units minimum.</p>
+<h3>Should I round order quantities up or down?</h3>
+<p>Up, by default — under-buying usually costs more than a few extra units. Except on slow movers where a big pack means months of extra cover; treat those as a separate buying decision.</p>
+<h3>How do I handle a product I buy from two suppliers?</h3>
+<p>Keep a buy option per supplier (each with its own pack, cost, and MOQ) and mark the one you're currently using as primary for suggestions. Switching suppliers is then one click, not a data migration.</p>
+    </article>
+  </div>
+</section>
+<section class="section-sm">
+  <div class="wrap">
+    <div class="cta-band">
+      <img class="loop-bg" src="/assets/mark_white.svg" alt="">
+      <span class="eyebrow" style="color:var(--amber);">Ready when you are</span>
+      <h2 style="margin-top:12px;">Start planning smarter buys today.</h2>
+      <p class="lede">Install Stockwik from the Shopify App Store, connect your store, and get your first reorder plan in minutes. Free to install with a 14-day trial.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="https://apps.shopify.com/stockwik-inventory-management?utm_source=stockwik_site&amp;utm_medium=referral&amp;utm_campaign=blog&amp;utm_content=case-packs-moq-ordering"><svg class="shopify-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M15.3 3.3c-.2 0-.4.1-.5.1l-.7.2c-.4-1.1-1-2-2.2-2-1.6 0-2.7 1.9-3.1 3.3l-1.6.5c-.5.2-.5.2-.6.7L4.6 19.6 14 21.4l5.1-1.1L16.3 4c-.3-.5-.7-.7-1-.7z"/></svg>Install on Shopify</a>
+        <a class="btn btn-white btn-lg" href="/pricing">See pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand"><img src="/assets/mark_white.svg" alt="" style="width:32px;height:32px;"><span class="wm">stockwik</span></div><p class="foot-about">Inventory planning, forecasting, and purchasing for small and mid-size Shopify merchants. Built by an operator who lived the problem.</p></div>
+      <div><h4>Product</h4><a href="/product">Features</a><a href="/pricing">Pricing</a><a href="/stocky-alternative">Stocky alternative</a><a href="/docs/">Docs</a><a href="/changelog">Changelog</a></div>
+      <div><h4>Company</h4><a href="/about">About</a><a href="/contact">Contact</a><a href="/blog/">Blog</a></div>
+      <div><h4>Legal</h4><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Stockwik. All rights reserved.</span><span>Made for Shopify merchants.</span></div>
+  </div>
+</footer>
+<script src="/nav.js" defer></script>
+</body>
+</html>

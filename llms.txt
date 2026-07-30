@@ -38,6 +38,7 @@ Key facts:
 - [Shopify built-in inventory tools: the limits](https://stockwik.com/blog/shopify-native-inventory-limits)
 - [Receiving inventory: best practices for Shopify](https://stockwik.com/blog/receiving-inventory-best-practices)
 - [How to prevent stockouts on your best sellers](https://stockwik.com/blog/prevent-stockouts-best-sellers)
+- [Case Packs, MOQs & Pack Sizes: Ordering Guide](https://stockwik.com/blog/case-packs-moq-ordering)
 
 ## Company
 
